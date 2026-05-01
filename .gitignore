@@ -1,0 +1,38 @@
+# Environment setup tools (not part of robot core code)
+# tools/ 已取消忽略 — wiki_ingest.py / wiki_query.py / build_graph.py 为核心协作脚本
+# tools/
+
+# Environment variables
+.env
+
+# Node modules
+node_modules/
+
+# Data files (generated)
+data/raw/
+data/mock/
+data/*.db
+
+# Logs
+logs/
+*.log
+
+# OS files
+.DS_Store
+
+# OpenClaw runtime
+.openclaw/
+workspace/
+
+# Sensitive configs (use .example templates instead)
+accounts.json
+
+# Wiki local index cache
+wiki/sources/*.md.tmp
+wiki/.cache/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/

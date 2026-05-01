@@ -1,0 +1,22 @@
+{
+  "accounts": [
+    {
+      "name": "efficiency-bot",
+      "channel": "feishu",
+      "config": {
+        "appId": "${FEISHU_APP_ID}",
+        "appSecret": "${FEISHU_APP_SECRET}",
+        "enabled": true,
+        "streaming": true,
+        "requireMention": true,
+        "footer": {
+          "status": true
+        }
+      },
+      "binding": {
+        "agent": "efficiency-analyzer",
+        "default": true
+      }
+    }
+  ]
+}

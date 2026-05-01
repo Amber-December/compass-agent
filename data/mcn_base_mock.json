@@ -1,0 +1,144 @@
+{
+  "metadata": {
+    "description": "MCN 事业部项目 KPI mock 数据 — 模拟飞书 Base 数据源",
+    "generated_at": "2026-05-01",
+    "week_range": "2026-03-02 至 2026-05-03",
+    "total_weeks": 9,
+    "projects": 6
+  },
+  "projects": [
+    {
+      "project_id": "P001",
+      "project_name": "垂类达人孵化",
+      "pm": "李小明",
+      "kpis": [
+        {"name": "头部达人数量", "field": "top_kol_count", "target": 8, "unit": "名"},
+        {"name": "月均粉丝增长率", "field": "fan_growth_rate", "target": 0.12, "unit": "%"},
+        {"name": "商单转化率", "field": "order_conversion_rate", "target": 0.15, "unit": "%"},
+        {"name": "达人月均变现", "field": "kol_monthly_revenue", "target": 30000, "unit": "元"}
+      ],
+      "weekly_data": [
+        {"week": 1, "date_range": "2026-03-02 至 2026-03-08", "top_kol_count": 1, "fan_growth_rate": 0.15, "order_conversion_rate": 0.10, "kol_monthly_revenue": 15000, "status": "正常"},
+        {"week": 2, "date_range": "2026-03-09 至 2026-03-15", "top_kol_count": 2, "fan_growth_rate": 0.18, "order_conversion_rate": 0.12, "kol_monthly_revenue": 18000, "status": "正常"},
+        {"week": 3, "date_range": "2026-03-16 至 2026-03-22", "top_kol_count": 3, "fan_growth_rate": 0.20, "order_conversion_rate": 0.14, "kol_monthly_revenue": 21000, "status": "正常"},
+        {"week": 4, "date_range": "2026-03-23 至 2026-03-29", "top_kol_count": 4, "fan_growth_rate": 0.16, "order_conversion_rate": 0.15, "kol_monthly_revenue": 23000, "status": "正常"},
+        {"week": 5, "date_range": "2026-03-30 至 2026-04-05", "top_kol_count": 5, "fan_growth_rate": 0.14, "order_conversion_rate": 0.16, "kol_monthly_revenue": 25000, "status": "正常"},
+        {"week": 6, "date_range": "2026-04-06 至 2026-04-12", "top_kol_count": 5, "fan_growth_rate": 0.10, "order_conversion_rate": 0.17, "kol_monthly_revenue": 26000, "status": "预警"},
+        {"week": 7, "date_range": "2026-04-13 至 2026-04-19", "top_kol_count": 6, "fan_growth_rate": 0.07, "order_conversion_rate": 0.18, "kol_monthly_revenue": 27000, "status": "预警"},
+        {"week": 8, "date_range": "2026-04-20 至 2026-04-26", "top_kol_count": 6, "fan_growth_rate": 0.04, "order_conversion_rate": 0.17, "kol_monthly_revenue": 27000, "status": "风险"},
+        {"week": 9, "date_range": "2026-04-27 至 2026-05-03", "top_kol_count": 6, "fan_growth_rate": 0.03, "order_conversion_rate": 0.18, "kol_monthly_revenue": 28000, "status": "风险"}
+      ]
+    },
+    {
+      "project_id": "P002",
+      "project_name": "短视频内容矩阵",
+      "pm": "王小花",
+      "kpis": [
+        {"name": "矩阵月播放量", "field": "monthly_play_count", "target": 30000000, "unit": "次"},
+        {"name": "爆款占比", "field": "viral_ratio", "target": 0.08, "unit": "%"},
+        {"name": "月均账号增量", "field": "monthly_account_growth", "target": 300000, "unit": "粉丝"},
+        {"name": "日均更新", "field": "daily_update_count", "target": 10, "unit": "条"}
+      ],
+      "weekly_data": [
+        {"week": 1, "date_range": "2026-03-02 至 2026-03-08", "monthly_play_count": 18000000, "viral_ratio": 0.05, "monthly_account_growth": 150000, "daily_update_count": 8, "status": "正常"},
+        {"week": 2, "date_range": "2026-03-09 至 2026-03-15", "monthly_play_count": 20000000, "viral_ratio": 0.06, "monthly_account_growth": 180000, "daily_update_count": 8, "status": "正常"},
+        {"week": 3, "date_range": "2026-03-16 至 2026-03-22", "monthly_play_count": 22000000, "viral_ratio": 0.06, "monthly_account_growth": 200000, "daily_update_count": 9, "status": "正常"},
+        {"week": 4, "date_range": "2026-03-23 至 2026-03-29", "monthly_play_count": 25000000, "viral_ratio": 0.07, "monthly_account_growth": 250000, "daily_update_count": 10, "status": "正常"},
+        {"week": 5, "date_range": "2026-03-30 至 2026-04-05", "monthly_play_count": 27000000, "viral_ratio": 0.07, "monthly_account_growth": 280000, "daily_update_count": 10, "status": "正常"},
+        {"week": 6, "date_range": "2026-04-06 至 2026-04-12", "monthly_play_count": 29000000, "viral_ratio": 0.08, "monthly_account_growth": 300000, "daily_update_count": 11, "status": "正常"},
+        {"week": 7, "date_range": "2026-04-13 至 2026-04-19", "monthly_play_count": 31000000, "viral_ratio": 0.08, "monthly_account_growth": 320000, "daily_update_count": 11, "status": "正常"},
+        {"week": 8, "date_range": "2026-04-20 至 2026-04-26", "monthly_play_count": 31500000, "viral_ratio": 0.09, "monthly_account_growth": 340000, "daily_update_count": 12, "status": "正常"},
+        {"week": 9, "date_range": "2026-04-27 至 2026-05-03", "monthly_play_count": 32000000, "viral_ratio": 0.09, "monthly_account_growth": 350000, "daily_update_count": 12, "status": "正常"}
+      ]
+    },
+    {
+      "project_id": "P003",
+      "project_name": "品牌代运营",
+      "pm": "陈九",
+      "kpis": [
+        {"name": "月均新增品牌", "field": "new_brand_monthly", "target": 2, "unit": "家"},
+        {"name": "客户满意度", "field": "customer_satisfaction", "target": 0.90, "unit": "%"},
+        {"name": "单品牌月曝光", "field": "brand_monthly_exposure", "target": 5000000, "unit": "次"},
+        {"name": "项目月营收", "field": "monthly_revenue", "target": 500000, "unit": "元"}
+      ],
+      "weekly_data": [
+        {"week": 1, "date_range": "2026-03-02 至 2026-03-08", "new_brand_monthly": 1, "customer_satisfaction": 0.88, "brand_monthly_exposure": 3000000, "monthly_revenue": 300000, "status": "正常"},
+        {"week": 2, "date_range": "2026-03-09 至 2026-03-15", "new_brand_monthly": 1, "customer_satisfaction": 0.89, "brand_monthly_exposure": 3500000, "monthly_revenue": 350000, "status": "正常"},
+        {"week": 3, "date_range": "2026-03-16 至 2026-03-22", "new_brand_monthly": 2, "customer_satisfaction": 0.90, "brand_monthly_exposure": 4000000, "monthly_revenue": 400000, "status": "正常"},
+        {"week": 4, "date_range": "2026-03-23 至 2026-03-29", "new_brand_monthly": 2, "customer_satisfaction": 0.91, "brand_monthly_exposure": 4200000, "monthly_revenue": 420000, "status": "正常"},
+        {"week": 5, "date_range": "2026-03-30 至 2026-04-05", "new_brand_monthly": 2, "customer_satisfaction": 0.92, "brand_monthly_exposure": 4500000, "monthly_revenue": 450000, "status": "正常"},
+        {"week": 6, "date_range": "2026-04-06 至 2026-04-12", "new_brand_monthly": 1, "customer_satisfaction": 0.93, "brand_monthly_exposure": 4600000, "monthly_revenue": 480000, "status": "预警"},
+        {"week": 7, "date_range": "2026-04-13 至 2026-04-19", "new_brand_monthly": 1, "customer_satisfaction": 0.92, "brand_monthly_exposure": 4700000, "monthly_revenue": 500000, "status": "预警"},
+        {"week": 8, "date_range": "2026-04-20 至 2026-04-26", "new_brand_monthly": 1, "customer_satisfaction": 0.93, "brand_monthly_exposure": 4750000, "monthly_revenue": 470000, "status": "预警"},
+        {"week": 9, "date_range": "2026-04-27 至 2026-05-03", "new_brand_monthly": 1, "customer_satisfaction": 0.92, "brand_monthly_exposure": 4800000, "monthly_revenue": 450000, "status": "预警"}
+      ]
+    },
+    {
+      "project_id": "P004",
+      "project_name": "直播电商",
+      "pm": "郑十三",
+      "kpis": [
+        {"name": "月 GMV", "field": "monthly_gmv", "target": 800000, "unit": "元"},
+        {"name": "直播转化率", "field": "live_conversion_rate", "target": 0.05, "unit": "%"},
+        {"name": "场均观看", "field": "avg_viewers_per_live", "target": 20000, "unit": "人"},
+        {"name": "ROI", "field": "roi", "target": 3.0, "unit": "1:x"}
+      ],
+      "weekly_data": [
+        {"week": 1, "date_range": "2026-03-02 至 2026-03-08", "monthly_gmv": 400000, "live_conversion_rate": 0.035, "avg_viewers_per_live": 10000, "roi": 1.8, "status": "正常"},
+        {"week": 2, "date_range": "2026-03-09 至 2026-03-15", "monthly_gmv": 450000, "live_conversion_rate": 0.038, "avg_viewers_per_live": 12000, "roi": 2.0, "status": "正常"},
+        {"week": 3, "date_range": "2026-03-16 至 2026-03-22", "monthly_gmv": 500000, "live_conversion_rate": 0.040, "avg_viewers_per_live": 13000, "roi": 2.2, "status": "正常"},
+        {"week": 4, "date_range": "2026-03-23 至 2026-03-29", "monthly_gmv": 550000, "live_conversion_rate": 0.042, "avg_viewers_per_live": 14000, "roi": 2.3, "status": "正常"},
+        {"week": 5, "date_range": "2026-03-30 至 2026-04-05", "monthly_gmv": 600000, "live_conversion_rate": 0.045, "avg_viewers_per_live": 15000, "roi": 2.5, "status": "正常"},
+        {"week": 6, "date_range": "2026-04-06 至 2026-04-12", "monthly_gmv": 700000, "live_conversion_rate": 0.048, "avg_viewers_per_live": 16000, "roi": 2.8, "status": "正常"},
+        {"week": 7, "date_range": "2026-04-13 至 2026-04-19", "monthly_gmv": 750000, "live_conversion_rate": 0.050, "avg_viewers_per_live": 18000, "roi": 3.0, "status": "正常"},
+        {"week": 8, "date_range": "2026-04-20 至 2026-04-26", "monthly_gmv": 680000, "live_conversion_rate": 0.045, "avg_viewers_per_live": 17000, "roi": 2.7, "status": "预警"},
+        {"week": 9, "date_range": "2026-04-27 至 2026-05-03", "monthly_gmv": 650000, "live_conversion_rate": 0.042, "avg_viewers_per_live": 18000, "roi": 2.5, "status": "预警"}
+      ]
+    },
+    {
+      "project_id": "P005",
+      "project_name": "达人私域运营",
+      "pm": "张十七",
+      "kpis": [
+        {"name": "月均私域沉淀", "field": "monthly_private_domain_growth", "target": 10000, "unit": "人"},
+        {"name": "粉丝活跃度", "field": "fan_activity_rate", "target": 0.25, "unit": "%"},
+        {"name": "私域转化", "field": "private_domain_conversion", "target": 0.10, "unit": "%"},
+        {"name": "复购率", "field": "repurchase_rate", "target": 0.20, "unit": "%"}
+      ],
+      "weekly_data": [
+        {"week": 1, "date_range": "2026-03-02 至 2026-03-08", "monthly_private_domain_growth": 5000, "fan_activity_rate": 0.15, "private_domain_conversion": 0.05, "repurchase_rate": 0.10, "status": "正常"},
+        {"week": 2, "date_range": "2026-03-09 至 2026-03-15", "monthly_private_domain_growth": 6000, "fan_activity_rate": 0.18, "private_domain_conversion": 0.06, "repurchase_rate": 0.12, "status": "正常"},
+        {"week": 3, "date_range": "2026-03-16 至 2026-03-22", "monthly_private_domain_growth": 7000, "fan_activity_rate": 0.20, "private_domain_conversion": 0.07, "repurchase_rate": 0.14, "status": "正常"},
+        {"week": 4, "date_range": "2026-03-23 至 2026-03-29", "monthly_private_domain_growth": 8000, "fan_activity_rate": 0.22, "private_domain_conversion": 0.08, "repurchase_rate": 0.16, "status": "正常"},
+        {"week": 5, "date_range": "2026-03-30 至 2026-04-05", "monthly_private_domain_growth": 9000, "fan_activity_rate": 0.24, "private_domain_conversion": 0.09, "repurchase_rate": 0.18, "status": "正常"},
+        {"week": 6, "date_range": "2026-04-06 至 2026-04-12", "monthly_private_domain_growth": 10000, "fan_activity_rate": 0.25, "private_domain_conversion": 0.09, "repurchase_rate": 0.19, "status": "正常"},
+        {"week": 7, "date_range": "2026-04-13 至 2026-04-19", "monthly_private_domain_growth": 11000, "fan_activity_rate": 0.26, "private_domain_conversion": 0.10, "repurchase_rate": 0.20, "status": "正常"},
+        {"week": 8, "date_range": "2026-04-20 至 2026-04-26", "monthly_private_domain_growth": 11500, "fan_activity_rate": 0.27, "private_domain_conversion": 0.10, "repurchase_rate": 0.21, "status": "正常"},
+        {"week": 9, "date_range": "2026-04-27 至 2026-05-03", "monthly_private_domain_growth": 12000, "fan_activity_rate": 0.28, "private_domain_conversion": 0.11, "repurchase_rate": 0.22, "status": "正常"}
+      ]
+    },
+    {
+      "project_id": "P006",
+      "project_name": "虚拟IP孵化与运营",
+      "pm": "钱二十一",
+      "kpis": [
+        {"name": "上线虚拟IP数量", "field": "virtual_ip_online_count", "target": 2, "unit": "个"},
+        {"name": "虚拟IP粉丝总量", "field": "virtual_ip_total_fans", "target": 300000, "unit": "粉丝"},
+        {"name": "月商业化营收", "field": "monthly_commercial_revenue", "target": 150000, "unit": "元"},
+        {"name": "直播/短视频互动率", "field": "interaction_rate", "target": 0.08, "unit": "%"},
+        {"name": "技术故障率", "field": "tech_failure_rate", "target": 0.02, "unit": "%"}
+      ],
+      "weekly_data": [
+        {"week": 1, "date_range": "2026-03-02 至 2026-03-08", "virtual_ip_online_count": 0, "virtual_ip_total_fans": 0, "monthly_commercial_revenue": 0, "interaction_rate": 0, "tech_failure_rate": 0, "status": "正常"},
+        {"week": 2, "date_range": "2026-03-09 至 2026-03-15", "virtual_ip_online_count": 0, "virtual_ip_total_fans": 0, "monthly_commercial_revenue": 0, "interaction_rate": 0, "tech_failure_rate": 0, "status": "正常"},
+        {"week": 3, "date_range": "2026-03-16 至 2026-03-22", "virtual_ip_online_count": 0, "virtual_ip_total_fans": 0, "monthly_commercial_revenue": 0, "interaction_rate": 0, "tech_failure_rate": 0, "status": "正常"},
+        {"week": 4, "date_range": "2026-03-23 至 2026-03-29", "virtual_ip_online_count": 1, "virtual_ip_total_fans": 20000, "monthly_commercial_revenue": 10000, "interaction_rate": 0.05, "tech_failure_rate": 0.10, "status": "风险"},
+        {"week": 5, "date_range": "2026-03-30 至 2026-04-05", "virtual_ip_online_count": 1, "virtual_ip_total_fans": 50000, "monthly_commercial_revenue": 20000, "interaction_rate": 0.06, "tech_failure_rate": 0.08, "status": "风险"},
+        {"week": 6, "date_range": "2026-04-06 至 2026-04-12", "virtual_ip_online_count": 1, "virtual_ip_total_fans": 80000, "monthly_commercial_revenue": 30000, "interaction_rate": 0.06, "tech_failure_rate": 0.07, "status": "风险"},
+        {"week": 7, "date_range": "2026-04-13 至 2026-04-19", "virtual_ip_online_count": 1, "virtual_ip_total_fans": 100000, "monthly_commercial_revenue": 40000, "interaction_rate": 0.07, "tech_failure_rate": 0.06, "status": "风险"},
+        {"week": 8, "date_range": "2026-04-20 至 2026-04-26", "virtual_ip_online_count": 1, "virtual_ip_total_fans": 110000, "monthly_commercial_revenue": 50000, "interaction_rate": 0.07, "tech_failure_rate": 0.06, "status": "风险"},
+        {"week": 9, "date_range": "2026-04-27 至 2026-05-03", "virtual_ip_online_count": 1, "virtual_ip_total_fans": 120000, "monthly_commercial_revenue": 60000, "interaction_rate": 0.07, "tech_failure_rate": 0.06, "status": "风险"}
+      ]
+    }
+  ]
+}

@@ -1,0 +1,262 @@
+{
+  "metadata": {
+    "description": "MCN 事业部任务列表 mock 数据 — 模拟飞书 Base 数据源",
+    "generated_at": "2026-05-01",
+    "total_tasks": 24
+  },
+  "tasks": [
+    {
+      "task_id": "T001",
+      "project_id": "P001",
+      "project_name": "垂类达人孵化",
+      "title": "签约美妆赛道达人 3 名",
+      "owner": "张三",
+      "status": "已完成",
+      "priority": "高",
+      "planned_end": "2026-04-30",
+      "actual_end": "2026-04-28"
+    },
+    {
+      "task_id": "T002",
+      "project_id": "P001",
+      "project_name": "垂类达人孵化",
+      "title": "制定整改方案并启动执行",
+      "owner": "李小明",
+      "status": "进行中",
+      "priority": "高",
+      "planned_end": "2026-05-10",
+      "actual_end": null
+    },
+    {
+      "task_id": "T003",
+      "project_id": "P001",
+      "project_name": "垂类达人孵化",
+      "title": "流量投放测试（小红书方向）",
+      "owner": "李四",
+      "status": "进行中",
+      "priority": "中",
+      "planned_end": "2026-05-05",
+      "actual_end": null
+    },
+    {
+      "task_id": "T004",
+      "project_id": "P001",
+      "project_name": "垂类达人孵化",
+      "title": "品牌绑定谈判（雅诗兰黛）",
+      "owner": "王五",
+      "status": "延期",
+      "priority": "高",
+      "planned_end": "2026-04-25",
+      "actual_end": null
+    },
+    {
+      "task_id": "T005",
+      "project_id": "P002",
+      "project_name": "短视频内容矩阵",
+      "title": "美食赛道新账号矩阵搭建",
+      "owner": "赵六",
+      "status": "已完成",
+      "priority": "高",
+      "planned_end": "2026-04-30",
+      "actual_end": "2026-04-29"
+    },
+    {
+      "task_id": "T006",
+      "project_id": "P002",
+      "project_name": "短视频内容矩阵",
+      "title": "AI 剪辑工具全面上线",
+      "owner": "孙七",
+      "status": "已完成",
+      "priority": "中",
+      "planned_end": "2026-04-30",
+      "actual_end": "2026-04-30"
+    },
+    {
+      "task_id": "T007",
+      "project_id": "P002",
+      "project_name": "短视频内容矩阵",
+      "title": "旅行赛道内容策划",
+      "owner": "赵六",
+      "status": "进行中",
+      "priority": "中",
+      "planned_end": "2026-05-08",
+      "actual_end": null
+    },
+    {
+      "task_id": "T008",
+      "project_id": "P003",
+      "project_name": "品牌代运营",
+      "title": "完美日记季度结案报告",
+      "owner": "林十",
+      "status": "已完成",
+      "priority": "高",
+      "planned_end": "2026-04-28",
+      "actual_end": "2026-04-28"
+    },
+    {
+      "task_id": "T009",
+      "project_id": "P003",
+      "project_name": "品牌代运营",
+      "title": "雅诗兰黛续约谈判",
+      "owner": "陈九",
+      "status": "进行中",
+      "priority": "高",
+      "planned_end": "2026-05-10",
+      "actual_end": null
+    },
+    {
+      "task_id": "T010",
+      "project_id": "P003",
+      "project_name": "品牌代运营",
+      "title": "新品牌商务拓展（2 家线索跟进）",
+      "owner": "林十",
+      "status": "进行中",
+      "priority": "高",
+      "planned_end": "2026-05-15",
+      "actual_end": null
+    },
+    {
+      "task_id": "T011",
+      "project_id": "P004",
+      "project_name": "直播电商",
+      "title": "618 大促选品会",
+      "owner": "郑十三",
+      "status": "已完成",
+      "priority": "高",
+      "planned_end": "2026-04-30",
+      "actual_end": "2026-04-30"
+    },
+    {
+      "task_id": "T012",
+      "project_id": "P004",
+      "project_name": "直播电商",
+      "title": "直播间场景升级",
+      "owner": "何十四",
+      "status": "已完成",
+      "priority": "中",
+      "planned_end": "2026-04-28",
+      "actual_end": "2026-04-28"
+    },
+    {
+      "task_id": "T013",
+      "project_id": "P004",
+      "project_name": "直播电商",
+      "title": "主播话术培训计划",
+      "owner": "吕十五",
+      "status": "进行中",
+      "priority": "高",
+      "planned_end": "2026-05-10",
+      "actual_end": null
+    },
+    {
+      "task_id": "T014",
+      "project_id": "P004",
+      "project_name": "直播电商",
+      "title": "选品结构优化（提升转化率）",
+      "owner": "施十六",
+      "status": "延期",
+      "priority": "高",
+      "planned_end": "2026-04-25",
+      "actual_end": null
+    },
+    {
+      "task_id": "T015",
+      "project_id": "P005",
+      "project_name": "达人私域运营",
+      "title": "五一假期私域活动",
+      "owner": "李十八",
+      "status": "已完成",
+      "priority": "中",
+      "planned_end": "2026-05-03",
+      "actual_end": "2026-05-03"
+    },
+    {
+      "task_id": "T016",
+      "project_id": "P005",
+      "project_name": "达人私域运营",
+      "title": "新增企微社群 3 个",
+      "owner": "李十八",
+      "status": "已完成",
+      "priority": "中",
+      "planned_end": "2026-04-30",
+      "actual_end": "2026-04-30"
+    },
+    {
+      "task_id": "T017",
+      "project_id": "P005",
+      "project_name": "达人私域运营",
+      "title": "会员体系搭建",
+      "owner": "王十九",
+      "status": "进行中",
+      "priority": "高",
+      "planned_end": "2026-05-10",
+      "actual_end": null
+    },
+    {
+      "task_id": "T018",
+      "project_id": "P005",
+      "project_name": "达人私域运营",
+      "title": "私域内容素材库建设",
+      "owner": "王十九",
+      "status": "延期",
+      "priority": "低",
+      "planned_end": "2026-04-25",
+      "actual_end": null
+    },
+    {
+      "task_id": "T019",
+      "project_id": "P006",
+      "project_name": "虚拟IP孵化与运营",
+      "title": "第一个虚拟IP「星瞳」直播测试",
+      "owner": "吴二十四",
+      "status": "已完成",
+      "priority": "高",
+      "planned_end": "2026-04-30",
+      "actual_end": "2026-04-30"
+    },
+    {
+      "task_id": "T020",
+      "project_id": "P006",
+      "project_name": "虚拟IP孵化与运营",
+      "title": "第二个虚拟IP「月影」人设定稿",
+      "owner": "周二十三",
+      "status": "进行中",
+      "priority": "高",
+      "planned_end": "2026-05-15",
+      "actual_end": null
+    },
+    {
+      "task_id": "T021",
+      "project_id": "P006",
+      "project_name": "虚拟IP孵化与运营",
+      "title": "技术架构升级（动捕延迟优化）",
+      "owner": "孙二十二",
+      "status": "进行中",
+      "priority": "高",
+      "planned_end": "2026-05-20",
+      "actual_end": null
+    },
+    {
+      "task_id": "T022",
+      "project_id": "P006",
+      "project_name": "虚拟IP孵化与运营",
+      "title": "容灾演练方案制定",
+      "owner": "孙二十二",
+      "status": "延期",
+      "priority": "中",
+      "planned_end": "2026-04-20",
+      "actual_end": null
+    },
+    {
+      "task_id": "T023",
+      "project_id": "P006",
+      "project_name": "虚拟IP孵化与运营",
+      "title": "虚拟IP商业化路径设计",
+      "owner": "钱二十一",
+      "status": "进行中",
+      "priority": "中",
+      "planned_end": "2026-05-15",
+      "actual_end": null
+    }
+  ]
+}
