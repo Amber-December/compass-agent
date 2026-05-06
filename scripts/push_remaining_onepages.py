@@ -17,7 +17,7 @@ PROJECTS = [
     "虚拟IP孵化与运营",
 ]
 
-BASE_DIR = Path("/Users/amber/lark-knowledge-agent/docs/projects")
+BASE_DIR = Path("/Users/amber/compass-agent/docs/projects")
 
 
 def run_cmd(cmd: list) -> dict:

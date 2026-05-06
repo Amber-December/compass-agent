@@ -10,7 +10,7 @@ import os
 from pathlib import Path
 from datetime import datetime, timedelta
 
-BASE_DIR = Path("/Users/amber/lark-knowledge-agent/docs/projects/垂类达人孵化")
+BASE_DIR = Path("/Users/amber/compass-agent/docs/projects/垂类达人孵化")
 
 # 项目数据
 PROJECT = {

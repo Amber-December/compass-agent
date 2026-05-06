@@ -62,9 +62,6 @@ metadata:
 3. 生成高亮匹配节点的交互式子图 HTML
 4. 将 HTML 保存到 `workspace/knowledge/graph/subgraph_<keyword>.html`
 
-**实际文件路径示例**：
-- 垂类达人孵化子图：`workspace/knowledge/graph/subgraph_垂类达人孵化.html`
-- 直播电商子图：`workspace/knowledge/graph/subgraph_直播电商.html`
 
 **工具调用**：
 ```bash
@@ -86,18 +83,8 @@ qa-bot 返回的图谱查询回复为 **Markdown 格式**，包含子图概况 +
 
 节点数：53 ｜ 边数：194 ｜ 核心节点：李小明、张三、达人筛选SOP
 
-🔗 [点击打开交互式图谱](http://localhost:8766/subgraph_垂类达人孵化.html)
+🔗 [点击打开交互式图谱](http://localhost:8766.html)
 ```
-
-**链接地址规则**：
-- 子图 HTML 文件名 = `subgraph_<keyword>.html`（keyword 为中文项目名）
-- 默认地址格式：`http://localhost:8766/subgraph_<keyword>.html`
-- 实际示例：`http://localhost:8766/subgraph_垂类达人孵化.html`
-- qa-bot 只负责生成链接和返回 URL，HTTP 服务由 wiki-manager / DevOps 维护
-- 如果服务未部署，提供本地文件路径作为降级：
-  ```markdown
-  📎 [下载图谱 HTML 文件](file:///Users/amber/lark-knowledge-agent/workspace/knowledge/graph/subgraph_垂类达人孵化.html)
-  ```
 
 ---
 
@@ -118,7 +105,7 @@ qa-bot 返回的图谱查询回复为 **Markdown 格式**，包含子图概况 +
             │   └── 保存到 workspace/knowledge/graph/subgraph_垂类达人孵化.html
             ├── 构建 Markdown 回复
             │   ├── 子图概况（节点数/边数/核心节点）
-            │   └── 可点击链接（跳转 http://localhost:8766/subgraph_垂类达人孵化.html）
+            │   └── 可点击链接（跳转 http://localhost:8766.html）
             └── 返回 Markdown → 飞书群聊展示
 ```
 
@@ -222,7 +209,7 @@ def build_graph_reply(subgraph, scope):
 
 节点数：53 ｜ 边数：194 ｜ 核心节点：李小明、张三、达人筛选SOP
 
-📎 [下载图谱 HTML 文件](file:///Users/amber/lark-knowledge-agent/workspace/knowledge/graph/subgraph_垂类达人孵化.html)
+📎 [下载图谱 HTML 文件](file:///Users/amber/compass-agent/workspace/knowledge/graph/subgraph_垂类达人孵化.html)
 ```
 
 ## 缺失处理

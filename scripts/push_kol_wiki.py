@@ -28,7 +28,7 @@ PARENT_NODES = {
     "项目 OnePage": "Nc6EwRimJirsREkOKA5cOM25n8t",
 }
 
-BASE_DIR = Path("/Users/amber/lark-knowledge-agent/docs/projects/垂类达人孵化")
+BASE_DIR = Path("/Users/amber/compass-agent/docs/projects/垂类达人孵化")
 
 
 def run_cmd(cmd: list) -> dict:

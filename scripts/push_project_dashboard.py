@@ -9,7 +9,7 @@ PROFILE = "compass"
 SPACE_ID = "7634845410292403395"
 PARENT_NODE = "WMXewXyeYi62dTk3p5xct3yZnde"
 TITLE = "项目列表与状态看板"
-MD_FILE = Path("/Users/amber/lark-knowledge-agent/docs/projects/项目列表与状态看板.md")
+MD_FILE = Path("/Users/amber/compass-agent/docs/projects/项目列表与状态看板.md")
 
 
 def run_cmd(cmd: list) -> dict:
