@@ -462,42 +462,114 @@
     Compass 不是单一聊天机器人，而是基于 OpenClaw 的多 Agent 协作系统。
   </p>
 
-  <div class="arch-diagram">
+  <!-- Design Philosophy -->
+  <div style="background:var(--bg-panel);border:1px solid var(--border);padding:32px;margin-bottom:24px">
+    <h4 style="font-size:14px;color:var(--primary);margin-bottom:16px">设计哲学 · 为什么不是单体 AI？</h4>
+    <div class="pain-grid" style="margin-top:0">
+      <div class="pain-card" style="padding:24px">
+        <h4 style="font-size:13px"><span class="dot" style="background:var(--accent)"></span>单体 AI 的局限</h4>
+        <p style="font-size:12px;color:var(--text-muted);line-height:1.9">职责混杂导致上下文爆炸 · 无法独立演进 · 单点故障风险高 · 权限边界模糊</p>
+      </div>
+      <div class="pain-card" style="padding:24px">
+        <h4 style="font-size:13px"><span class="dot" style="background:var(--secondary)"></span>多 Agent 的优势</h4>
+        <p style="font-size:12px;color:var(--text-muted);line-height:1.9">单一职责 Prompt 更聚焦 · 独立部署可单独升级 · 能力可组合复用 · 权限物理隔离</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Complete Call Chain -->
+  <h4 style="font-size:14px;color:var(--primary);margin:32px 0 16px">完整调用链路 · 从消息到回答的 10 步流程</h4>
+  <div style="background:var(--bg-panel);border:1px solid var(--border);padding:32px">
+    <div class="timeline" style="padding-left:24px;margin-top:0">
+      <div class="t-item" style="margin-bottom:16px">
+        <h4 style="font-size:12px">Step 1-2 · 消息接收</h4>
+        <p>用户在"垂类达人孵化项目群"发送 "@司南 达人筛选标准是什么" → Gateway 接收</p>
+      </div>
+      <div class="t-item" style="margin-bottom:16px">
+        <h4 style="font-size:12px">Step 3 · Scope 绑定</h4>
+        <p>chatBindings 查找 chat_id → scope = "kol-incubation"</p>
+      </div>
+      <div class="t-item" style="margin-bottom:16px">
+        <h4 style="font-size:12px">Step 4-5 · 意图识别</h4>
+        <p>qa-bot intent skill 分析 → "知识查询" / 置信度 0.95 / target_skill = "query"</p>
+      </div>
+      <div class="t-item" style="margin-bottom:16px">
+        <h4 style="font-size:12px">Step 6-7 · 知识检索</h4>
+        <p>query skill 调用 wiki_query.py → 读取 wiki/ 目录 → 按 scope 过滤 → 匹配 "达人筛选标准.md"</p>
+      </div>
+      <div class="t-item" style="margin-bottom:16px">
+        <h4 style="font-size:12px">Step 8 · LLM 润色</h4>
+        <p>LLM 基于检索结果 + SKILL.md 模板生成自然语言回答</p>
+      </div>
+      <div class="t-item" style="margin-bottom:0">
+        <h4 style="font-size:12px">Step 9-10 · 输出推送</h4>
+        <p>红线检查（无思考过程 / 无本地路径 / 只一条消息）→ Gateway 推送到飞书群聊</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4-Agent Detail -->
+  <h4 style="font-size:14px;color:var(--primary);margin:32px 0 16px">4 个 Agent · 单一职责 · 独立演进</h4>
+  <div class="hl-grid">
+    <div class="hl-card" style="padding:24px">
+      <div class="num" style="font-size:28px">qa-bot</div>
+      <h4 style="font-size:14px">入口 Agent / 调度中心</h4>
+      <p style="font-size:12px">entryPoint = true · 所有用户流量入口<br>意图识别 → 查询执行 → Agent 调度<br>5 Skills + 3 Tools · delegatesTo 其他 3 个 Agent</p>
+      <span class="tag">不直接操作 API · 只负责调度</span>
+    </div>
+    <div class="hl-card" style="padding:24px">
+      <div class="num" style="font-size:28px">wiki-mgr</div>
+      <h4 style="font-size:14px">知识同步 Agent · 图书管理员</h4>
+      <p style="font-size:12px">canBeCalledBy: qa-bot · 8 Skills<br>Wiki 拉取 → Base 同步 → LLM 编译 → 图谱构建<br>定时全量 + 增量检查（content_hash 对比）</p>
+      <span class="tag">后台运行 · 不直接回答用户</span>
+    </div>
+    <div class="hl-card" style="padding:24px">
+      <div class="num" style="font-size:28px">weekly-rpt</div>
+      <h4 style="font-size:14px">周报生成 Agent</h4>
+      <p style="font-size:12px">canBeCalledBy: qa-bot · delegatesTo: card-builder<br>数据采集 → 趋势分析 → Markdown 生成 → 卡片推送<br>每周一 9:00 定时触发</p>
+      <span class="tag">分钟级延迟 · 非实时</span>
+    </div>
+    <div class="hl-card" style="padding:24px">
+      <div class="num" style="font-size:28px">card-bldr</div>
+      <h4 style="font-size:14px">卡片渲染 Agent · UI 层</h4>
+      <p style="font-size:12px">canBeCalledBy: weekly-reporter<br>Markdown/数据 → 飞书消息卡片 JSON<br>多种模板：数据卡片 / 周报卡片 / 通知卡片</p>
+      <span class="tag">专注"好看" · 可复用</span>
+    </div>
+  </div>
+
+  <!-- Skill vs Tool -->
+  <h4 style="font-size:14px;color:var(--primary);margin:32px 0 16px">Skill 与 Tool 的分层 · 接口定义 + 精确实现</h4>
+  <div class="tech-stack">
+    <div class="tech-layer">
+      <div class="left" style="width:120px"><div class="name">SKILL.md</div><div class="role">接口定义</div></div>
+      <div class="right"><div class="tech-item">触发条件</div><div class="tech-item">查询链路</div><div class="tech-item">输出模板</div><div class="tech-item">红线规则</div></div>
+    </div>
+    <div class="tech-layer">
+      <div class="left" style="width:120px"><div class="name">Python 工具</div><div class="role">精确实现</div></div>
+      <div class="right"><div class="tech-item accent">wiki_query.py</div><div class="tech-item accent">data_query.py</div><div class="tech-item accent">graph_query.py</div></div>
+    </div>
+  </div>
+  <p style="font-size:12px;color:var(--text-muted);margin-top:12px">SKILL.md 给 LLM 看（"做什么"）· Python 工具给机器执行（"怎么做"）· 各尽其责</p>
+
+  <!-- Scope Flow -->
+  <h4 style="font-size:14px;color:var(--primary);margin:32px 0 16px">Scope 流转 · 群即边界</h4>
+  <div style="background:var(--bg-panel);border:1px solid var(--border);padding:24px 32px">
+    <div class="arch-row" style="margin:0;gap:12px">
+      <div class="arch-box" style="min-width:auto;padding:12px 16px"><div class="title" style="font-size:11px">飞书消息</div><div class="desc" style="font-size:10px">chat_id</div></div>
+      <div class="arch-arrow" style="font-size:14px">→</div>
+      <div class="arch-box primary" style="min-width:auto;padding:12px 16px"><div class="title" style="font-size:11px">chatBindings</div><div class="desc" style="font-size:10px">scope</div></div>
+      <div class="arch-arrow" style="font-size:14px">→</div>
+      <div class="arch-box" style="min-width:auto;padding:12px 16px"><div class="title" style="font-size:11px">权限检查</div><div class="desc" style="font-size:10px">可访问范围</div></div>
+      <div class="arch-arrow" style="font-size:14px">→</div>
+      <div class="arch-box" style="min-width:auto;padding:12px 16px"><div class="title" style="font-size:11px">数据过滤</div><div class="desc" style="font-size:10px">只读本项目</div></div>
+    </div>
+    <p style="text-align:center;font-size:11px;color:var(--text-muted);margin-top:12px">拒答不是 Prompt 层面"请求 LLM 不要说"，而是物理层面"工具层面就读不到数据"</p>
+  </div>
+
+  <!-- Knowledge Base -->
+  <div class="arch-diagram" style="margin-top:24px">
     <div class="corner-deco top-left"></div><div class="corner-deco top-right"></div>
     <div class="corner-deco bot-left"></div><div class="corner-deco bot-right"></div>
-
-    <div class="arch-label">用户入口层</div>
-    <div class="arch-row">
-      <div class="arch-box primary">
-        <div class="title">飞书项目群</div>
-        <div class="desc">@司南 提问</div>
-      </div>
-      <div class="arch-arrow">→</div>
-      <div class="arch-box primary">
-        <div class="title">OpenClaw Gateway</div>
-        <div class="desc">任务分发</div>
-      </div>
-    </div>
-
-    <div class="arch-label">Agent 协作层</div>
-    <div class="arch-row">
-      <div class="arch-box">
-        <div class="title">qa-bot</div>
-        <div class="desc">入口 · 意图 · 路由</div>
-      </div>
-      <div class="arch-box">
-        <div class="title">wiki-manager</div>
-        <div class="desc">知识同步 · 图谱构建</div>
-      </div>
-      <div class="arch-box">
-        <div class="title">weekly-reporter</div>
-        <div class="desc">数据聚合 · 周报生成</div>
-      </div>
-      <div class="arch-box">
-        <div class="title">card-builder</div>
-        <div class="desc">卡片渲染 · 富文本</div>
-      </div>
-    </div>
 
     <div class="arch-label">知识底座三层结构</div>
     <div class="arch-layer">
