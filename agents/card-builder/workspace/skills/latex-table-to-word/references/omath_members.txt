@@ -1,0 +1,29 @@
+
+Name                 MemberType
+----                 ----------
+AlignPoint             Property
+Application            Property
+ArgIndex               Property
+ArgSize                Property
+Breaks                 Property
+BuildUp                  Method
+ConvertToLiteralText     Method
+ConvertToMathText        Method
+ConvertToNormalText      Method
+Creator                Property
+Functions              Property
+Justification          Property
+Linearize                Method
+NestingLevel           Property
+Parent                 Property
+ParentArg              Property
+ParentCol              Property
+ParentFunction         Property
+ParentOMath            Property
+ParentRow              Property
+Range                  Property
+Remove                   Method
+Type                   Property
+
+
+

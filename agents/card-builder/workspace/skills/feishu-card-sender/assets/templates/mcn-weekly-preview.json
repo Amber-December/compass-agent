@@ -1,0 +1,105 @@
+{
+  "schema": "2.0",
+  "config": {
+    "update_multi": true,
+    "style": {
+      "text_size": {
+        "normal_v2": {
+          "default": "normal",
+          "pc": "normal",
+          "mobile": "heading"
+        }
+      }
+    }
+  },
+  "body": {
+    "direction": "horizontal",
+    "horizontal_spacing": "8px",
+    "vertical_spacing": "8px",
+    "horizontal_align": "left",
+    "vertical_align": "top",
+    "elements": [
+      {
+        "tag": "markdown",
+        "content": "**<font color='blue-600'>项目周报 Dashboard 预览</font>**\nMCN Weekly Bulletin · 核心摘要",
+        "text_align": "left",
+        "text_size": "normal_v2"
+      },
+      {
+        "tag": "column_set",
+        "horizontal_spacing": "12px",
+        "columns": [
+          {
+            "tag": "column",
+            "width": "weighted",
+            "weight": 1,
+            "background_style": "blue-50",
+            "padding": "12px 12px 12px 12px",
+            "elements": [
+              {
+                "tag": "markdown",
+                "content": "**<font color='blue-600'>GMV</font>**"
+              },
+              {
+                "tag": "markdown",
+                "content": "842万"
+              }
+            ]
+          },
+          {
+            "tag": "column",
+            "width": "weighted",
+            "weight": 1,
+            "background_style": "blue-50",
+            "padding": "12px 12px 12px 12px",
+            "elements": [
+              {
+                "tag": "markdown",
+                "content": "**<font color='blue-600'>环比</font>**"
+              },
+              {
+                "tag": "markdown",
+                "content": "+12.3%"
+              }
+            ]
+          },
+          {
+            "tag": "column",
+            "width": "weighted",
+            "weight": 1,
+            "background_style": "blue-50",
+            "padding": "12px 12px 12px 12px",
+            "elements": [
+              {
+                "tag": "markdown",
+                "content": "**<font color='blue-600'>风险数</font>**"
+              },
+              {
+                "tag": "markdown",
+                "content": "2个"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "markdown",
+        "content": "**<font color='blue-600'>本周核心增长</font>**\n- GMV：**842万**\n- 周环比：**+12.3%**\n- 核心驱动：**抖音爆款内容拉动明显**\n- 关键信号：**3 条爆款视频贡献约 60% 流量**",
+        "text_align": "left",
+        "text_size": "normal"
+      },
+      {
+        "tag": "markdown",
+        "content": "**<font color='red-600'>本周主要风险</font>**\n- 任务完成率：**81.8%（18/22）**\n- 延期任务：**4 项**\n- 抖音达人内容调性偏离，存在粉丝流失风险\n- 快手私域运营效率下滑，可能影响 618 转化",
+        "text_align": "left",
+        "text_size": "normal"
+      },
+      {
+        "tag": "markdown",
+        "content": "**一句话判断**：增长面是亮的，但执行面要补，延期任务和达人/私域风险需要尽快压住。",
+        "text_align": "left",
+        "text_size": "normal_v2"
+      }
+    ]
+  }
+}

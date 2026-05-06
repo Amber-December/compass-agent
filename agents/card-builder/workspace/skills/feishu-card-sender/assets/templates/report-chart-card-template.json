@@ -1,0 +1,89 @@
+{
+  "schema": "2.0",
+  "config": {
+    "update_multi": true
+  },
+  "header": {
+    "template": "blue",
+    "title": {
+      "tag": "plain_text",
+      "content": "${title}"
+    }
+  },
+  "body": {
+    "direction": "vertical",
+    "horizontal_spacing": "8px",
+    "vertical_spacing": "8px",
+    "horizontal_align": "left",
+    "vertical_align": "top",
+    "elements": [
+      {
+        "tag": "markdown",
+        "content": "**周期**：${period}\\n**总结**：${summary}"
+      },
+      {
+        "tag": "column_set",
+        "flex_mode": "stretch",
+        "columns": [
+          {
+            "tag": "column",
+            "width": "weighted",
+            "weight": 1,
+            "background_style": "blue-50",
+            "padding": "12px 12px 12px 12px",
+            "elements": [
+              { "tag": "markdown", "content": "**GMV**\\n`${gmv}`" }
+            ]
+          },
+          {
+            "tag": "column",
+            "width": "weighted",
+            "weight": 1,
+            "background_style": "blue-50",
+            "padding": "12px 12px 12px 12px",
+            "elements": [
+              { "tag": "markdown", "content": "**转化率**\\n`${conversion}`" }
+            ]
+          },
+          {
+            "tag": "column",
+            "width": "weighted",
+            "weight": 1,
+            "background_style": "blue-50",
+            "padding": "12px 12px 12px 12px",
+            "elements": [
+              { "tag": "markdown", "content": "**完成率**\\n`${completion}`" }
+            ]
+          },
+          {
+            "tag": "column",
+            "width": "weighted",
+            "weight": 1,
+            "background_style": "red-50",
+            "padding": "12px 12px 12px 12px",
+            "elements": [
+              { "tag": "markdown", "content": "**风险数**\\n`${risk_count}`" }
+            ]
+          }
+        ]
+      },
+      ${bar_chart_block}
+      ${line_chart_block}
+      {
+        "tag": "markdown",
+        "content": "**风险摘要**\\n${risk_summary}"
+      },
+      {
+        "tag": "button",
+        "text": {
+          "tag": "plain_text",
+          "content": "${button_text}"
+        },
+        "type": "primary",
+        "multi_url": {
+          "url": "${button_url}"
+        }
+      }
+    ]
+  }
+}
