@@ -48,3 +48,4 @@ workspace/knowledge/graph/graph.html
 workspace/knowledge/graph/subgraph_*.html
 agents/wiki-manager/workspace/raw_lark/
 agents/wiki-manager/workspace/state/sync_state.json
+workspace/knowledge/wiki/projects/*/sources/
