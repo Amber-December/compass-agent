@@ -1,0 +1,100 @@
+{
+  "name": "wiki-manager-sync",
+  "version": "1.0.0",
+  "description": "wiki-manager 自动同步工作流：wiki-sync → base-sync → wiki-ingest",
+  "type": "workflow",
+  "agent": "wiki-manager",
+  "trigger": {
+    "keywords": [
+      "刷新知识库",
+      "同步知识库",
+      "/wiki-sync"
+    ],
+    "schedule": "30 8 * * 1"
+  },
+  "steps": [
+    {
+      "id": "step-0",
+      "name": "wiki-discover",
+      "skill": "wiki-discover",
+      "description": "扫描飞书 Wiki 空间，自动发现新文档并更新 sources.yaml",
+      "condition": "always",
+      "timeout": 120,
+      "output": {
+        "discover_report": "state/discover_report.json"
+      }
+    },
+    {
+      "id": "step-1",
+      "name": "wiki-sync",
+      "skill": "wiki-sync",
+      "description": "检测并拉取飞书 Wiki 变更",
+      "condition": "always",
+      "timeout": 300,
+      "depends_on": [
+        "step-0"
+      ],
+      "output": {
+        "changed_files": "raw_lark/wiki/",
+        "sync_report": "state/sync_report_wiki.json"
+      }
+    },
+    {
+      "id": "step-2",
+      "name": "base-sync",
+      "skill": "base-sync",
+      "description": "检测并拉取飞书 Base 变更",
+      "condition": "always",
+      "timeout": 300,
+      "depends_on": [
+        "step-1"
+      ],
+      "output": {
+        "changed_tables": "workspace/knowledge/data/",
+        "sync_report": "state/sync_report_base.json"
+      }
+    },
+    {
+      "id": "step-3",
+      "name": "wiki-ingest",
+      "skill": "wiki-ingest",
+      "description": "将变更的 Wiki 文档通过 LLM 编译为知识底座",
+      "condition": "step-1.changed_files > 0",
+      "timeout": 600,
+      "depends_on": [
+        "step-1",
+        "step-2"
+      ],
+      "input": {
+        "source_files": "{{step-1.changed_files}}"
+      },
+      "output": {
+        "ingested_pages": "workspace/knowledge/wiki/",
+        "log": "workspace/knowledge/wiki/log.md"
+      }
+    },
+    {
+      "id": "step-4",
+      "name": "wiki-graph",
+      "skill": "wiki-graph",
+      "description": "基于最新 wiki 重建知识图谱",
+      "condition": "step-3.ingested_pages > 0",
+      "timeout": 300,
+      "depends_on": [
+        "step-3"
+      ],
+      "output": {
+        "graph_json": "workspace/knowledge/graph/graph.json",
+        "graph_html": "workspace/knowledge/graph/graph.html"
+      }
+    }
+  ],
+  "on_success": {
+    "action": "log",
+    "message": "同步完成：Wiki {{step-1.changed_files}} 个文件，Base {{step-2.changed_tables}} 个表格，Ingest {{step-3.ingested_pages}} 个页面"
+  },
+  "on_failure": {
+    "action": "notify",
+    "message": "同步失败：{{error.step}} - {{error.message}}"
+  }
+}
