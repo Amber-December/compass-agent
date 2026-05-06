@@ -1,201 +1,159 @@
-# Wiki 管理助手 (wiki-manager)
+# wiki-manager Agent 工作区
 
-负责飞书 Wiki 知识库的文档推送、读取、结构管理和本地 LLM-Wiki 知识底座构建。
+> 知识库管理 Agent — 负责飞书 Wiki 文档拉取、Base 数据同步、本地知识库维护
 
-## 职责
+## 目录结构
 
-- 📤 推送本地 Markdown 文档到飞书 Wiki
-- 📥 读取飞书 Wiki 文档到本地
-- 🏗️ 管理 Wiki 目录结构（创建/移动/删除节点）
-- 📚 **构建本地 LLM-Wiki 符号化知识底座**（核心能力）
-  - 知识编译：将飞书文档编译为结构化 Markdown
-  - 实体/概念提取：自动创建实体页和概念页
-  - 知识图谱：两-pass 建图（显式 wikilink + LLM 语义推断）
-  - 问答检索：关键词匹配 + 图邻居扩展，带飞书链接引用
+```
+agents/wiki-manager/
+├── README.md              # 本文件
+├── agent.json             # OpenClaw agent 配置
+├── config/
+│   └── sources.yaml       # Wiki 节点与 Base 表源映射配置
+├── prompts/
+│   ├── ingest.md          # 知识编译规范
+│   └── base-sync.md       # Base 数据同步规范
+├── skills/
+│   └── wiki-ingest/
+│       └── SKILL.md       # 知识编译 skill（完整 ingest 规范）
+├── tools/                 # 可执行脚本
+│   ├── wiki_ingest.py     # 知识编译（Markdown → 结构化 wiki）
+│   ├── wiki_sync.py       # 飞书 Wiki 文档拉取与同步
+│   ├── base_sync.py       # Base 单表同步
+│   ├── base_sync_all.py   # Base 批量同步
+│   ├── build_graph.py     # 知识图谱构建
+│   ├── wiki_query.py      # 图增强检索
+│   └── scheduler.py       # 统一调度器
+├── state/                 # 同步状态与日志
+│   ├── sync_state.json    # 各源 content_hash / revision
+│   └── scheduler.log      # 调度器运行日志
+└── raw_lark/              # 从飞书拉取的原始镜像（只读）
+    ├── workspace/knowledge/wiki/              # Wiki 文档（Markdown，含 frontmatter）
+    ├── base/              # Base API 原始响应（按项目分目录）
+    └── minutes/           # 妙记转录文本
+```
+
+**全局输出目录**（位于 workspace 根目录，供其他 Agent 只读消费）：
+- `workspace/knowledge/wiki/` — 最终知识底座（llm-wiki 标准结构）
+- `workspace/knowledge/graph/` — 知识图谱数据
+- `workspace/knowledge/data/` — Base 结构化数据出口
+
+---
+
+## 核心职责
+
+1. **Wiki 文档拉取** — 通过 lark-cli 从飞书 Wiki/云文档获取内容 → `raw_lark/wiki/`
+2. **Base 数据同步** — 通过 lark-cli 从飞书 Base 拉取多维表格 → `raw_lark/base/` + `workspace/knowledge/data/`
+3. **知识编译** — 运行 wiki_ingest.py 将 Markdown → 结构化知识 → `workspace/knowledge/wiki/`
+4. **索引维护** — 更新 `workspace/knowledge/wiki/index.md`，维护实体和概念图谱
+5. **增量同步** — 检测变更，只重新编译修改过的文档和数据
+
+---
+
+## 6 个 Skill
+
+| Skill | 职责 | 触发方式 |
+|-------|------|----------|
+| **lark-api** | 飞书 API 基础调用 | 全局可用 |
+| **wiki-read** | Wiki 文档读取 | 全局可用 |
+| **base-read** | Base 数据读取 | 全局可用 |
+| **wiki-sync** | 飞书 Wiki 增量同步 | 定时 / 手动触发 |
+| **base-sync** | 飞书 Base 增量同步 | 定时 / 手动触发 |
+| **wiki-ingest** | 知识编译（LLM 处理） | wiki-sync 后 / 手动触发 |
+
+### Skill 调用关系
+
+```
+定时触发 / 用户说"刷新知识库"
+    └── wiki-manager
+        ├── wiki-sync（检测 Wiki 变更）
+        │   └── 拉取新增/修改文档 → raw_lark/wiki/
+        ├── base-sync（检测 Base 变更）
+        │   └── 拉取新增/修改数据 → workspace/knowledge/data/
+        └── wiki-ingest（知识编译）
+            └── LLM 处理 → workspace/knowledge/wiki/ + entities/ + concepts/
+```
+
+---
 
 ## 触发方式
 
-- 人工指令："把 docs/MCN lark/ 下的文档推到 Wiki"
-- 定时任务：每周同步 Wiki 更新到本地
-- 被动触发：qa-bot 检索知识底座时自动使用
+- **用户说** "刷新知识库" / "ingest 文档" / "编译知识" / "同步 Wiki" / "知识库更新" / "/wiki-sync"
+- **定时心跳**：
+  - 每周一 8:30 全量同步（与 weekly-reporter 9:00 对齐）
+  - 每 6 小时增量检查
 
-## 输入输出
+---
 
-| 输入 | 输出 |
-|------|------|
-| 本地 Markdown 文件 | 飞书 Wiki 文档 |
-| Wiki 节点 token | 本地 Markdown 文件 |
-| 目录结构调整指令 | 更新后的 Wiki 结构 |
-| 飞书原始文档 | 结构化 wiki/sources/ + entities/ + concepts/ |
+## 工作流
 
-## 配置
-
-### 环境变量
-
-在 `.env` 中配置：
-
-```bash
-# Wiki 空间配置
-WIKI_SPACE_ID=                # MCN 知识库空间 ID
-WIKI_MCN_NODE_TOKEN=          # MCN 根节点 token
-
-# LLM 配置（用于知识编译和图谱构建）
-MOONSHOT_API_KEY=             # Moonshot API Key
-LLM_BASE_URL=https://api.kimi.com/coding/
-LLM_MODEL=kimi-k2-6
-```
-
-### 本地知识库结构（wiki/）
+### Wiki 文档线（知识）
 
 ```
-wiki/
-├── index.md              # 知识库索引（自动维护）
-├── overview.md           # 全局综合页（自动维护）
-├── log.md                # 操作日志（追加模式）
-├── sources/              # 来源页（每份飞书文档对应一页）
-│   └── <slug>.md         # 结构化摘要，含 frontmatter（lark_url 等）
-├── entities/             # 实体页（人、项目、品牌）
-│   └── <EntityName>.md   # 实体定义和关系
-├── concepts/             # 概念页（SOP、方法论、规范）
-│   └── <ConceptName>.md  # 概念定义和引用
-└── syntheses/            # 综合页（qa-bot 问答沉淀）
-    └── <slug>.md         # 问答综合结果
+飞书 Wiki 节点列表（按配置的 scope 过滤）
+    │
+    ▼
+wiki_sync.py → lark-cli docs +fetch → agents/wiki-manager/raw_lark/wiki/<node_id>.md
+    │
+    ▼
+content-hash / 修改时间 对比 sync_state.json
+    │
+    ├─ 无变化 → 跳过
+    └─ 有变化 → 进入 ingest
+              │
+              ▼
+        wiki-ingest skill（LLM 按 ingest.md 规范处理）
+              │
+              ▼
+        输出到 workspace/knowledge/wiki/{scope}/sources/<slug>.md
+              │
+              ▼
+        更新 workspace/knowledge/wiki/index.md、workspace/knowledge/wiki/log.md
+              │
+              ▼
+        build_graph.py（增量或全量重建 graph.json）
 ```
 
-### 图谱输出（graph/）
+### Base 数据线（结构化）
 
 ```
-graph/
-├── graph.json            # 节点和边数据（供 wiki_query.py 检索）
-├── graph.html            # 交互式可视化（vis.js）
-├── graph-report.md       # 图谱健康报告（可选）
-├── .cache.json           # SHA256 增量缓存
-└── .inferred_edges.jsonl # 语义推断检查点（断点续传）
+飞书 Base 表列表（按 schema/*.yaml 注册）
+    │
+    ▼
+base_sync.py → lark-cli base +record-list → agents/wiki-manager/raw_lark/base/<project>/<table>.json
+    │
+    ▼
+规范化处理（展平嵌套字段、统一日期格式、空值处理）
+    │
+    ▼
+输出为 workspace/knowledge/data/<project>/<table>.json
+    │
+    │   结构：数组对象 [{field: value, ...}, ...]
+    │   元数据：同级 <table>_meta.json（table_token, synced_at, record_count, content_hash）
+    ▼
+更新 sync_state.json（记录每张表的 hash、时间、状态）
+    │
+    ▼
+供 weekly-reporter（聚合分析）和 qa-bot（实时查询）读取
 ```
 
-## 核心工具
+**Base 数据不进入 workspace/knowledge/wiki/ 目录**，与知识文档物理隔离。
 
-### 1. 知识编译：wiki_ingest.py
+---
 
-将飞书文档（Markdown 格式）编译为结构化知识底座。
+## 与 qa-bot 的关系
 
-```bash
-# 单文件 ingest
-python tools/wiki_ingest.py workspace/raw_lark/wiki/垂类达人孵化/项目\ OnePage.md
+- **qa-bot 只读**：查询时读取 `workspace/knowledge/wiki/` 和 `workspace/knowledge/data/` 下的结果
+- **wiki-manager 只写**：所有飞书交互、知识编译和数据同步由 wiki-manager 负责
+- **解耦**：qa-bot 不依赖 lark-cli，wiki-manager 不处理对话逻辑
 
-# 批量 ingest 目录
-python tools/wiki_ingest.py --batch workspace/raw_lark/wiki/
+---
 
-# 仅验证（检查断链和未索引页面）
-python tools/wiki_ingest.py --validate-only
-```
+## OpenClaw 集成
 
-**输出**：
-- `wiki/sources/<slug>.md` — 结构化来源页（含 lark_url frontmatter）
-- `wiki/entities/<Name>.md` — 实体页（自动提取）
-- `wiki/concepts/<Name>.md` — 概念页（自动提取）
-- 自动更新 `wiki/index.md` 和 `wiki/overview.md`
+- `agent.json` 定义了 wiki-manager 的 triggers、skills、systemPrompt
+- OpenClaw agent 运行时从本目录读取配置，执行知识同步任务
+- `prompts/ingest.md` 与 `tools/wiki_ingest.py` 共享同一套 Wiki ingest 规范
+- `prompts/base-sync.md` 与 `tools/base_sync.py` 共享同一套 Base 同步规范
 
-### 2. 知识检索：wiki_query.py
-
-基于符号化知识底座回答用户问题，支持图邻居扩展。
-
-```bash
-# 命令行查询
-python tools/wiki_query.py "垂类达人孵化的粉丝增长率为什么下滑？"
-python tools/wiki_query.py "达人筛选标准有哪些硬性指标？" --save
-
-# API 调用
-python -c "from tools.wiki_query import query_wiki; print(query_wiki('问题', project_scope='垂类达人孵化'))"
-```
-
-**检索策略**：
-1. 关键词匹配 `wiki/index.md`（CJK 双字滑动窗口）
-2. 图邻居扩展 `graph/graph.json`（置信度 ≥ 0.7 的 INFERRED 边）
-3. 总是包含 `wiki/overview.md`
-4. LLM 综合答案，要求标注 `[[PageName]]` 来源引用
-
-### 3. 图谱构建：build_graph.py
-
-两-pass 构建知识图谱，支持增量更新和交互式可视化。
-
-```bash
-# 完整重建（含语义推断）
-python tools/build_graph.py
-
-# 跳过语义推断（更快，仅提取显式 wikilink）
-python tools/build_graph.py --no-infer
-
-# 构建后打开浏览器查看
-python tools/build_graph.py --open
-
-# 生成健康报告
-python tools/build_graph.py --report --save
-
-# 强制全量重新推断（清除缓存）
-python tools/build_graph.py --clean
-```
-
-**图谱特性**：
-- **Pass 1**：提取 `[[Wikilink]]` 作为 EXTRACTED 边（置信度 1.0）
-- **Pass 2**：LLM 推断隐式语义关系作为 INFERRED（≥ 0.7）/ AMBIGUOUS（< 0.7）边
-- **Louvain 社区检测**：自动聚类相关主题，用不同颜色标识
-- **增量更新**：SHA256 缓存，仅处理变更页面
-- **断点续传**：`.inferred_edges.jsonl` 检查点，避免重复调用 LLM
-
-## 使用方法
-
-### 推送本地文档到飞书 Wiki
-
-```bash
-cd /Users/amber/lark-knowledge-agent
-python scripts/wiki_push.py \
-  --space <space_id> \
-  --parent <parent_node_token> \
-  --dir "docs/MCN lark"
-```
-
-### 读取飞书 Wiki 到本地
-
-```bash
-# 获取节点信息
-lark-cli wiki spaces get_node --params '{"token":"<wiki_token>"}'
-
-# 读取文档内容
-lark-cli docs +fetch --doc <obj_token> > workspace/raw_lark/<filename>.md
-```
-
-### 管理 Wiki 结构
-
-```bash
-# 创建节点
-lark-cli wiki +node-create --space <space_id> --parent <parent> --type docx --title "节点标题"
-
-# 移动节点
-lark-cli wiki +move --node <node_token> --to_space <space_id> --to_parent <parent>
-
-# 列出子节点
-lark-cli wiki nodes list --params '{"space_id":"<space_id>"}'
-```
-
-## 当前状态
-
-- [x] 本地 MCN 文档已准备（5 份）
-- [x] 推送脚本已创建
-- [x] 操作指南已创建
-- [x] 知识库结构已定义
-- [x] **符号化知识编译工具（wiki_ingest.py）已就绪**
-- [x] **图增强检索工具（wiki_query.py）已就绪**
-- [x] **知识图谱构建工具（build_graph.py）已就绪**
-- [x] **wiki/ 目录结构已初始化（index.md / overview.md / log.md）**
-- [ ] 待获取目标 Wiki 空间权限
-- [ ] 待执行首次推送
-
-## 依赖
-
-- `shared/skills/lark-api`
-- `shared/skills/prompt-template`
-- `shared/skills/wiki-push`
-- `shared/skills/wiki-read`
-- `shared/skills/wiki-structure`
-- Python 依赖：`openai`, `pyyaml`, `networkx`（可选，用于社区检测）
+---

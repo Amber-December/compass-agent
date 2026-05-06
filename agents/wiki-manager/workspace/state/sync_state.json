@@ -1,0 +1,1368 @@
+{
+  "last_full_sync_at": "2026-05-06T19:41:31.120745",
+  "last_incremental_check_at": null,
+  "pending_changes": 0,
+  "is_syncing": false,
+  "sync_version": 1,
+  "sources": {
+    "wiki": {
+      "count": 139,
+      "items": [
+        {
+          "lark_node_id": "U3JdwSDV8iKhZYkjtXBcPY8wnth",
+          "content_hash": "",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:39:38.933548",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "JD7hw3BbfiTdhNkPD3pcdCwpn6b",
+          "content_hash": "",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:39:38.934449",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "YWoYwX7HliA8Dpkjf5scmjXPnYe",
+          "content_hash": "",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:39:38.935137",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "TcF6wfQXWix9GckEdSDcrA44nyg",
+          "content_hash": "01ba4719c80b6fe9",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:39:40.189361",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "Rnv6wGql7iM0vnklL2Ic5mSunjh",
+          "content_hash": "de51395c2b044ca8",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:39:41.339969",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "N1K9whjj5iD0JSkOEl3ccLJ4n6b",
+          "content_hash": "27cab32cdc6e24de",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:39:42.388523",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "Wv42wkfV7iFDVJkTGRzco7SZnEe",
+          "content_hash": "372459bca8965852",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:39:43.699463",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "BdDIwik6piTpfAkoQEBc9FScnGf",
+          "content_hash": "bbddefc8059fa7a1",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:39:44.673319",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "C4LEwt34oiNmlAk88pVcgDLenOd",
+          "content_hash": "e35db75ab1413ef9",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:39:46.097220",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "DCvXwPd74iassEkrdyRcWhiYnQf",
+          "content_hash": "d2388d63738072a2",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:39:46.986455",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "YPrswpD8Xip3SPkRFOFcWrgWn4g",
+          "content_hash": "6f8feab8c355c87b",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:39:47.861082",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "K5hYw8eMniMfrckVG5zcCSn9nbg",
+          "content_hash": "2a6735ca18c12fda",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:39:48.779555",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "SW0bwJZvii4ub5kaJ63cBbwanth",
+          "content_hash": "2c43f3fe463dbda2",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:39:49.723052",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "YPiJwyCfni3m39kX9tHcw7pKnOb",
+          "content_hash": "1fdcc451c98f8436",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:39:50.711495",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "FSs4wR8y9iefVwkWZarcfmqWnRh",
+          "content_hash": "01ba4719c80b6fe9",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:39:51.462863",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "SxZ5wcZLziAXz5kPCfjcuaQjnMg",
+          "content_hash": "cd31032fdb69c5e1",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:39:52.359504",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "BRMww0ch6izSt6kk9sFcf3o3nkr",
+          "content_hash": "b4453f68be1c5be1",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:39:53.127092",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "IKSuwzqH5i9Jj2k9pAjcO9h3nlc",
+          "content_hash": "01ba4719c80b6fe9",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:39:53.892729",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "DGFkwJSutitA6pkpJlkckJdsnzc",
+          "content_hash": "b8cff011d5b97184",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:39:54.773385",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "WAkEwAlQui5yhekV7CVcHmBinUf",
+          "content_hash": "7e2626a28432f3c5",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:39:55.633656",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "XLJvw6w0hi8Sn4kfrzWcZMrOnFb",
+          "content_hash": "01ba4719c80b6fe9",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:39:56.363961",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "RS7ewr1nOimS0akPNWwcpoOenXx",
+          "content_hash": "c10a3d79edb65af6",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:39:57.289171",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "XMYKwL5nJiMQGQkSFYOc5bOnnwe",
+          "content_hash": "",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:39:57.290610",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "WMXewXyeYi62dTk3p5xct3yZnde",
+          "content_hash": "",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:39:57.291734",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "W6Xsw5WmvilhJSkGKj0cLluvnue",
+          "content_hash": "01ba4719c80b6fe9",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:39:58.218753",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "GKdxwCv6AiWp5AkQT1Xc6kuHnkc",
+          "content_hash": "e0113986d768ed29",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:39:59.209444",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "Dl3hw4y0riRXpBkzMLZcK0iDntf",
+          "content_hash": "01ba4719c80b6fe9",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:39:59.969954",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "TcrpwKXCVivyd1kpvPvc4ZGtnrg",
+          "content_hash": "cd3aa5768f3e285d",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:40:00.745495",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "QfgzwVdDGiQiF3kR2Dwc8DJBnHh",
+          "content_hash": "2d6eb33adae632b6",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:40:01.472935",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "CRdkwlX9yitVuPkBv2vcOeTinoh",
+          "content_hash": "353420f4ab5d9bf6",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:40:02.235576",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "Q1TWw965piQLlhkMtXEc8r9Lnzh",
+          "content_hash": "9e24b9fb626df497",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:40:03.260828",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "K3pRwE7wFiRjRQkgwGNcdEEdn6f",
+          "content_hash": "d2a0d1f76b6ccd06",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:40:04.099093",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "HPRIwReWJiZen5kLSggcApjynJe",
+          "content_hash": "8587e209c72e8c67",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:40:05.166176",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "UkpWwKyPDikLmtkSLr0cU1Sgnkd",
+          "content_hash": "42566c86a3df8870",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:40:06.153591",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "S0TxwPnvSiTmoikpmXtcrpuyncf",
+          "content_hash": "46a2ff27993e16c3",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:40:07.048913",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "KsgWwe5UgiZR55ktXezcdp33nJd",
+          "content_hash": "5fe6373339f0d265",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:40:07.773502",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "BRGQw23y6ioohjkxhiLcmwlAnYd",
+          "content_hash": "01ba4719c80b6fe9",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:40:08.485328",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "PP01wEnnkipWi7kiyHQc5nzznDg",
+          "content_hash": "c113b76c23a35bc1",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:40:09.224912",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "RTVSw7Ecsicpupk1i1LcNi28nue",
+          "content_hash": "01ba4719c80b6fe9",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:40:09.951802",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "U5wrwXfkQirSagkSQ7ccwIdAn9c",
+          "content_hash": "5b5743ec4749487a",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:40:10.998991",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "NDA6wgFOLiAlEqkHKTocWhKonNh",
+          "content_hash": "c05764d48b4573c3",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:40:11.738710",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "Bucaw13h4i4ihYkDzxncZBAWnIg",
+          "content_hash": "099697d53881b078",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:40:12.529324",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "X0T8w49aPiVcRqkJYHRcP0jinfg",
+          "content_hash": "96e607dd28be1a19",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:40:13.248374",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "Dv7nwhPuYi9iBfk1JIoceO1wnmh",
+          "content_hash": "47795356e0aa0519",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:40:14.121603",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "GW51wyQ3KiaenKkSQdMcZVOtnRz",
+          "content_hash": "a9da55c30e736465",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:40:14.920684",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "MRJQwaJdJite4MkfRjOc67yCnUc",
+          "content_hash": "b87b3e3f9e1f2fdc",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:40:15.798501",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "GrVFwvmXXisNEzk98MWcl7drn6e",
+          "content_hash": "b40a7a666725f19c",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:40:16.884304",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "C1QBwKN6gifMIBk0T1ycH0a2nxg",
+          "content_hash": "f1d13701a7d0465b",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:40:17.630086",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "L9Qnw1lsOiQ9JBk1MsecQGPlncc",
+          "content_hash": "01ba4719c80b6fe9",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:40:18.363128",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "Y4ynwhFXIiLPPtkzaLYcmtLRnQb",
+          "content_hash": "eb58338468752ca5",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:40:19.181106",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "YZd9wxrS9ioIX5kogaPcpdJQncg",
+          "content_hash": "889898ebb141e401",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:40:20.136862",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "Fn1vwvqYDisBnvkfsYBc5duenLd",
+          "content_hash": "67cc3049faedcc81",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:40:21.081272",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "GdYaw7uPCiVf4Tky05wceBEBnHf",
+          "content_hash": "f5013e12e127581e",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:40:22.075792",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "ECL2wmBxOi0GgtkDB9mc4Q0wnMh",
+          "content_hash": "ce4f59de79f84888",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:40:22.991135",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "OAaGwmXmjiFwHYknkrLcKhYhnjf",
+          "content_hash": "4bbe8640abe71ca2",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:40:23.726753",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "PURBwkpUuiHoVEkhGRocjgPNnZf",
+          "content_hash": "49fab48b671d1877",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:40:24.437209",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "HpDOwBpZMi9fdokqmOwcJsrcnHc",
+          "content_hash": "1b66262ef38e80e0",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:40:25.187322",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "XJXtwTVVei4Ux3kUPwscoS7nnfb",
+          "content_hash": "a62e14f06a6de8e0",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:40:25.972034",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "Xn48wugFViovxKkquH9c1radnRb",
+          "content_hash": "bd49f47a75577a8a",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:40:26.794290",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "HY99wQm2AiRUXakq7PdcLYjUnAh",
+          "content_hash": "55bcbb66fd9406b3",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:40:27.477981",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "BPcqwG5vCi24cYkwpovc88QCn5c",
+          "content_hash": "f4e2609f3e8ac256",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:40:28.229287",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "Vw8XwPy7qiJItlkvJMIcmPAvndb",
+          "content_hash": "b0515aeaf6b2e272",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:40:28.973112",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "FuGgwp7ZDigrGAkQQuicY4MTnue",
+          "content_hash": "6ab13905ab5586bb",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:40:29.890821",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "QQKRw9EwOiCoyikyldYcCuITnTg",
+          "content_hash": "34d6d1de1e2cb4f7",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:40:30.735057",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "ImxlwhlKTiauoAkpTNEcWU31nbe",
+          "content_hash": "be4c1621b916919d",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:40:31.556308",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "LOhYwTGHYitpmKkAczJcKoHPn6g",
+          "content_hash": "4403768c6ebf4a1b",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:40:32.427644",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "VfJawJl2yiejzdkR8LOc0yFgnSf",
+          "content_hash": "839769c899f55844",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:40:33.436364",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "CkfZweQ0OiC99ykWCOdcaNDkn2e",
+          "content_hash": "3f17e0742a5c19e6",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:40:34.295962",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "Hb2xwhMP4i2EBlkez2Qc6tGxnEc",
+          "content_hash": "04fbc1d0d2515fbb",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:40:35.146552",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "DEllwzWIvincjekNRn0c7uFznjf",
+          "content_hash": "6424855ff2b8886f",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:40:36.039945",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "QX59wwSKiiNb7ZkVcMPccwPrnCh",
+          "content_hash": "0d6e27b9fed588f7",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:40:36.942437",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "Qbt7wXOUXiAFAGkw21fc3LUbnWe",
+          "content_hash": "c8e4d8fdf55dcc08",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:40:37.792776",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "Vg7QwAHFFiFIXjkXkVscleA3nkd",
+          "content_hash": "6200df85398672df",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:40:38.574753",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "IUHiwUwutilxTSkJRK1cV19Ynvy",
+          "content_hash": "b8cc268d867fae0d",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:40:39.336525",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "NfTFwrTx8igmnakvlqCcf7KOnWb",
+          "content_hash": "33ef543cca9bd40b",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:40:40.191674",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "BGXlw498QiWtHPkH15wcpxm9nTf",
+          "content_hash": "f70b97f54f1ca7c1",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:40:40.996488",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "HUSawAFpCiczsokCPe4cbXChnzh",
+          "content_hash": "01ba4719c80b6fe9",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:40:41.765683",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "H1NbwsvEVi3WDhkYQZlcOFSRnSe",
+          "content_hash": "6640c187439bbc89",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:40:42.523311",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "NrCTwf4N9ihhLtktilncuLfgnOe",
+          "content_hash": "1d3d1c8cc7a14173",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:40:43.263028",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "C6olwKVxJi0E2WksKbQcfK1tnpc",
+          "content_hash": "106b808b675d8611",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:40:44.045104",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "BEduwDdvFiRPVIksgvQcYbNynmh",
+          "content_hash": "459a169ba98e7b96",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:40:44.839662",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "DvHew3o0ZiRx7BkjxFDcd6Qgnof",
+          "content_hash": "5103d4fa91b888dc",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:40:45.661181",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "Q6VjwPyl7inYjykEICVck5munXg",
+          "content_hash": "f965f16de5b49313",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:40:46.714937",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "Yjd0wHogniGWlIkhPpgcUJo5nJe",
+          "content_hash": "f6e1471b1886a833",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:40:47.482977",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "R7jPwHvXhiYYl7k5Vtlc8hR6nOe",
+          "content_hash": "9839c59a2fdb6351",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:40:48.251336",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "Z78TwE7qAigeUbkNREjcQXrjnYb",
+          "content_hash": "07be29a85d6a4e29",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:40:49.149923",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "ZZgZwpurmiaIWbkF2YOcppBsnec",
+          "content_hash": "3b394c452f12b326",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:40:50.176855",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "MALqwjsFSiDHP6kA4v3c7MKGnfd",
+          "content_hash": "01ba4719c80b6fe9",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:40:50.891253",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "XhHZwDIHSiZlANkjKwocIKzLn8g",
+          "content_hash": "a5b08e7311b65727",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:40:51.620159",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "BdvvwOwLOiA5WbkrF3Pci8Qyn07",
+          "content_hash": "01ba4719c80b6fe9",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:40:52.315388",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "NxiFwQG0miS7ZEk9gducEzoEnuE",
+          "content_hash": "a71825378ce9ca5e",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:40:53.222346",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "Uy5Iw9bnOiuxaukdjyAccuZJngg",
+          "content_hash": "93f5e5c4d36fb844",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:40:53.987782",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "IPkjw0WcyivKR0kJIqscMM7nnFe",
+          "content_hash": "4f15cd619b760a8c",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:40:54.726303",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "PHrEwxFh5i0l5Ik2tp2cmb4PnBf",
+          "content_hash": "77616859fc09ac88",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:40:55.488371",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "J0fdwCSAuilsApkGE6XcUxHenBg",
+          "content_hash": "a427ce870518e7b3",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:40:56.453570",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "BBplwBst8iAu9lkfsOjc6AyMnDd",
+          "content_hash": "4204a66a35d2a262",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:40:57.201538",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "MYNxwMYzjiMUavkrszOclVuannd",
+          "content_hash": "79737534a65e307a",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:40:57.886968",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "GJhew4DfkiuUsmkU89dcnE6hnqh",
+          "content_hash": "19f8397296a7df51",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:40:58.805120",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "AE2EwMBpViUtmak4DN3c4akln3J",
+          "content_hash": "c0474a5b39058fcc",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:40:59.484539",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "JUaKw3IHdiA1F9kC94fcBzXVnTe",
+          "content_hash": "01ba4719c80b6fe9",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:41:00.159499",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "Ln7Swheirio9VkkVb0Wc8IVEnRg",
+          "content_hash": "5a7609e9f7b855a4",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:41:00.910024",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "MO16wjgeBi7BuvkRvzXctcxhn2y",
+          "content_hash": "01ba4719c80b6fe9",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:41:01.684463",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "U4rXw58rcixmLWkgQUZc0fwTn9c",
+          "content_hash": "e6c9c04012426875",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:41:02.394591",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "OxLUweov1iPzYtkq3v8ciPTunRc",
+          "content_hash": "6e9ac77b83adb187",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:41:03.169882",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "QmJKwoOe8ih1dmkblVxcpXFMnOe",
+          "content_hash": "96f268a0c4664a1b",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:41:03.888307",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "WQGrwXb1Sip9BskMKZ5cVBNjn7b",
+          "content_hash": "2d12f281fe74ab44",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:41:04.668019",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "MdEIwpL1Jil4wXk1qRNcGgIOn4b",
+          "content_hash": "df67bcb8b07b0986",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:41:05.391876",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "Dae5w5n1WieC2CkLXOrcTcbFnMc",
+          "content_hash": "601b3ca6b2c248e9",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:41:06.170786",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "CQRzwrlvuifpsYkqZEzcdjMOnke",
+          "content_hash": "59413ccfe6d3c1a4",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:41:06.969099",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "ELhYwvi2ZiAnSEk8WmbcDsxNnRf",
+          "content_hash": "01ba4719c80b6fe9",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:41:07.670177",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "OpPbwwVVLi96ujkBbfockY6hnjb",
+          "content_hash": "d63e57dd9f5a7c0e",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:41:08.447724",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "GKIkwkqbliahMakaNCzcTSB5nNf",
+          "content_hash": "01ba4719c80b6fe9",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:41:09.309974",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "GknTwIFBKiOVRWkHFAUcT0oVn3g",
+          "content_hash": "aefa3c6b971625e9",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:41:10.165123",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "FOhgwHtcai6VodkbX9DcrAFJnKg",
+          "content_hash": "3c3beb5201169c91",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:41:11.212262",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "UuEEwFVdfinfUAknRvDc8o2Inlc",
+          "content_hash": "3a475073dc39a5a3",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:41:11.950577",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "VcZtwsj4eiqDgik7kRIcPdUqnbf",
+          "content_hash": "6943f6ae66fbfdf3",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:41:12.874640",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "AQFrw5yJCiOWSFkKTiSc48JonRE",
+          "content_hash": "c13ee02a8c242487",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:41:13.835241",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "AxxcwODTiiFe3hkaBqVcJXuWn1d",
+          "content_hash": "2ccfbc0c6e5d949d",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:41:14.683599",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "L14pw7KABiDUBckE53scjz6LntI",
+          "content_hash": "45b778d28f05eaa1",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:41:15.546485",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "DVkuwCymHi5tWekjC9DcrCNmnwn",
+          "content_hash": "a05decf26c247efe",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:41:16.314268",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "MdVXwbCYsiKNDkk3PWPcuEzHn8K",
+          "content_hash": "01ba4719c80b6fe9",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:41:17.108963",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "H2HkwA0EaiBvGnkfsCucB8J2noh",
+          "content_hash": "34a14e1213780477",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:41:17.895502",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "Ho2kwdIidiv5eqkoW48ccSkCnPd",
+          "content_hash": "01ba4719c80b6fe9",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:41:18.628532",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "VO8Ywg6DriPChYk8MgqcWSt8nJg",
+          "content_hash": "ae1822dcc9f3a49f",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:41:19.346676",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "Mlifw0VKyipoV1kUPbicgUz8nuf",
+          "content_hash": "b4cd6273e1e37b9b",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:41:20.127547",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "P7lVwv4MWiMKP1kOq3xcsJy7nmf",
+          "content_hash": "b03620367b8d1950",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:41:20.907310",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "Nk0zwwiLXi3nwvkuvm0cR5xDnEh",
+          "content_hash": "a9dd46538668d4df",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:41:21.659023",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "EHKxwe4GCi2YT1klD4ucWCONnye",
+          "content_hash": "508812df367c1cd5",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:41:22.393954",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "OB57wSPwUiy2nhkz1QScCKwanNe",
+          "content_hash": "01ba4719c80b6fe9",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:41:23.111689",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "OKRQwU9n8ibypckRzuLcAwVdnXg",
+          "content_hash": "dc1f957d56c669f4",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:41:23.979825",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "HzXVwGUwkiV3RGk45bJcayYgnJb",
+          "content_hash": "01ba4719c80b6fe9",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:41:24.882721",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "ShIWwLL87iNt9KkvLLaczKI6n4b",
+          "content_hash": "ae4888a066ef5ac5",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:41:25.622490",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "PcXAwMlMPicrQBk5pEyciMyonHb",
+          "content_hash": "d99a36258b7f8017",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:41:26.329084",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "PhVawJauRi0mCnk9Juccm4nPn0f",
+          "content_hash": "d8cf3c82506d4a98",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:41:27.232913",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "C3MXwBhtUipAKikj3COcgbqlnXe",
+          "content_hash": "eac6f970fc396218",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:41:28.028676",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "VWqAw5xK9ipnHCk62vWccmBqnU1",
+          "content_hash": "d7bcfc899a778626",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:41:28.765881",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "Lt5dwLbOCiOHLnkYynWcARE8nqc",
+          "content_hash": "45de2fcddff5fb61",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:41:29.523064",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "EziWw1u2IiriMskfbeeceAThnge",
+          "content_hash": "4e024e1ce3b76dbe",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:41:30.277694",
+          "status": "active"
+        },
+        {
+          "lark_node_id": "SSYuwgwQkivR9gkApWmcINybnGg",
+          "content_hash": "fcb7de50c44e43d4",
+          "revision": 1,
+          "last_synced_at": "2026-05-06T19:41:31.120467",
+          "status": "active"
+        }
+      ]
+    },
+    "base": {
+      "count": 37,
+      "items": [
+        {
+          "table_token": "tblbbwkCKI5pHy4C",
+          "table_name": "project_list",
+          "project": "mcn",
+          "record_count": 6,
+          "content_hash": "a0b8e7c30c02d0da",
+          "last_synced_at": "2026-05-05T16:38:38.951872",
+          "status": "active"
+        },
+        {
+          "table_token": "tbl9OF7TP0ecPHRG",
+          "table_name": "project_weekly_kpi",
+          "project": "mcn",
+          "record_count": 46,
+          "content_hash": "b7bb71978e4a0f90",
+          "last_synced_at": "2026-05-05T16:38:40.293959",
+          "status": "active"
+        },
+        {
+          "table_token": "tbli4vUzTszy0gp1",
+          "table_name": "department_health",
+          "project": "mcn",
+          "record_count": 9,
+          "content_hash": "b0cb46470b42c57e",
+          "last_synced_at": "2026-05-05T16:38:41.696794",
+          "status": "active"
+        },
+        {
+          "table_token": "tblLhY6gJgm4AFtT",
+          "table_name": "kol_profile",
+          "project": "kol-incubation",
+          "record_count": 6,
+          "content_hash": "043b87d9f8756b0b",
+          "last_synced_at": "2026-05-05T16:38:43.197505",
+          "status": "active"
+        },
+        {
+          "table_token": "tblwa0o5rL1rOk9m",
+          "table_name": "kol_weekly_snapshot",
+          "project": "kol-incubation",
+          "record_count": 37,
+          "content_hash": "0c5c98c8c089a9c6",
+          "last_synced_at": "2026-05-05T16:38:44.657614",
+          "status": "active"
+        },
+        {
+          "table_token": "tblaL4F3Hp4pnOJK",
+          "table_name": "brand_cooperation",
+          "project": "kol-incubation",
+          "record_count": 3,
+          "content_hash": "0c079dc19fd4fee4",
+          "last_synced_at": "2026-05-05T16:38:46.114402",
+          "status": "active"
+        },
+        {
+          "table_token": "tblE3JvWpkZgEBoL",
+          "table_name": "content_production",
+          "project": "kol-incubation",
+          "record_count": 69,
+          "content_hash": "6a93fa48dff6b3a8",
+          "last_synced_at": "2026-05-05T16:38:47.548525",
+          "status": "active"
+        },
+        {
+          "table_token": "tblKajrMfSWEWXvZ",
+          "table_name": "team_profile",
+          "project": "kol-incubation",
+          "record_count": 4,
+          "content_hash": "fce8fc277f1cd37b",
+          "last_synced_at": "2026-05-05T16:38:48.984119",
+          "status": "active"
+        },
+        {
+          "table_token": "tbl83PBLxIbUir1x",
+          "table_name": "project_kpi",
+          "project": "kol-incubation",
+          "record_count": 9,
+          "content_hash": "0c5c96686edecb7d",
+          "last_synced_at": "2026-05-05T16:38:50.493040",
+          "status": "active"
+        },
+        {
+          "table_token": "tblwIcIfwjQLaiNc",
+          "table_name": "client_profile",
+          "project": "brand-ops",
+          "record_count": 7,
+          "content_hash": "046192c26461365e",
+          "last_synced_at": "2026-05-05T16:38:52.151174",
+          "status": "active"
+        },
+        {
+          "table_token": "tbl1A5YesPpwXFXx",
+          "table_name": "client_weekly_snapshot",
+          "project": "brand-ops",
+          "record_count": 29,
+          "content_hash": "b312bf72a4125556",
+          "last_synced_at": "2026-05-05T16:38:53.616933",
+          "status": "active"
+        },
+        {
+          "table_token": "tbl2Ku7rK0ph0mRT",
+          "table_name": "service_record",
+          "project": "brand-ops",
+          "record_count": 90,
+          "content_hash": "84e2e66cc9adf3b4",
+          "last_synced_at": "2026-05-05T16:38:55.221949",
+          "status": "active"
+        },
+        {
+          "table_token": "tblcSYQHl8BBDjEF",
+          "table_name": "team_profile",
+          "project": "brand-ops",
+          "record_count": 4,
+          "content_hash": "862f469744289fb1",
+          "last_synced_at": "2026-05-05T16:38:56.751949",
+          "status": "active"
+        },
+        {
+          "table_token": "tbl3jDP61lu1vZXY",
+          "table_name": "project_kpi",
+          "project": "brand-ops",
+          "record_count": 7,
+          "content_hash": "e74b706145e7c206",
+          "last_synced_at": "2026-05-05T16:38:58.301614",
+          "status": "active"
+        },
+        {
+          "table_token": "tblO4nPhrGmQyIxB",
+          "table_name": "anchor_profile",
+          "project": "live-commerce",
+          "record_count": 4,
+          "content_hash": "ec07b2d87e311918",
+          "last_synced_at": "2026-05-05T16:38:59.891957",
+          "status": "active"
+        },
+        {
+          "table_token": "tblL1I1WH3tAEGAF",
+          "table_name": "anchor_weekly_snapshot",
+          "project": "live-commerce",
+          "record_count": 32,
+          "content_hash": "261c2e9f2ad28efd",
+          "last_synced_at": "2026-05-05T16:39:01.366724",
+          "status": "active"
+        },
+        {
+          "table_token": "tblkoG7mX1m1UFkY",
+          "table_name": "live_session",
+          "project": "live-commerce",
+          "record_count": 21,
+          "content_hash": "deac49d40454842d",
+          "last_synced_at": "2026-05-05T16:39:02.903550",
+          "status": "active"
+        },
+        {
+          "table_token": "tblIDKGdBt5nO50g",
+          "table_name": "product_selection",
+          "project": "live-commerce",
+          "record_count": 12,
+          "content_hash": "9f536b647c92b847",
+          "last_synced_at": "2026-05-05T16:39:04.436081",
+          "status": "active"
+        },
+        {
+          "table_token": "tblHw2rtoGApg8QK",
+          "table_name": "team_profile",
+          "project": "live-commerce",
+          "record_count": 3,
+          "content_hash": "7beff481cf04e7d8",
+          "last_synced_at": "2026-05-05T16:39:05.984701",
+          "status": "active"
+        },
+        {
+          "table_token": "tbllcWWX1QMiXOH2",
+          "table_name": "project_kpi",
+          "project": "live-commerce",
+          "record_count": 8,
+          "content_hash": "b061ec52994401ec",
+          "last_synced_at": "2026-05-05T16:39:07.461374",
+          "status": "active"
+        },
+        {
+          "table_token": "tbl2W9lYDuXxiqjp",
+          "table_name": "account_profile",
+          "project": "short-video",
+          "record_count": 6,
+          "content_hash": "d40c2b5710e46289",
+          "last_synced_at": "2026-05-05T16:39:09.047075",
+          "status": "active"
+        },
+        {
+          "table_token": "tblxQzlMwvdM1WP3",
+          "table_name": "account_weekly_snapshot",
+          "project": "short-video",
+          "record_count": 46,
+          "content_hash": "4235310542a84e7a",
+          "last_synced_at": "2026-05-05T16:39:10.394005",
+          "status": "active"
+        },
+        {
+          "table_token": "tblQphP0IoJEZuGi",
+          "table_name": "content_production",
+          "project": "short-video",
+          "record_count": 200,
+          "content_hash": "0d197b6e0dea0f8d",
+          "last_synced_at": "2026-05-05T16:39:12.131541",
+          "status": "active"
+        },
+        {
+          "table_token": "tblIv9gutvqSCF3t",
+          "table_name": "team_profile",
+          "project": "short-video",
+          "record_count": 7,
+          "content_hash": "16b6d6b708402b3c",
+          "last_synced_at": "2026-05-05T16:39:13.543641",
+          "status": "active"
+        },
+        {
+          "table_token": "tblNlFguhMIi0o4F",
+          "table_name": "project_kpi",
+          "project": "short-video",
+          "record_count": 9,
+          "content_hash": "753f2df8efb1bde1",
+          "last_synced_at": "2026-05-05T16:39:14.990826",
+          "status": "active"
+        },
+        {
+          "table_token": "tblizcCslMArUBSg",
+          "table_name": "ip_profile",
+          "project": "virtual-ip",
+          "record_count": 4,
+          "content_hash": "cf8a86c5b2b6a697",
+          "last_synced_at": "2026-05-05T16:39:16.452197",
+          "status": "active"
+        },
+        {
+          "table_token": "tbl3OGLktyaOHRqb",
+          "table_name": "ip_weekly_snapshot",
+          "project": "virtual-ip",
+          "record_count": 10,
+          "content_hash": "2e9d4e5003b8aff7",
+          "last_synced_at": "2026-05-05T16:39:17.890793",
+          "status": "active"
+        },
+        {
+          "table_token": "tbl78gzsEVIlQqMO",
+          "table_name": "live_session",
+          "project": "virtual-ip",
+          "record_count": 30,
+          "content_hash": "6d27eb4fcbd46cfc",
+          "last_synced_at": "2026-05-05T16:39:19.388167",
+          "status": "active"
+        },
+        {
+          "table_token": "tbl3Q4mMJqb5g2rt",
+          "table_name": "tech_issue",
+          "project": "virtual-ip",
+          "record_count": 16,
+          "content_hash": "655476296b5a912c",
+          "last_synced_at": "2026-05-05T16:39:20.791865",
+          "status": "active"
+        },
+        {
+          "table_token": "tble1XnkfdwWywkN",
+          "table_name": "team_profile",
+          "project": "virtual-ip",
+          "record_count": 8,
+          "content_hash": "6f7f5c5eeba79058",
+          "last_synced_at": "2026-05-05T16:39:22.250194",
+          "status": "active"
+        },
+        {
+          "table_token": "tblnihoSAgKNSdNp",
+          "table_name": "project_kpi",
+          "project": "virtual-ip",
+          "record_count": 5,
+          "content_hash": "fbcdf80c3afb981e",
+          "last_synced_at": "2026-05-05T16:39:23.792573",
+          "status": "active"
+        },
+        {
+          "table_token": "tbl6MYZhmSjQs7KF",
+          "table_name": "community_profile",
+          "project": "private-domain",
+          "record_count": 6,
+          "content_hash": "796900d81e141bab",
+          "last_synced_at": "2026-05-05T16:39:25.430886",
+          "status": "active"
+        },
+        {
+          "table_token": "tblzbS0aGV4hNNj8",
+          "table_name": "community_weekly_snapshot",
+          "project": "private-domain",
+          "record_count": 41,
+          "content_hash": "af0db89c980848fb",
+          "last_synced_at": "2026-05-05T16:39:27.069216",
+          "status": "active"
+        },
+        {
+          "table_token": "tblodbIjKkBYjiQB",
+          "table_name": "member_profile",
+          "project": "private-domain",
+          "record_count": 30,
+          "content_hash": "62c910dc343bcfff",
+          "last_synced_at": "2026-05-05T16:39:28.618745",
+          "status": "active"
+        },
+        {
+          "table_token": "tblIW5uSiACEaEdZ",
+          "table_name": "activity_record",
+          "project": "private-domain",
+          "record_count": 8,
+          "content_hash": "de8b6a4371fa2865",
+          "last_synced_at": "2026-05-05T16:39:30.140473",
+          "status": "active"
+        },
+        {
+          "table_token": "tblDQhX5dlX43SMa",
+          "table_name": "team_profile",
+          "project": "private-domain",
+          "record_count": 5,
+          "content_hash": "c0852e2e71f0723d",
+          "last_synced_at": "2026-05-05T16:39:31.814846",
+          "status": "active"
+        },
+        {
+          "table_token": "tblWEbBYnj1mxgVi",
+          "table_name": "project_kpi",
+          "project": "private-domain",
+          "record_count": 8,
+          "content_hash": "481bfa8053654d32",
+          "last_synced_at": "2026-05-05T16:39:33.417187",
+          "status": "active"
+        }
+      ]
+    }
+  },
+  "_schema": {
+    "last_full_sync_at": "ISO8601，上次全量同步时间",
+    "last_incremental_check_at": "ISO8601，上次增量检查时间",
+    "pending_changes": "检测到有变更但未同步的文档数",
+    "is_syncing": "是否正在同步中（锁状态）",
+    "sync_version": "sync_state.json 自身的格式版本号",
+    "sources.wiki.items[].lark_node_id": "飞书 Wiki 节点 token",
+    "sources.wiki.items[].lark_doc_id": "飞书文档 obj_token",
+    "sources.wiki.items[].content_hash": "sha256(raw_lark content)",
+    "sources.wiki.items[].revision": "整数，每次变更+1",
+    "sources.wiki.items[].scope": "public / dept / projects/{project_id}",
+    "sources.wiki.items[].status": "active / archived / error",
+    "sources.wiki.items[].last_synced_at": "ISO8601",
+    "sources.base.items[].table_token": "飞书 Base 表 ID",
+    "sources.base.items[].table_name": "表名（如 project_kpi）",
+    "sources.base.items[].project": "所属项目（如 mcn / kol-incubation）",
+    "sources.base.items[].record_count": "上次同步时的记录数",
+    "sources.base.items[].content_hash": "sha256(规范化后的 json 内容)",
+    "sources.base.items[].last_synced_at": "ISO8601"
+  },
+  "pipelines": {
+    "base": {
+      "success": 37,
+      "errors": 0,
+      "total_records": 845,
+      "ok": true,
+      "at": "2026-05-05T19:33:25.531839"
+    },
+    "wiki": {
+      "synced": 0,
+      "unchanged": 0,
+      "skipped": 0,
+      "errors": 0,
+      "archived": 0,
+      "synced_files": [],
+      "archived_files": [],
+      "ok": true,
+      "at": "2026-05-05T19:33:07.751260"
+    },
+    "ingest": {},
+    "graph": {}
+  },
+  "last_scheduler_run": "2026-05-05T19:33:25.531839"
+}

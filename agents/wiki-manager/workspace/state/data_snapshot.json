@@ -1,0 +1,335 @@
+{
+  "created_at": "2026-05-05T16:08:33.218209",
+  "files": {
+    "data/mock/mcn/base.json": {
+      "hash": "bfdb8d17b4c18c30",
+      "size": 27002,
+      "mtime": 1777886122.682497
+    },
+    "data/mock/mcn/department_weekly_summary.json": {
+      "hash": "e45356278154e3c4",
+      "size": 43243,
+      "mtime": 1777917025.4118128
+    },
+    "data/mock/mcn/qa_evaluation_set.json": {
+      "hash": "fdee08fb09901fed",
+      "size": 18014,
+      "mtime": 1777631541.145755
+    },
+    "data/mock/mcn/tasks.json": {
+      "hash": "990127cba312064f",
+      "size": 7164,
+      "mtime": 1777631371.6078594
+    },
+    "data/mock/品牌代运营/client_profile.json": {
+      "hash": "d7d27bbee18da708",
+      "size": 3610,
+      "mtime": 1777901148.1981044
+    },
+    "data/mock/品牌代运营/client_weekly_snapshot.json": {
+      "hash": "a0a6528cf01038e5",
+      "size": 12744,
+      "mtime": 1777901148.1976006
+    },
+    "data/mock/品牌代运营/service_record.json": {
+      "hash": "e611ed69c2c98880",
+      "size": 33110,
+      "mtime": 1777884514.950964
+    },
+    "data/mock/品牌代运营/team_profile.json": {
+      "hash": "94a7b62e5b0baabc",
+      "size": 1137,
+      "mtime": 1777884514.9501889
+    },
+    "data/mock/垂类达人孵化/brand_cooperation.json": {
+      "hash": "9976d86452ec4e4c",
+      "size": 2941,
+      "mtime": 1777641732.1177132
+    },
+    "data/mock/垂类达人孵化/content_production.json": {
+      "hash": "d7c8112d1c00e329",
+      "size": 45273,
+      "mtime": 1777641679.9530976
+    },
+    "data/mock/垂类达人孵化/kol_profile.json": {
+      "hash": "33f01f4b0e63c0a7",
+      "size": 6033,
+      "mtime": 1777899016.7714639
+    },
+    "data/mock/垂类达人孵化/kol_weekly_snapshot.json": {
+      "hash": "a13683c160483766",
+      "size": 22607,
+      "mtime": 1777886122.683681
+    },
+    "data/mock/垂类达人孵化/team_profile.json": {
+      "hash": "fd835e82876c60be",
+      "size": 1183,
+      "mtime": 1777895473.15808
+    },
+    "data/mock/直播电商/anchor_profile.json": {
+      "hash": "92f04be9b300e508",
+      "size": 2694,
+      "mtime": 1777901957.069603
+    },
+    "data/mock/直播电商/anchor_weekly_snapshot.json": {
+      "hash": "723e460a974e7b9d",
+      "size": 17676,
+      "mtime": 1777886122.6861014
+    },
+    "data/mock/直播电商/live_session.json": {
+      "hash": "3f84741660afb206",
+      "size": 14270,
+      "mtime": 1777901957.0700874
+    },
+    "data/mock/直播电商/product_selection.json": {
+      "hash": "c6f3517349128085",
+      "size": 6349,
+      "mtime": 1777883973.6863258
+    },
+    "data/mock/直播电商/team_profile.json": {
+      "hash": "00d167eca7f81953",
+      "size": 954,
+      "mtime": 1777895838.1554554
+    },
+    "data/mock/短视频内容矩阵/account_profile.json": {
+      "hash": "3e0ef176f725aba6",
+      "size": 3394,
+      "mtime": 1777898563.8723931
+    },
+    "data/mock/短视频内容矩阵/account_weekly_snapshot.json": {
+      "hash": "efcafe863d7467f8",
+      "size": 25654,
+      "mtime": 1777886122.6847978
+    },
+    "data/mock/短视频内容矩阵/content_production.json": {
+      "hash": "36b140f957ddff85",
+      "size": 347054,
+      "mtime": 1777884339.6790986
+    },
+    "data/mock/短视频内容矩阵/team_profile.json": {
+      "hash": "1e4b5da0faf82de4",
+      "size": 1592,
+      "mtime": 1777884339.6809776
+    },
+    "data/mock/虚拟IP孵化/ip_profile.json": {
+      "hash": "5d5a0545cbfe6150",
+      "size": 2373,
+      "mtime": 1777884836.371296
+    },
+    "data/mock/虚拟IP孵化/ip_weekly_snapshot.json": {
+      "hash": "20dc2136e9e4c682",
+      "size": 7882,
+      "mtime": 1777886122.687809
+    },
+    "data/mock/虚拟IP孵化/live_session.json": {
+      "hash": "d02aaabf71022840",
+      "size": 10038,
+      "mtime": 1777884911.2112408
+    },
+    "data/mock/虚拟IP孵化/team_profile.json": {
+      "hash": "c2afd0ea0ccf292e",
+      "size": 2491,
+      "mtime": 1777884818.3762379
+    },
+    "data/mock/虚拟IP孵化/tech_issue.json": {
+      "hash": "e94a877afb7993ab",
+      "size": 6885,
+      "mtime": 1777884954.338064
+    },
+    "data/mock/达人私域运营/activity_record.json": {
+      "hash": "49353db4e05bece6",
+      "size": 2570,
+      "mtime": 1777884689.162709
+    },
+    "data/mock/达人私域运营/community_profile.json": {
+      "hash": "6686ee45db187e8d",
+      "size": 2468,
+      "mtime": 1777900234.7236435
+    },
+    "data/mock/达人私域运营/community_weekly_snapshot.json": {
+      "hash": "3b9e5db9c3660d68",
+      "size": 20145,
+      "mtime": 1777900234.723363
+    },
+    "data/mock/达人私域运营/member_profile.json": {
+      "hash": "f0cfbb9c15f9dae5",
+      "size": 11719,
+      "mtime": 1777884689.16261
+    },
+    "data/mock/达人私域运营/team_profile.json": {
+      "hash": "81d56c8b1dab1bce",
+      "size": 1458,
+      "mtime": 1777884689.16226
+    },
+    "data/schema/mcn/base.yaml": {
+      "hash": "5711bad705731bcb",
+      "size": 934,
+      "mtime": 1777915193.6817346
+    },
+    "data/schema/mcn/department_weekly_summary.yaml": {
+      "hash": "0358463cdea3d8c7",
+      "size": 951,
+      "mtime": 1777915194.709358
+    },
+    "data/schema/mcn/project_kpi.yaml": {
+      "hash": "a0b88c01887051d5",
+      "size": 1589,
+      "mtime": 1777637363.9631307
+    },
+    "data/schema/mcn/qa_evaluation_set.yaml": {
+      "hash": "80a8d6f5f262f581",
+      "size": 1000,
+      "mtime": 1777915195.7312748
+    },
+    "data/schema/mcn/risk_log.yaml": {
+      "hash": "691a506c09e43295",
+      "size": 1237,
+      "mtime": 1777637375.4446108
+    },
+    "data/schema/mcn/task_list.yaml": {
+      "hash": "35c3a20e1e9ca2cf",
+      "size": 836,
+      "mtime": 1777915152.8155203
+    },
+    "data/schema/mcn/weekly_report.yaml": {
+      "hash": "5f90ff85f29292df",
+      "size": 979,
+      "mtime": 1777637373.311467
+    },
+    "data/schema/品牌代运营/client_profile.yaml": {
+      "hash": "824963ddb9e4fb91",
+      "size": 1494,
+      "mtime": 1777915283.2975721
+    },
+    "data/schema/品牌代运营/client_weekly_snapshot.yaml": {
+      "hash": "bae7826c2e8f8a9d",
+      "size": 1608,
+      "mtime": 1777915284.321761
+    },
+    "data/schema/品牌代运营/service_record.yaml": {
+      "hash": "feab6c33979ece8d",
+      "size": 1181,
+      "mtime": 1777915285.334306
+    },
+    "data/schema/品牌代运营/team_profile.yaml": {
+      "hash": "bbdf832da5b0861e",
+      "size": 653,
+      "mtime": 1777915286.3532743
+    },
+    "data/schema/垂类达人孵化/brand_cooperation.yaml": {
+      "hash": "d5723fc2d216ebcb",
+      "size": 2129,
+      "mtime": 1777641702.9525506
+    },
+    "data/schema/垂类达人孵化/content_production.yaml": {
+      "hash": "1711c4147d1983e8",
+      "size": 2265,
+      "mtime": 1777641495.7000263
+    },
+    "data/schema/垂类达人孵化/kol_profile.yaml": {
+      "hash": "f1eb5dacf83199a0",
+      "size": 2873,
+      "mtime": 1777915153.8383963
+    },
+    "data/schema/垂类达人孵化/kol_weekly_snapshot.yaml": {
+      "hash": "83f18e0dced066c6",
+      "size": 1989,
+      "mtime": 1777915154.856817
+    },
+    "data/schema/直播电商/anchor_profile.yaml": {
+      "hash": "2a307fcfd690fdfe",
+      "size": 1823,
+      "mtime": 1777915287.3824875
+    },
+    "data/schema/直播电商/anchor_weekly_snapshot.yaml": {
+      "hash": "32783d2c96cfcfa8",
+      "size": 1841,
+      "mtime": 1777915288.3987234
+    },
+    "data/schema/直播电商/live_session.yaml": {
+      "hash": "9c1dca698d746a66",
+      "size": 2229,
+      "mtime": 1777915289.423825
+    },
+    "data/schema/直播电商/product_selection.yaml": {
+      "hash": "b03abfdd5392f8b5",
+      "size": 1353,
+      "mtime": 1777915290.434738
+    },
+    "data/schema/直播电商/team_profile.yaml": {
+      "hash": "23cf2e5aee678382",
+      "size": 650,
+      "mtime": 1777915291.4475672
+    },
+    "data/schema/短视频内容矩阵/account_profile.yaml": {
+      "hash": "b8b14f5d72485137",
+      "size": 1529,
+      "mtime": 1777915421.8473876
+    },
+    "data/schema/短视频内容矩阵/account_weekly_snapshot.yaml": {
+      "hash": "470ac08840673a42",
+      "size": 1891,
+      "mtime": 1777915422.85999
+    },
+    "data/schema/短视频内容矩阵/content_production.yaml": {
+      "hash": "6efac8d2854f07da",
+      "size": 1919,
+      "mtime": 1777915423.8816488
+    },
+    "data/schema/短视频内容矩阵/team_profile.yaml": {
+      "hash": "8f90170013a6a467",
+      "size": 659,
+      "mtime": 1777915424.8972797
+    },
+    "data/schema/虚拟IP孵化/ip_profile.yaml": {
+      "hash": "c3265669f9e278f5",
+      "size": 1859,
+      "mtime": 1777915425.9130797
+    },
+    "data/schema/虚拟IP孵化/ip_weekly_snapshot.yaml": {
+      "hash": "0cfa6d00d5adc813",
+      "size": 2347,
+      "mtime": 1777915426.9297757
+    },
+    "data/schema/虚拟IP孵化/live_session.yaml": {
+      "hash": "c7f14aa9cb79a5a3",
+      "size": 2053,
+      "mtime": 1777915427.9482422
+    },
+    "data/schema/虚拟IP孵化/team_profile.yaml": {
+      "hash": "0bedb2e3333ae756",
+      "size": 1202,
+      "mtime": 1777915428.9600127
+    },
+    "data/schema/虚拟IP孵化/tech_issue.yaml": {
+      "hash": "05e55968c62d3e84",
+      "size": 1713,
+      "mtime": 1777915429.97717
+    },
+    "data/schema/达人私域运营/activity_record.yaml": {
+      "hash": "a75117396167f995",
+      "size": 1127,
+      "mtime": 1777915430.996772
+    },
+    "data/schema/达人私域运营/community_profile.yaml": {
+      "hash": "47ef1cff6bc26c8c",
+      "size": 1197,
+      "mtime": 1777915432.005827
+    },
+    "data/schema/达人私域运营/community_weekly_snapshot.yaml": {
+      "hash": "9cc639557bf6b0f5",
+      "size": 1672,
+      "mtime": 1777915433.0213604
+    },
+    "data/schema/达人私域运营/member_profile.yaml": {
+      "hash": "8f62be6b339aa7f7",
+      "size": 1385,
+      "mtime": 1777915434.0404413
+    },
+    "data/schema/达人私域运营/team_profile.yaml": {
+      "hash": "013ddb8f93875c6d",
+      "size": 656,
+      "mtime": 1777915435.0543575
+    }
+  }
+}
