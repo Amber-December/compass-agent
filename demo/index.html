@@ -3,28 +3,33 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=1020">
-<title>Compass 司南 — 项目展示</title>
+<title>司南 Compass — 企业办公知识整合与分发 Agent</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Noto+Sans+SC:wght@300;400;500;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=VT323&family=ZCOOL+KuaiLe&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
 <style>
   :root{
-    --bg-deep:#070b14;
-    --bg-panel:#0f1623;
-    --bg-elevated:#171f30;
-    --primary:#d4a853;
-    --primary-dim:#8a6d3b;
-    --secondary:#2d5a5a;
-    --accent:#c75b3a;
-    --text:#e6e2d8;
-    --text-muted:#6b7a8f;
-    --border:#1e2a3a;
-    --glow-primary:rgba(212,168,83,0.12);
-    --glow-accent:rgba(199,91,58,0.1);
+    --bg:#ffffff;
+    --bg-soft:#f0f7ff;
+    --bg-card:#eef5ff;
+    --primary:#3b82f6;
+    --primary-light:#93c5fd;
+    --primary-dark:#1d4ed8;
+    --accent:#f59e0b;
+    --accent-soft:#fef3c7;
+    --text:#1e293b;
+    --text-muted:#64748b;
+    --text-light:#94a3b8;
+    --border:#bfdbfe;
+    --border-dark:#60a5fa;
+    --success:#10b981;
+    --danger:#ef4444;
+    --pixel-shadow:4px 4px 0 rgba(59,130,246,0.15);
+    --pixel-shadow-dark:6px 6px 0 rgba(29,78,216,0.2);
   }
   *{margin:0;padding:0;box-sizing:border-box}
   html{scroll-behavior:smooth}
   body{
-    background:var(--bg-deep);
+    background:var(--bg);
     color:var(--text);
     font-family:'Noto Sans SC',sans-serif;
     font-size:15px;
@@ -33,21 +38,11 @@
     overflow-x:hidden;
   }
 
-  /* ===== Background texture ===== */
-  body::before{
-    content:'';
-    position:fixed;inset:0;
-    background-image:
-      radial-gradient(circle at 20% 30%,rgba(212,168,83,0.03) 0%,transparent 50%),
-      radial-gradient(circle at 80% 70%,rgba(45,90,90,0.04) 0%,transparent 50%),
-      linear-gradient(180deg,transparent 0%,rgba(7,11,20,0.8) 100%);
-    pointer-events:none;z-index:0;
-  }
-  .grid-overlay{
-    position:fixed;inset:0;
-    background-image:linear-gradient(rgba(212,168,83,0.02) 1px,transparent 1px),linear-gradient(90deg,rgba(212,168,83,0.02) 1px,transparent 1px);
-    background-size:60px 60px;
-    pointer-events:none;z-index:1;
+  /* ===== Pixel decorations ===== */
+  .pixel-dots{
+    position:fixed;inset:0;pointer-events:none;z-index:0;
+    background-image:radial-gradient(circle,#bfdbfe 1px,transparent 1px);
+    background-size:32px 32px;opacity:0.4;
   }
 
   /* ===== Layout ===== */
@@ -56,736 +51,856 @@
     max-width:960px;margin:0 auto;
     padding:0 48px;
   }
-  section{padding:80px 0;position:relative}
+  section{padding:64px 0;position:relative}
   section+section::before{
-    content:'';position:absolute;top:0;left:15%;right:15%;
-    height:1px;background:linear-gradient(90deg,transparent,var(--border),transparent);
+    content:'';position:absolute;top:0;left:20%;right:20%;
+    height:4px;
+    background:repeating-linear-gradient(90deg,var(--border) 0px,var(--border) 8px,transparent 8px,transparent 16px);
   }
 
   /* ===== Typography ===== */
-  h1,h2,h3,h4{font-family:'Noto Serif SC',serif;font-weight:700}
-  .en{font-family:'Cormorant Garamond',serif;font-weight:400;letter-spacing:0.02em}
-  .mono{font-family:'JetBrains Mono',monospace;font-size:0.9em}
+  h1,h2,h3,h4{font-family:'ZCOOL KuaiLe',cursive;font-weight:400}
+  .pixel{font-family:'VT323',monospace}
   .label{
-    display:inline-block;font-family:'Cormorant Garamond',serif;
-    font-size:11px;letter-spacing:3px;text-transform:uppercase;
-    color:var(--primary);border:1px solid var(--primary-dim);
-    padding:3px 12px;margin-bottom:20px;
+    display:inline-block;font-family:'VT323',monospace;
+    font-size:16px;letter-spacing:2px;text-transform:uppercase;
+    color:var(--primary-dark);background:var(--bg-soft);
+    border:3px solid var(--primary);padding:4px 14px;
+    box-shadow:var(--pixel-shadow);margin-bottom:20px;
   }
 
   /* ===== HERO ===== */
   .hero{
     min-height:100vh;display:flex;flex-direction:column;
     justify-content:center;align-items:center;text-align:center;
-    padding:120px 0 80px;
+    padding:100px 0 60px;
   }
-  .compass-deco{
-    width:180px;height:180px;margin-bottom:40px;
-    position:relative;animation:float 6s ease-in-out infinite;
+  .avatar-wrap{
+    position:relative;margin-bottom:32px;
+    animation:bounce-soft 3s ease-in-out infinite;
   }
-  @keyframes float{
+  @keyframes bounce-soft{
     0%,100%{transform:translateY(0)}
-    50%{transform:translateY(-12px)}
+    50%{transform:translateY(-8px)}
   }
-  .compass-deco svg{width:100%;height:100%}
+  .avatar{
+    width:160px;height:160px;
+    image-rendering:pixelated;
+    border:4px solid var(--primary-dark);
+    box-shadow:var(--pixel-shadow-dark);
+    background:#fff;
+  }
+  .avatar-badge{
+    position:absolute;bottom:-8px;right:-8px;
+    background:var(--accent);color:#fff;
+    font-family:'VT323',monospace;font-size:18px;
+    padding:4px 12px;border:3px solid #b45309;
+    box-shadow:3px 3px 0 rgba(180,83,9,0.3);
+  }
   .hero h1{
-    font-size:56px;font-weight:900;letter-spacing:8px;
-    margin-bottom:8px;background:linear-gradient(180deg,var(--text) 0%,var(--primary) 100%);
-    -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+    font-size:52px;letter-spacing:4px;
+    margin-bottom:4px;color:var(--primary-dark);
+    text-shadow:3px 3px 0 var(--border);
   }
   .hero .subtitle{
-    font-family:'Cormorant Garamond',serif;font-size:22px;
-    font-style:italic;color:var(--primary);letter-spacing:2px;margin-bottom:24px;
+    font-family:'VT323',monospace;font-size:24px;
+    color:var(--primary);letter-spacing:3px;margin-bottom:20px;
   }
   .hero .tagline{
-    font-size:17px;color:var(--text-muted);max-width:520px;
-    line-height:1.9;margin-bottom:48px;
+    font-size:16px;color:var(--text-muted);max-width:600px;
+    line-height:1.9;margin-bottom:36px;
   }
   .hero .meta{
-    display:flex;gap:40px;justify-content:center;
-    font-size:12px;color:var(--text-muted);letter-spacing:1px;
+    display:flex;gap:20px;justify-content:center;flex-wrap:wrap;
   }
-  .hero .meta span{display:flex;align-items:center;gap:8px}
+  .hero .meta span{
+    display:inline-flex;align-items:center;gap:6px;
+    font-size:13px;color:var(--text-muted);
+    background:var(--bg-soft);padding:6px 14px;
+    border:2px solid var(--border);
+  }
   .hero .meta span::before{
-    content:'';display:inline-block;width:4px;height:4px;
-    background:var(--primary);transform:rotate(45deg);
+    content:'';display:inline-block;width:8px;height:8px;
+    background:var(--primary);
   }
 
   /* ===== Section headers ===== */
   .section-header{
-    display:flex;align-items:baseline;gap:20px;margin-bottom:48px;
+    display:flex;align-items:center;gap:16px;margin-bottom:40px;
   }
   .section-num{
-    font-family:'Cormorant Garamond',serif;font-size:48px;
-    font-weight:600;color:var(--primary);opacity:0.3;line-height:1;
+    font-family:'VT323',monospace;font-size:56px;
+    font-weight:400;color:var(--primary);opacity:0.25;line-height:1;
   }
-  .section-title{font-size:32px;letter-spacing:4px}
-  .section-title .en{
-    display:block;font-size:14px;color:var(--text-muted);
-    font-style:italic;letter-spacing:2px;margin-top:4px;
-  }
-
-  /* ===== Pain table ===== */
-  .pain-grid{
-    display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:32px;
-  }
-  .pain-card{
-    background:var(--bg-panel);border:1px solid var(--border);
-    padding:32px;border-radius:2px;position:relative;
-    transition:all 0.4s ease;
-  }
-  .pain-card:hover{border-color:var(--primary-dim);transform:translateY(-2px)}
-  .pain-card h4{
-    font-size:15px;color:var(--primary);margin-bottom:12px;
-    display:flex;align-items:center;gap:10px;
-  }
-  .pain-card h4 .dot{width:6px;height:6px;background:var(--primary);transform:rotate(45deg)}
-  .pain-card .bad{color:var(--accent);font-size:13px;margin-bottom:4px}
-  .pain-card .good{color:var(--secondary);font-size:13px}
-  .pain-card .time{
-    position:absolute;top:20px;right:24px;
-    font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text-muted);
+  .section-title{font-size:32px;letter-spacing:2px;color:var(--text)}
+  .section-title .pixel{
+    display:block;font-size:16px;color:var(--text-light);
+    letter-spacing:3px;margin-top:4px;
   }
 
-  /* ===== Architecture ===== */
+  /* ===== Tables ===== */
+  .compare-table{
+    width:100%;border-collapse:collapse;margin-top:20px;font-size:13px;
+  }
+  .compare-table th{
+    text-align:left;padding:12px 14px;background:var(--bg-card);
+    color:var(--primary-dark);font-weight:700;font-size:12px;letter-spacing:1px;
+    border-bottom:3px solid var(--primary);
+    font-family:'ZCOOL KuaiLe',cursive;
+  }
+  .compare-table td{
+    padding:12px 14px;border-bottom:2px solid var(--border);
+    color:var(--text-muted);
+  }
+  .compare-table tr:hover td{background:#f0f7ff}
+  .compare-table .hl{color:var(--text);font-weight:500}
+  .compare-table .pos{color:var(--success);font-weight:500}
+  .compare-table .neg{color:var(--danger);font-weight:500}
+
+  /* ===== Cards ===== */
+  .hl-grid{
+    display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:28px;
+  }
+  .hl-card{
+    background:var(--bg-soft);border:3px solid var(--border);
+    padding:28px;position:relative;overflow:hidden;
+    transition:all 0.2s ease;box-shadow:var(--pixel-shadow);
+  }
+  .hl-card:hover{
+    transform:translate(-2px,-2px);
+    box-shadow:6px 6px 0 rgba(59,130,246,0.18);
+    border-color:var(--primary);
+  }
+  .hl-card::before{
+    content:'';position:absolute;top:0;left:0;width:6px;height:100%;
+    background:var(--primary);
+  }
+  .hl-card .num{
+    font-family:'VT323',monospace;font-size:40px;
+    color:var(--primary);opacity:0.2;line-height:1;margin-bottom:6px;
+  }
+  .hl-card h4{font-size:16px;margin-bottom:10px;color:var(--text)}
+  .hl-card p{font-size:13px;color:var(--text-muted);line-height:1.9}
+  .hl-card .tag{
+    display:inline-block;font-size:11px;padding:3px 10px;
+    background:#dbeafe;color:var(--primary-dark);
+    border:2px solid var(--primary-light);margin-top:10px;
+    font-family:'VT323',monospace;
+  }
+
+  /* ===== Architecture boxes ===== */
   .arch-diagram{
-    background:var(--bg-panel);border:1px solid var(--border);
-    padding:40px;margin-top:32px;position:relative;
-  }
-  .arch-diagram::before{
-    content:'';position:absolute;top:-1px;left:40px;right:40px;height:2px;
-    background:linear-gradient(90deg,transparent,var(--primary),transparent);
+    background:var(--bg-soft);border:3px solid var(--border);
+    padding:36px;margin-top:28px;position:relative;
+    box-shadow:var(--pixel-shadow);
   }
   .arch-row{
-    display:flex;align-items:center;justify-content:center;gap:24px;margin:20px 0;
+    display:flex;align-items:center;justify-content:center;gap:16px;margin:16px 0;
     flex-wrap:wrap;
   }
   .arch-box{
-    background:var(--bg-elevated);border:1px solid var(--border);
-    padding:16px 28px;text-align:center;min-width:140px;
-    position:relative;
+    background:#fff;border:3px solid var(--border);
+    padding:14px 24px;text-align:center;min-width:130px;
+    position:relative;box-shadow:3px 3px 0 rgba(59,130,246,0.1);
   }
-  .arch-box.primary{border-color:var(--primary-dim);background:rgba(212,168,83,0.05)}
-  .arch-box .title{font-size:13px;font-weight:700;color:var(--primary);margin-bottom:4px}
+  .arch-box.primary{border-color:var(--primary);background:#eff6ff;box-shadow:3px 3px 0 rgba(59,130,246,0.2)}
+  .arch-box .title{font-size:13px;font-weight:700;color:var(--primary-dark);margin-bottom:4px}
   .arch-box .desc{font-size:11px;color:var(--text-muted)}
   .arch-arrow{
-    color:var(--primary-dim);font-size:18px;font-family:'Cormorant Garamond',serif;
+    color:var(--primary);font-size:20px;font-family:'VT323',monospace;
   }
   .arch-label{
-    text-align:center;font-size:11px;color:var(--text-muted);
-    letter-spacing:2px;margin-top:8px;
+    text-align:center;font-size:12px;color:var(--text-muted);
+    letter-spacing:2px;margin-top:8px;font-family:'VT323',monospace;
   }
   .arch-layer{
-    display:flex;gap:16px;justify-content:center;margin-top:16px;
+    display:flex;gap:14px;justify-content:center;margin-top:14px;
   }
   .layer-box{
-    flex:1;max-width:200px;background:var(--bg-elevated);
-    border:1px solid var(--border);padding:20px;text-align:center;
+    flex:1;max-width:180px;background:#fff;
+    border:3px solid var(--border);padding:18px;text-align:center;
+    box-shadow:3px 3px 0 rgba(59,130,246,0.08);
   }
-  .layer-box .icon{font-size:20px;margin-bottom:8px}
-  .layer-box .name{font-size:13px;color:var(--text);margin-bottom:4px}
+  .layer-box .icon{font-size:24px;margin-bottom:6px}
+  .layer-box .name{font-size:13px;color:var(--text);margin-bottom:4px;font-weight:700}
   .layer-box .detail{font-size:11px;color:var(--text-muted)}
 
-  /* ===== Highlight cards ===== */
-  .hl-grid{
-    display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-top:32px;
-  }
-  .hl-card{
-    background:var(--bg-panel);border:1px solid var(--border);
-    padding:32px;position:relative;overflow:hidden;
-    transition:all 0.4s ease;
-  }
-  .hl-card::before{
-    content:'';position:absolute;top:0;left:0;width:3px;height:100%;
-    background:var(--primary);opacity:0.6;
-  }
-  .hl-card:hover{border-color:var(--primary-dim);box-shadow:0 0 30px var(--glow-primary)}
-  .hl-card .num{
-    font-family:'Cormorant Garamond',serif;font-size:36px;
-    color:var(--primary);opacity:0.25;line-height:1;margin-bottom:8px;
-  }
-  .hl-card h4{font-size:16px;margin-bottom:12px;color:var(--text)}
-  .hl-card p{font-size:13px;color:var(--text-muted);line-height:1.9}
-  .hl-card .tag{
-    display:inline-block;font-size:10px;padding:2px 8px;
-    background:rgba(212,168,83,0.1);color:var(--primary);
-    border:1px solid var(--primary-dim);margin-top:12px;
-  }
-
-  /* ===== Tech section ===== */
-  .tech-stack{
-    margin-top:32px;
-  }
+  /* ===== Tech stack ===== */
+  .tech-stack{margin-top:28px}
   .tech-layer{
-    display:flex;align-items:stretch;margin-bottom:16px;
-    background:var(--bg-panel);border:1px solid var(--border);
+    display:flex;align-items:stretch;margin-bottom:14px;
+    background:var(--bg-soft);border:3px solid var(--border);
+    box-shadow:var(--pixel-shadow);
   }
   .tech-layer .left{
-    width:160px;padding:24px;background:var(--bg-elevated);
-    border-right:1px solid var(--border);display:flex;flex-direction:column;
+    width:150px;padding:20px;background:#dbeafe;
+    border-right:3px solid var(--border);display:flex;flex-direction:column;
     justify-content:center;
   }
-  .tech-layer .left .name{font-size:14px;font-weight:700;color:var(--primary)}
-  .tech-layer .left .role{font-size:11px;color:var(--text-muted);margin-top:4px}
+  .tech-layer .left .name{font-size:14px;font-weight:700;color:var(--primary-dark)}
+  .tech-layer .left .role{font-size:11px;color:var(--text-muted);margin-top:4px;font-family:'VT323',monospace}
   .tech-layer .right{
-    flex:1;padding:24px 32px;display:flex;align-items:center;
-    flex-wrap:wrap;gap:12px;
+    flex:1;padding:20px 28px;display:flex;align-items:center;
+    flex-wrap:wrap;gap:10px;
   }
   .tech-item{
-    background:var(--bg-elevated);border:1px solid var(--border);
-    padding:8px 16px;font-size:12px;color:var(--text);
-    font-family:'JetBrains Mono',monospace;
+    background:#fff;border:2px solid var(--border);
+    padding:6px 14px;font-size:12px;color:var(--text);
+    font-family:'VT323',monospace;
+    box-shadow:2px 2px 0 rgba(59,130,246,0.1);
   }
-  .tech-item.accent{border-color:var(--primary-dim);color:var(--primary)}
+  .tech-item.accent{border-color:var(--primary);color:var(--primary-dark);background:#eff6ff}
 
-  /* ===== Demo timeline ===== */
+  /* ===== Timeline ===== */
   .timeline{
-    margin-top:32px;position:relative;padding-left:32px;
+    margin-top:28px;position:relative;padding-left:28px;
   }
   .timeline::before{
-    content:'';position:absolute;left:8px;top:8px;bottom:8px;
-    width:1px;background:linear-gradient(180deg,var(--primary-dim),var(--border));
+    content:'';position:absolute;left:6px;top:6px;bottom:6px;
+    width:4px;
+    background:repeating-linear-gradient(180deg,var(--primary) 0px,var(--primary) 8px,transparent 8px,transparent 16px);
   }
   .t-item{
-    position:relative;margin-bottom:28px;padding-left:24px;
+    position:relative;margin-bottom:24px;padding-left:22px;
   }
   .t-item::before{
-    content:'';position:absolute;left:-28px;top:6px;
-    width:8px;height:8px;border:2px solid var(--primary);
-    background:var(--bg-deep);transform:rotate(45deg);
+    content:'';position:absolute;left:-29px;top:4px;
+    width:14px;height:14px;border:3px solid var(--primary);
+    background:#fff;
   }
-  .t-item h4{font-size:14px;color:var(--primary);margin-bottom:6px}
+  .t-item h4{font-size:14px;color:var(--primary-dark);margin-bottom:6px}
   .t-item p{font-size:13px;color:var(--text-muted)}
   .t-item .check{
     display:inline-flex;align-items:center;gap:6px;
-    font-size:12px;color:var(--secondary);margin-top:6px;
+    font-size:12px;color:var(--success);margin-top:6px;font-weight:500;
   }
 
-  /* ===== Value stats ===== */
+  /* ===== Stats ===== */
   .stats-grid{
-    display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:32px;
+    display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:28px;
   }
   .stat-card{
-    background:var(--bg-panel);border:1px solid var(--border);
-    padding:32px 20px;text-align:center;position:relative;
+    background:var(--bg-soft);border:3px solid var(--border);
+    padding:28px 16px;text-align:center;position:relative;
+    box-shadow:var(--pixel-shadow);transition:all 0.2s ease;
+  }
+  .stat-card:hover{
+    transform:translate(-2px,-2px);
+    box-shadow:6px 6px 0 rgba(59,130,246,0.15);
+    border-color:var(--primary);
   }
   .stat-card::after{
     content:'';position:absolute;bottom:0;left:20%;right:20%;
-    height:2px;background:var(--primary);opacity:0.4;
+    height:4px;background:var(--primary);
   }
   .stat-card .number{
-    font-family:'Cormorant Garamond',serif;font-size:42px;
-    font-weight:600;color:var(--primary);line-height:1;
+    font-family:'VT323',monospace;font-size:52px;
+    color:var(--primary-dark);line-height:1;
   }
-  .stat-card .unit{font-size:14px;color:var(--primary-dim)}
-  .stat-card .label{font-size:12px;color:var(--text-muted);margin-top:12px}
+  .stat-card .unit{font-size:18px;color:var(--primary)}
+  .stat-card .label{font-size:12px;color:var(--text-muted);margin-top:10px}
   .stat-card .arrow{
-    font-size:11px;color:var(--secondary);margin-top:4px;
+    font-size:11px;color:var(--success);margin-top:4px;font-weight:500;
   }
 
-  /* ===== Comparison table ===== */
-  .compare-table{
-    width:100%;border-collapse:collapse;margin-top:24px;font-size:13px;
+  /* ===== Code blocks ===== */
+  .code-block{
+    background:#1e293b;color:#e2e8f0;
+    border:3px solid var(--border-dark);
+    padding:20px 24px;
+    font-family:'VT323',monospace;
+    font-size:13px;line-height:1.8;
+    white-space:pre;
+    overflow-x:auto;
+    box-shadow:var(--pixel-shadow);
+    margin-top:16px;
   }
-  .compare-table th{
-    text-align:left;padding:14px 16px;background:var(--bg-elevated);
-    color:var(--primary);font-weight:500;font-size:12px;letter-spacing:1px;
-    border-bottom:2px solid var(--primary-dim);
-  }
-  .compare-table td{
-    padding:14px 16px;border-bottom:1px solid var(--border);
-    color:var(--text-muted);
-  }
-  .compare-table tr:hover td{background:rgba(212,168,83,0.03)}
-  .compare-table .hl{color:var(--text);font-weight:500}
-  .compare-table .pos{color:var(--secondary)}
-  .compare-table .neg{color:var(--accent)}
+  .code-block .comment{color:#94a3b8}
+  .code-block .keyword{color:#93c5fd}
+  .code-block .string{color:#86efac}
 
   /* ===== Footer ===== */
   .footer{
-    text-align:center;padding:80px 0 60px;
+    text-align:center;padding:60px 0 50px;
+  }
+  .footer-avatar{
+    width:64px;height:64px;image-rendering:pixelated;
+    border:3px solid var(--primary);margin-bottom:16px;
+    box-shadow:var(--pixel-shadow);
   }
   .footer .quote{
-    font-family:'Noto Serif SC',serif;font-size:20px;
-    color:var(--primary);letter-spacing:2px;margin-bottom:16px;
+    font-family:'ZCOOL KuaiLe',cursive;font-size:20px;
+    color:var(--primary-dark);letter-spacing:2px;margin-bottom:12px;
   }
   .footer .credit{
-    font-size:12px;color:var(--text-muted);letter-spacing:1px;
+    font-size:12px;color:var(--text-light);letter-spacing:1px;
+    font-family:'VT323',monospace;
   }
 
   /* ===== Decorative elements ===== */
   .deco-line{
-    display:flex;align-items:center;gap:16px;margin:40px 0;
+    display:flex;align-items:center;gap:12px;margin:32px 0;
   }
-  .deco-line .line{flex:1;height:1px;background:var(--border)}
+  .deco-line .line{flex:1;height:4px;
+    background:repeating-linear-gradient(90deg,var(--border) 0px,var(--border) 8px,transparent 8px,transparent 16px);
+  }
   .deco-line .diamond{
-    width:6px;height:6px;background:var(--primary);transform:rotate(45deg);opacity:0.5;
+    width:10px;height:10px;background:var(--primary);
   }
-
   .corner-deco{
-    position:absolute;width:30px;height:30px;pointer-events:none;
+    position:absolute;width:24px;height:24px;pointer-events:none;
   }
-  .corner-deco.top-left{top:0;left:0;border-top:1px solid var(--primary-dim);border-left:1px solid var(--primary-dim)}
-  .corner-deco.top-right{top:0;right:0;border-top:1px solid var(--primary-dim);border-right:1px solid var(--primary-dim)}
-  .corner-deco.bot-left{bottom:0;left:0;border-bottom:1px solid var(--primary-dim);border-left:1px solid var(--primary-dim)}
-  .corner-deco.bot-right{bottom:0;right:0;border-bottom:1px solid var(--primary-dim);border-right:1px solid var(--primary-dim)}
+  .corner-deco.top-left{top:0;left:0;border-top:3px solid var(--primary);border-left:3px solid var(--primary)}
+  .corner-deco.top-right{top:0;right:0;border-top:3px solid var(--primary);border-right:3px solid var(--primary)}
+  .corner-deco.bot-left{bottom:0;left:0;border-bottom:3px solid var(--primary);border-left:3px solid var(--primary)}
+  .corner-deco.bot-right{bottom:0;right:0;border-bottom:3px solid var(--primary);border-right:3px solid var(--primary)}
+
+  /* Floating pixels */
+  .float-pixels{
+    position:fixed;inset:0;pointer-events:none;z-index:1;overflow:hidden;
+  }
+  .float-pixels span{
+    position:absolute;width:8px;height:8px;background:var(--primary-light);
+    opacity:0.3;animation:float-pixel 8s ease-in-out infinite;
+  }
+  .float-pixels span:nth-child(1){left:10%;top:20%;animation-delay:0s}
+  .float-pixels span:nth-child(2){left:80%;top:15%;animation-delay:2s;background:var(--accent)}
+  .float-pixels span:nth-child(3){left:70%;top:60%;animation-delay:4s}
+  .float-pixels span:nth-child(4){left:20%;top:70%;animation-delay:1s;background:var(--accent)}
+  .float-pixels span:nth-child(5){left:50%;top:40%;animation-delay:3s}
+  .float-pixels span:nth-child(6){left:90%;top:80%;animation-delay:5s}
+  @keyframes float-pixel{
+    0%,100%{transform:translateY(0) rotate(0deg);opacity:0.2}
+    50%{transform:translateY(-20px) rotate(90deg);opacity:0.4}
+  }
 
   /* Print / screenshot optimization */
   @media print{
     body{background:#fff!important;color:#000!important}
-    .grid-overlay,body::before{display:none}
+    .pixel-dots,.float-pixels{display:none}
   }
 </style>
 </head>
 <body>
-<div class="grid-overlay"></div>
+<div class="pixel-dots"></div>
+<div class="float-pixels">
+  <span></span><span></span><span></span><span></span><span></span><span></span>
+</div>
 
 <div class="page">
 
 <!-- ==================== HERO ==================== -->
 <section class="hero">
-  <div class="compass-deco">
-    <svg viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <circle cx="90" cy="90" r="85" stroke="#d4a853" stroke-width="0.5" opacity="0.3"/>
-      <circle cx="90" cy="90" r="70" stroke="#d4a853" stroke-width="0.3" opacity="0.2"/>
-      <circle cx="90" cy="90" r="55" stroke="#d4a853" stroke-width="0.3" opacity="0.15"/>
-      <line x1="90" y1="5" x2="90" y2="175" stroke="#d4a853" stroke-width="0.3" opacity="0.15"/>
-      <line x1="5" y1="90" x2="175" y2="90" stroke="#d4a853" stroke-width="0.3" opacity="0.15"/>
-      <line x1="26" y1="26" x2="154" y2="154" stroke="#d4a853" stroke-width="0.3" opacity="0.1"/>
-      <line x1="154" y1="26" x2="26" y2="154" stroke="#d4a853" stroke-width="0.3" opacity="0.1"/>
-      <polygon points="90,35 102,90 90,145 78,90" fill="#d4a853" opacity="0.8"/>
-      <polygon points="90,55 96,90 90,125 84,90" fill="#070b14"/>
-      <text x="90" y="25" text-anchor="middle" fill="#d4a853" font-size="10" font-family="Cormorant Garamond" opacity="0.6">N</text>
-      <text x="90" y="168" text-anchor="middle" fill="#d4a853" font-size="10" font-family="Cormorant Garamond" opacity="0.6">S</text>
-      <text x="12" y="94" text-anchor="middle" fill="#d4a853" font-size="10" font-family="Cormorant Garamond" opacity="0.6">W</text>
-      <text x="168" y="94" text-anchor="middle" fill="#d4a853" font-size="10" font-family="Cormorant Garamond" opacity="0.6">E</text>
-      <circle cx="90" cy="90" r="3" fill="#d4a853" opacity="0.8"/>
-    </svg>
+  <div class="avatar-wrap">
+    <img src="pics/logo.jpg" alt="司南" class="avatar">
+    <div class="avatar-badge">Hi!</div>
   </div>
   <h1>司 南</h1>
-  <div class="subtitle">Compass — MCN Division AI Knowledge Hub</div>
+  <div class="subtitle">Compass — 企业办公知识整合与分发 Agent</div>
   <div class="tagline">
-    一个懂业务、有边界、会协作的 AI 团队效能助手。<br>
-    让项目群里的每个问题，都能在 10 秒内得到精准回答。
+    基于 OpenClaw × 飞书生态的企业级知识助手。<br>
+    将散落在 Wiki、Base、妙记和群聊中的信息自动编译成结构化"团队大脑"，<br>
+    在群聊中按需推送、回答与预警，提升团队效能。
   </div>
   <div class="meta">
     <span>多 Agent 协作</span>
     <span>Scope 权限隔离</span>
+    <span>符号化知识编译</span>
     <span>知识图谱</span>
     <span>飞书生态</span>
   </div>
 </section>
 
-<!-- ==================== PAIN POINTS ==================== -->
+<!-- ==================== 一、定位与场景 ==================== -->
 <section>
   <div class="section-header">
     <div class="section-num">01</div>
     <div class="section-title">
-      痛点与解决
-      <span class="en">Problem & Solution</span>
+      定位与场景
+      <span class="pixel">Positioning & Scenarios</span>
     </div>
   </div>
 
-  <p style="color:var(--text-muted);font-size:14px;margin-bottom:8px">
-    MCN 事业部 6 个项目并行运营，信息散落在飞书 Wiki、Base 和群聊中。
+  <p style="color:var(--text-muted);font-size:14px;margin-bottom:20px">
+    Compass（司南）是<strong>基于 OpenClaw × 飞书生态的企业级知识助手</strong>，面向所有<strong>项目制工作场景</strong>。
   </p>
 
+  <h4 style="font-size:15px;color:var(--primary-dark);margin:24px 0 12px">&#128101; 目标用户</h4>
   <table class="compare-table">
-    <tr>
-      <th>场景</th>
-      <th>传统工作流</th>
-      <th>旧方式耗时</th>
-      <th>Compass 方式</th>
-      <th>新耗时</th>
-    </tr>
-    <tr>
-      <td class="hl">达人筛选标准</td>
-      <td>翻找 Wiki，可能找到旧版本</td>
-      <td class="neg">5-15 min</td>
-      <td class="pos">@司南 直接回答，附最新链接</td>
-      <td class="pos">10 s</td>
-    </tr>
-    <tr>
-      <td class="hl">本周 GMV 查询</td>
-      <td>打开 Base，切表，筛选，计算</td>
-      <td class="neg">3-10 min</td>
-      <td class="pos">秒回表格，带时间范围</td>
-      <td class="pos">10 s</td>
-    </tr>
-    <tr>
-      <td class="hl">项目知识全貌</td>
-      <td>手动整理文档，手动画关系图</td>
-      <td class="neg">1-2 h</td>
-      <td class="pos">生成可交互知识图谱子图</td>
-      <td class="pos">10 s</td>
-    </tr>
-    <tr>
-      <td class="hl">跨项目打听数据</td>
-      <td>私聊其他项目组，等待回复</td>
-      <td class="neg">数小时</td>
-      <td class="pos">自动拒答敏感数据，引导正确渠道</td>
-      <td class="pos">即时</td>
-    </tr>
-    <tr>
-      <td class="hl">部门周报撰写</td>
-      <td>逐个群收集数据，复制粘贴汇总</td>
-      <td class="neg">半天</td>
-      <td class="pos">数据自动聚合 + LLM 润色生成</td>
-      <td class="pos">15 min</td>
-    </tr>
+    <tr><th>角色</th><th>关注点</th></tr>
+    <tr><td class="hl">部门负责人</td><td>全局项目进展、资源调配、风险预警</td></tr>
+    <tr><td class="hl">项目负责人</td><td>周报汇总、项目数据、知识沉淀</td></tr>
+    <tr><td class="hl">项目团队成员</td><td>SOP 查询、经验复用、快速上手</td></tr>
+  </table>
+
+  <h4 style="font-size:15px;color:var(--primary-dark);margin:28px 0 12px">&#127775; 首发落地场景：MCN 事业部</h4>
+  <p style="color:var(--text-muted);font-size:13px;margin-bottom:12px">
+    下设 6 个并行运营项目，每个项目都有上百份 Wiki 文档、多张 Base 数据表、频繁的会议妙记和群聊协作。
+  </p>
+  <table class="compare-table">
+    <tr><th>项目</th><th>核心定位</th></tr>
+    <tr><td class="hl">垂类达人孵化</td><td>素人挖掘 &#8594; 培训 &#8594; 扶持 &#8594; 变现</td></tr>
+    <tr><td class="hl">短视频内容矩阵</td><td>多赛道内容策划、AI 脚本、流量沉淀</td></tr>
+    <tr><td class="hl">品牌代运营</td><td>品牌筛选、达人匹配、效果监测</td></tr>
+    <tr><td class="hl">直播电商</td><td>直播间搭建、选品排期、流量投放</td></tr>
+    <tr><td class="hl">达人私域运营</td><td>私域流量池搭建、激活活动策划</td></tr>
+    <tr><td class="hl">虚拟 IP 孵化与运营</td><td>虚拟人技术栈、AIGC 内容生产</td></tr>
+  </table>
+</section>
+
+<!-- ==================== 二、痛点与方案 ==================== -->
+<section>
+  <div class="section-header">
+    <div class="section-num">02</div>
+    <div class="section-title">
+      痛点与方案
+      <span class="pixel">Pain Points & Solutions</span>
+    </div>
+  </div>
+
+  <h4 style="font-size:15px;color:var(--primary-dark);margin:0 0 12px">&#128293; 五大真实痛点</h4>
+  <p style="color:var(--text-muted);font-size:13px;margin-bottom:12px">
+    在 MCN 事业部，6 个项目并行运营，信息散落在飞书 Wiki、Base 和群聊中：
+  </p>
+  <table class="compare-table">
+    <tr><th>场景</th><th>旧方式</th><th>耗时</th></tr>
+    <tr><td class="hl">新人问"达人筛选标准是什么"</td><td>翻找 Wiki，可能找到旧版本</td><td class="neg">5-15 分钟</td></tr>
+    <tr><td class="hl">项目经理问"这周 GMV 多少"</td><td>打开 Base，切表，筛选，计算</td><td class="neg">3-10 分钟</td></tr>
+    <tr><td class="hl">想看某个项目的知识全貌</td><td>手动整理文档，手动画关系图</td><td class="neg">1-2 小时</td></tr>
+    <tr><td class="hl">跨项目打听数据</td><td>私聊其他项目组，等待回复</td><td class="neg">数小时</td></tr>
+    <tr><td class="hl">写部门周报</td><td>逐个群收集数据，复制粘贴汇总</td><td class="neg">半天</td></tr>
   </table>
 
   <div class="deco-line">
     <div class="line"></div><div class="diamond"></div><div class="line"></div>
   </div>
 
-  <div style="background:var(--bg-panel);border:1px solid var(--border);padding:24px 32px;text-align:center">
-    <span class="mono" style="color:var(--text-muted);font-size:13px">Before</span>
-    <span style="color:var(--text-muted);margin:0 16px">→</span>
-    <span style="color:var(--primary);font-size:17px;font-weight:700">
-      员工提问 → @司南 → 意图识别 → 知识检索/数据查询/图谱生成 → <span class="mono">秒级回复</span>
-    </span>
-  </div>
-</section>
-
-<!-- ==================== ARCHITECTURE ==================== -->
-<section>
-  <div class="section-header">
-    <div class="section-num">02</div>
-    <div class="section-title">
-      系统架构
-      <span class="en">System Architecture</span>
-    </div>
-  </div>
-
-  <p style="color:var(--text-muted);font-size:14px;margin-bottom:20px">
-    Compass 不是单一聊天机器人，而是基于 OpenClaw 的多 Agent 协作系统。
+  <h4 style="font-size:15px;color:var(--primary-dark);margin:0 0 12px">&#9889; 解决方案</h4>
+  <p style="color:var(--text);font-size:14px;margin-bottom:16px;font-weight:500">
+    Compass（司南）= <strong>群聊入口 + AI 推理 + 知识底座 + 权限隔离</strong>
   </p>
 
-  <!-- Design Philosophy -->
-  <div style="background:var(--bg-panel);border:1px solid var(--border);padding:32px;margin-bottom:24px">
-    <h4 style="font-size:14px;color:var(--primary);margin-bottom:16px">设计哲学 · 为什么不是单体 AI？</h4>
-    <div class="pain-grid" style="margin-top:0">
-      <div class="pain-card" style="padding:24px">
-        <h4 style="font-size:13px"><span class="dot" style="background:var(--accent)"></span>单体 AI 的局限</h4>
-        <p style="font-size:12px;color:var(--text-muted);line-height:1.9">职责混杂导致上下文爆炸 · 无法独立演进 · 单点故障风险高 · 权限边界模糊</p>
-      </div>
-      <div class="pain-card" style="padding:24px">
-        <h4 style="font-size:13px"><span class="dot" style="background:var(--secondary)"></span>多 Agent 的优势</h4>
-        <p style="font-size:12px;color:var(--text-muted);line-height:1.9">单一职责 Prompt 更聚焦 · 独立部署可单独升级 · 能力可组合复用 · 权限物理隔离</p>
-      </div>
+  <table class="compare-table">
+    <tr><th>能力</th><th>触发方式</th><th>场景</th></tr>
+    <tr><td class="hl">项目群知识查询</td><td>群内 @司南 提问</td><td>检索文档 SOP、查询 Base 数据、查看知识图谱</td></tr>
+    <tr><td class="hl">项目级周报推送</td><td>每周一 9:00 自动触发</td><td>汇总单项目上周 KPI、任务、风险，推送到项目群</td></tr>
+    <tr><td class="hl">部门级周报推送</td><td>每周一 9:05 自动触发</td><td>聚合全部项目状态 + Top3 精选知识，推送到部门群</td></tr>
+  </table>
+
+  <div class="deco-line">
+    <div class="line"></div><div class="diamond"></div><div class="line"></div>
+  </div>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:20px">
+    <div style="background:var(--bg-soft);border:3px solid var(--border);padding:20px;box-shadow:var(--pixel-shadow)">
+      <div class="pixel" style="color:var(--text-muted);font-size:14px;margin-bottom:10px">Before</div>
+      <p style="font-size:12px;color:var(--text-muted);line-height:1.9">
+        员工提问 &#8594; 找文档/翻表格/问同事 &#8594; 等待 &#8594; 获得答案（10min~1h）
+      </p>
+    </div>
+    <div style="background:#eff6ff;border:3px solid var(--primary);padding:20px;box-shadow:var(--pixel-shadow-dark)">
+      <div class="pixel" style="color:var(--primary-dark);font-size:14px;margin-bottom:10px">After</div>
+      <p style="font-size:12px;color:var(--text);line-height:1.9;font-weight:500">
+        员工提问 &#8594; @司南 &#8594; 意图识别 &#8594; 知识检索/数据查询/图谱生成 &#8594; <span class="pixel">秒级回复</span>
+      </p>
     </div>
   </div>
 
-  <!-- Complete Call Chain -->
-  <h4 style="font-size:14px;color:var(--primary);margin:32px 0 16px">完整调用链路 · 从消息到回答的 10 步流程</h4>
-  <div style="background:var(--bg-panel);border:1px solid var(--border);padding:32px">
-    <div class="timeline" style="padding-left:24px;margin-top:0">
-      <div class="t-item" style="margin-bottom:16px">
-        <h4 style="font-size:12px">Step 1-2 · 消息接收</h4>
-        <p>用户在"垂类达人孵化项目群"发送 "@司南 达人筛选标准是什么" → Gateway 接收</p>
-      </div>
-      <div class="t-item" style="margin-bottom:16px">
-        <h4 style="font-size:12px">Step 3 · Scope 绑定</h4>
-        <p>chatBindings 查找 chat_id → scope = "kol-incubation"</p>
-      </div>
-      <div class="t-item" style="margin-bottom:16px">
-        <h4 style="font-size:12px">Step 4-5 · 意图识别</h4>
-        <p>qa-bot intent skill 分析 → "知识查询" / 置信度 0.95 / target_skill = "query"</p>
-      </div>
-      <div class="t-item" style="margin-bottom:16px">
-        <h4 style="font-size:12px">Step 6-7 · 知识检索</h4>
-        <p>query skill 调用 wiki_query.py → 读取 wiki/ 目录 → 按 scope 过滤 → 匹配 "达人筛选标准.md"</p>
-      </div>
-      <div class="t-item" style="margin-bottom:16px">
-        <h4 style="font-size:12px">Step 8 · LLM 润色</h4>
-        <p>LLM 基于检索结果 + SKILL.md 模板生成自然语言回答</p>
-      </div>
-      <div class="t-item" style="margin-bottom:0">
-        <h4 style="font-size:12px">Step 9-10 · 输出推送</h4>
-        <p>红线检查（无思考过程 / 无本地路径 / 只一条消息）→ Gateway 推送到飞书群聊</p>
-      </div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:18px">
+    <div style="background:var(--bg-soft);border:3px solid var(--border);padding:20px;box-shadow:var(--pixel-shadow)">
+      <div class="pixel" style="color:var(--text-muted);font-size:14px;margin-bottom:10px">Before</div>
+      <p style="font-size:12px;color:var(--text-muted);line-height:1.9">
+        PM 逐个群收集数据 &#8594; 复制粘贴汇总 &#8594; 手动写 Markdown &#8594; 上传 Wiki &#8594; 部门群粘贴（半天）
+      </p>
     </div>
-  </div>
-
-  <!-- 4-Agent Detail -->
-  <h4 style="font-size:14px;color:var(--primary);margin:32px 0 16px">4 个 Agent · 单一职责 · 独立演进</h4>
-  <div class="hl-grid">
-    <div class="hl-card" style="padding:24px">
-      <div class="num" style="font-size:28px">qa-bot</div>
-      <h4 style="font-size:14px">入口 Agent / 调度中心</h4>
-      <p style="font-size:12px">entryPoint = true · 所有用户流量入口<br>意图识别 → 查询执行 → Agent 调度<br>5 Skills + 3 Tools · delegatesTo 其他 3 个 Agent</p>
-      <span class="tag">不直接操作 API · 只负责调度</span>
-    </div>
-    <div class="hl-card" style="padding:24px">
-      <div class="num" style="font-size:28px">wiki-mgr</div>
-      <h4 style="font-size:14px">知识同步 Agent · 图书管理员</h4>
-      <p style="font-size:12px">canBeCalledBy: qa-bot · 8 Skills<br>Wiki 拉取 → Base 同步 → LLM 编译 → 图谱构建<br>定时全量 + 增量检查（content_hash 对比）</p>
-      <span class="tag">后台运行 · 不直接回答用户</span>
-    </div>
-    <div class="hl-card" style="padding:24px">
-      <div class="num" style="font-size:28px">weekly-rpt</div>
-      <h4 style="font-size:14px">周报生成 Agent</h4>
-      <p style="font-size:12px">canBeCalledBy: qa-bot · delegatesTo: card-builder<br>数据采集 → 趋势分析 → Markdown 生成 → 卡片推送<br>每周一 9:00 定时触发</p>
-      <span class="tag">分钟级延迟 · 非实时</span>
-    </div>
-    <div class="hl-card" style="padding:24px">
-      <div class="num" style="font-size:28px">card-bldr</div>
-      <h4 style="font-size:14px">卡片渲染 Agent · UI 层</h4>
-      <p style="font-size:12px">canBeCalledBy: weekly-reporter<br>Markdown/数据 → 飞书消息卡片 JSON<br>多种模板：数据卡片 / 周报卡片 / 通知卡片</p>
-      <span class="tag">专注"好看" · 可复用</span>
-    </div>
-  </div>
-
-  <!-- Skill vs Tool -->
-  <h4 style="font-size:14px;color:var(--primary);margin:32px 0 16px">Skill 与 Tool 的分层 · 接口定义 + 精确实现</h4>
-  <div class="tech-stack">
-    <div class="tech-layer">
-      <div class="left" style="width:120px"><div class="name">SKILL.md</div><div class="role">接口定义</div></div>
-      <div class="right"><div class="tech-item">触发条件</div><div class="tech-item">查询链路</div><div class="tech-item">输出模板</div><div class="tech-item">红线规则</div></div>
-    </div>
-    <div class="tech-layer">
-      <div class="left" style="width:120px"><div class="name">Python 工具</div><div class="role">精确实现</div></div>
-      <div class="right"><div class="tech-item accent">wiki_query.py</div><div class="tech-item accent">data_query.py</div><div class="tech-item accent">graph_query.py</div></div>
-    </div>
-  </div>
-  <p style="font-size:12px;color:var(--text-muted);margin-top:12px">SKILL.md 给 LLM 看（"做什么"）· Python 工具给机器执行（"怎么做"）· 各尽其责</p>
-
-  <!-- Scope Flow -->
-  <h4 style="font-size:14px;color:var(--primary);margin:32px 0 16px">Scope 流转 · 群即边界</h4>
-  <div style="background:var(--bg-panel);border:1px solid var(--border);padding:24px 32px">
-    <div class="arch-row" style="margin:0;gap:12px">
-      <div class="arch-box" style="min-width:auto;padding:12px 16px"><div class="title" style="font-size:11px">飞书消息</div><div class="desc" style="font-size:10px">chat_id</div></div>
-      <div class="arch-arrow" style="font-size:14px">→</div>
-      <div class="arch-box primary" style="min-width:auto;padding:12px 16px"><div class="title" style="font-size:11px">chatBindings</div><div class="desc" style="font-size:10px">scope</div></div>
-      <div class="arch-arrow" style="font-size:14px">→</div>
-      <div class="arch-box" style="min-width:auto;padding:12px 16px"><div class="title" style="font-size:11px">权限检查</div><div class="desc" style="font-size:10px">可访问范围</div></div>
-      <div class="arch-arrow" style="font-size:14px">→</div>
-      <div class="arch-box" style="min-width:auto;padding:12px 16px"><div class="title" style="font-size:11px">数据过滤</div><div class="desc" style="font-size:10px">只读本项目</div></div>
-    </div>
-    <p style="text-align:center;font-size:11px;color:var(--text-muted);margin-top:12px">拒答不是 Prompt 层面"请求 LLM 不要说"，而是物理层面"工具层面就读不到数据"</p>
-  </div>
-
-  <!-- Knowledge Base -->
-  <div class="arch-diagram" style="margin-top:24px">
-    <div class="corner-deco top-left"></div><div class="corner-deco top-right"></div>
-    <div class="corner-deco bot-left"></div><div class="corner-deco bot-right"></div>
-
-    <div class="arch-label">知识底座三层结构</div>
-    <div class="arch-layer">
-      <div class="layer-box">
-        <div class="icon">📄</div>
-        <div class="name">文档层</div>
-        <div class="detail">Wiki 知识<br>RAG 检索</div>
-      </div>
-      <div class="layer-box">
-        <div class="icon">📊</div>
-        <div class="name">数据层</div>
-        <div class="detail">Base 数据<br>结构化查询</div>
-      </div>
-      <div class="layer-box">
-        <div class="icon">🕸️</div>
-        <div class="name">图谱层</div>
-        <div class="detail">关系网络<br>可视化</div>
-      </div>
+    <div style="background:#eff6ff;border:3px solid var(--primary);padding:20px;box-shadow:var(--pixel-shadow-dark)">
+      <div class="pixel" style="color:var(--primary-dark);font-size:14px;margin-bottom:10px">After</div>
+      <p style="font-size:12px;color:var(--text);line-height:1.9;font-weight:500">
+        weekly-reporter 周一 9:00 自动采集 &#8594; 生成项目周报 + 部门看板 &#8594; 归档 Wiki &#8594; 推送卡片（5 分钟）
+      </p>
     </div>
   </div>
 </section>
 
-<!-- ==================== HIGHLIGHTS ==================== -->
+<!-- ==================== 三、核心亮点 ==================== -->
 <section>
   <div class="section-header">
     <div class="section-num">03</div>
     <div class="section-title">
-      核心创新
-      <span class="en">Key Innovations</span>
+      核心亮点
+      <span class="pixel">Key Innovations</span>
     </div>
   </div>
 
   <div class="hl-grid">
     <div class="hl-card">
       <div class="num">01</div>
-      <h4>Scope-Aware 权限隔离</h4>
-      <p>根据聊天群自动推断项目范围，无需登录。更精细的是<strong>数据分级</strong>：PM 姓名等公开信息可跨项目回答，GMV/转化率等敏感 KPI 严格按 scope 拒答。</p>
-      <span class="tag">群即边界</span>
+      <h4>OpenClaw 多 Agent 协作架构</h4>
+      <p>4 个独立 Agent（qa-bot / wiki-manager / weekly-reporter / card-builder）通过 OpenClaw 框架实现职责分离与能力组合。单一职责 Prompt 更聚焦，独立部署可单独升级，故障隔离，权限物理隔离。</p>
+      <span class="tag">单一职责 &#183; 独立演进 &#183; 故障隔离</span>
     </div>
     <div class="hl-card">
       <div class="num">02</div>
-      <h4>模糊匹配 + 默认本项目</h4>
-      <p>用户无需记忆指令格式。"本周达人变现多少"自动识别当前 scope；"看看本周数据"返回最新 KPI。像和同事聊天一样自然。</p>
-      <span class="tag">零学习成本</span>
+      <h4>符号化知识编译（零向量库依赖）</h4>
+      <p>不采用传统 RAG 向量检索，而是让 LLM 在 ingest 阶段把知识<strong>编译</strong>成结构化 Markdown 页面（实体/概念/来源），带 [[Wikilink]] 交叉引用。查询时直接读取完整页面做综合。</p>
+      <span class="tag">纯 Markdown &#183; 零外部依赖 &#183; 可解释</span>
     </div>
     <div class="hl-card">
       <div class="num">03</div>
-      <h4>数据查询自动降级</h4>
-      <p>数据查不到时，不编造、不外推，而是<strong>自动切到文档查询</strong>，返回相关 SOP 链接，告知最新数据时间范围。</p>
-      <span class="tag">Honest AI</span>
+      <h4>自动化更新数据底座</h4>
+      <p>wiki-manager 维护 5 步同步流水线：wiki-discover &#8594; wiki-sync &#8594; base-sync &#8594; wiki-ingest &#8594; wiki-graph。content_hash 增量判断，未变更文件跳过，原始镜像与编译知识物理隔离。</p>
+      <span class="tag">增量同步 &#183; 物理隔离 &#183; 定时调度</span>
     </div>
     <div class="hl-card">
       <div class="num">04</div>
-      <h4>交互式知识图谱子图</h4>
-      <p>从全量图谱提取关键词子图（含 1 跳邻居），生成 vis.js 可交互 HTML。可拖拽、缩放、查看节点详情，不是静态截图。</p>
-      <span class="tag">可视化的知识</span>
+      <h4>可交互前端卡片</h4>
+      <p>知识图谱子图可拖拽、可缩放、可点击查看详情（vis.js）。周报卡片一屏读完，部门看板一眼掌握全局。weekly-reporter 调用 card-builder 将 Markdown 渲染为飞书消息卡片直接推送到群聊。</p>
+      <span class="tag">交互式图谱 &#183; 结构化卡片</span>
     </div>
     <div class="hl-card" style="grid-column:span 2">
       <div class="num">05</div>
-      <h4>严格输出约束（Red Lines）</h4>
-      <p>通过 SKILL.md 强制规则确保 LLM 输出"像人话"：</p>
-      <p style="margin-top:8px">
-        <span class="mono" style="color:var(--accent)">✗</span> 输出思考过程 ·
-        <span class="mono" style="color:var(--accent)">✗</span> 暴露本地路径 ·
-        <span class="mono" style="color:var(--accent)">✗</span> 描述检索过程 ·
-        <span class="mono" style="color:var(--accent)">✗</span> 分条发送
+      <h4>Scope-Aware 权限隔离设计</h4>
+      <p>根据聊天群自动推断 scope，用户甚至不用登录。更精细的是<strong>数据分级</strong>：公开信息（PM 姓名等）可跨项目回答；敏感 KPI（GMV、转化率等）严格按 scope 拒答。</p>
+      <p style="margin-top:8px;font-size:12px;color:var(--text-muted)">
+        <strong>拒答不是 Prompt 层面的"请求 LLM 不要说"，而是物理层面的"工具层面就读不到数据"</strong>——data_query.py 在读取前会检查 scope，跨项目数据直接不加载。
       </p>
-      <p style="margin-top:4px">
-        <span class="mono" style="color:var(--secondary)">✓</span> 只输出一条最终消息 ·
-        <span class="mono" style="color:var(--secondary)">✓</span> 数据来源可溯源 ·
-        <span class="mono" style="color:var(--secondary)">✓</span> 附带飞书原文链接
-      </p>
-      <span class="tag">结构化控制</span>
+      <span class="tag">群即边界 &#183; 数据分级 &#183; 物理隔离</span>
     </div>
   </div>
 </section>
 
-<!-- ==================== TECH DEPTH ==================== -->
+<!-- ==================== 四、系统架构 ==================== -->
 <section>
   <div class="section-header">
     <div class="section-num">04</div>
     <div class="section-title">
-      技术实现
-      <span class="en">Technical Implementation</span>
+      系统架构
+      <span class="pixel">System Architecture</span>
     </div>
   </div>
 
-  <p style="color:var(--text-muted);font-size:14px;margin-bottom:20px">
-    分层架构设计：能规则不模型，能模型不端到端——降低幻觉，提升可控性。
-  </p>
+  <h4 style="font-size:15px;color:var(--primary-dark);margin:0 0 12px">&#128295; OpenClaw 编排机制</h4>
+  <table class="compare-table">
+    <tr><th>机制</th><th>作用</th><th>在 Compass 中的体现</th></tr>
+    <tr><td class="hl">entryPoint</td><td>定义用户入口 Agent</td><td>qa-bot 是唯一的 entryPoint</td></tr>
+    <tr><td class="hl">delegatesTo</td><td>定义可调度目标</td><td>qa-bot 可委派给 wiki-manager / weekly-reporter / card-builder</td></tr>
+    <tr><td class="hl">canBeCalledBy</td><td>定义调用权限</td><td>wiki-manager 只能被 qa-bot 调用，防止外部直接触发敏感操作</td></tr>
+    <tr><td class="hl">skills</td><td>注册 Agent 能力</td><td>每个 Agent 声明自己的技能列表，OpenClaw 按需加载</td></tr>
+    <tr><td class="hl">triggers</td><td>关键词触发</td><td>"刷新知识库" &#8594; wiki-manager；"生成周报" &#8594; weekly-reporter</td></tr>
+    <tr><td class="hl">chatBindings</td><td>群聊绑定</td><td>chat_id &#8594; scope 映射，实现"群即边界"</td></tr>
+    <tr><td class="hl">schedule</td><td>定时任务</td><td>wiki-manager 每周一 8:30 自动同步；weekly-reporter 9:00 生成周报</td></tr>
+  </table>
 
-  <div class="tech-stack">
-    <div class="tech-layer">
-      <div class="left">
-        <div class="name">OpenClaw</div>
-        <div class="role">编排层</div>
-      </div>
-      <div class="right">
-        <div class="tech-item accent">任务分发</div>
-        <div class="tech-item accent">状态管理</div>
-        <div class="tech-item accent">Agent 通信</div>
-        <div class="tech-item accent">工具调用</div>
-      </div>
+  <h4 style="font-size:15px;color:var(--primary-dark);margin:28px 0 12px">&#127959; 五层架构总览</h4>
+  <div class="arch-diagram">
+    <div class="corner-deco top-left"></div><div class="corner-deco top-right"></div>
+    <div class="corner-deco bot-left"></div><div class="corner-deco bot-right"></div>
+    <div class="arch-row" style="margin:8px 0">
+      <div class="arch-box primary" style="width:100%"><div class="title">输出层：飞书项目群 / 部门群</div><div class="desc">消息卡片 + Markdown 回答</div></div>
     </div>
-    <div class="tech-layer">
-      <div class="left">
-        <div class="name">LLM</div>
-        <div class="role">推理层</div>
-      </div>
-      <div class="right">
-        <div class="tech-item">意图识别</div>
-        <div class="tech-item">自然语言生成</div>
-        <div class="tech-item">回答润色</div>
-      </div>
+    <div class="arch-arrow" style="text-align:center;display:block">&#8595;</div>
+    <div class="arch-row" style="margin:8px 0">
+      <div class="arch-box" style="flex:1"><div class="title">qa-bot</div><div class="desc">调度中心</div></div>
+      <div class="arch-box" style="flex:1"><div class="title">weekly-reporter</div><div class="desc">周报工厂</div></div>
+      <div class="arch-box" style="flex:1"><div class="title">wiki-manager</div><div class="desc">知识同步</div></div>
+      <div class="arch-box" style="flex:1"><div class="title">card-builder</div><div class="desc">卡片渲染</div></div>
     </div>
-    <div class="tech-layer">
-      <div class="left">
-        <div class="name">Python 工具</div>
-        <div class="role">精确层</div>
-      </div>
-      <div class="right">
-        <div class="tech-item">数据过滤</div>
-        <div class="tech-item">图谱构建</div>
-        <div class="tech-item">Base API</div>
-        <div class="tech-item">Wiki 检索</div>
-      </div>
+    <div class="arch-arrow" style="text-align:center;display:block">&#8595;</div>
+    <div class="arch-row" style="margin:8px 0">
+      <div class="arch-box primary" style="width:100%"><div class="title">知识底座层</div><div class="desc">wiki/（符号化编译知识）+ graph/（知识图谱）+ data/（Base 结构化数据，物理隔离）</div></div>
+    </div>
+    <div class="arch-arrow" style="text-align:center;display:block">&#8595;</div>
+    <div class="arch-row" style="margin:8px 0">
+      <div class="arch-box" style="width:100%"><div class="title">采集层：data-collection</div><div class="desc">Base 数据线 + Wiki/妙记 知识线</div></div>
+    </div>
+    <div class="arch-arrow" style="text-align:center;display:block">&#8595;</div>
+    <div class="arch-row" style="margin:8px 0">
+      <div class="arch-box" style="width:100%"><div class="title">数据源层</div><div class="desc">飞书 Base / 飞书 Wiki / 飞书妙记 / 项目群 IM</div></div>
     </div>
   </div>
 
-  <div class="deco-line" style="margin:32px 0">
-    <div class="line"></div><div class="diamond"></div><div class="line"></div>
+  <h4 style="font-size:15px;color:var(--primary-dark);margin:28px 0 12px">&#128451; 数据底座结构</h4>
+  <div class="code-block">
+wiki/
+&#9500;&#9472;&#9472; public/          &#8592; 全员可见（SOP、入职指南、工具使用）
+&#9500;&#9472;&#9472; dept/            &#8592; 部门级（负责人/PM 可见：部门周报、汇总）
+&#9500;&#9472;&#9472; projects/        &#8592; 项目级（仅项目成员可见）
+&#9474;   &#9500;&#9472;&#9472; kol-incubation/
+&#9474;   &#9500;&#9472;&#9472; live-commerce/
+&#9474;   &#9500;&#9472;&#9472; short-video/
+&#9474;   &#9500;&#9472;&#9472; brand-ops/
+&#9474;   &#9500;&#9472;&#9472; private-domain/
+&#9474;   &#9492;&#9472;&#9472; virtual-ip/
+&#9500;&#9472;&#9472; sources/         &#8592; ingest 后的结构化文档（含 frontmatter + [[Wikilink]]）
+&#9500;&#9472;&#9472; entities/        &#8592; 自动提取的实体页（达人、品牌、项目、PM）
+&#9492;&#9472;&#9472; concepts/        &#8592; 自动提取的概念页（SOP、方法论、规范）
   </div>
 
-  <h4 style="font-size:15px;color:var(--primary);margin-bottom:16px">高阶 AI 技巧</h4>
-  <div class="hl-grid" style="grid-template-columns:1fr 1fr">
-    <div class="hl-card" style="padding:24px">
-      <h4 style="font-size:14px">意图分类 + 路由分发</h4>
-      <p style="font-size:12px">非端到端生成。先分类（文档/数据/图谱/闲聊），再路由到对应 Skill。降低幻觉，提升可控性。</p>
-    </div>
-    <div class="hl-card" style="padding:24px">
-      <h4 style="font-size:14px">Prompt 工程三层架构</h4>
-      <p style="font-size:12px">systemPrompt（全局行为）→ IDENTITY.md（人格）→ SKILL.md（具体能力）。LLM 在结构化模板中填空。</p>
-    </div>
-    <div class="hl-card" style="padding:24px">
-      <h4 style="font-size:14px">RAG + 结构化查询双轨</h4>
-      <p style="font-size:12px">文档层用 RAG 检索非结构化知识；数据层用结构化过滤精确数值。两者互补，覆盖 90%+ 场景。</p>
-    </div>
-    <div class="hl-card" style="padding:24px">
-      <h4 style="font-size:14px">知识图谱增强</h4>
-      <p style="font-size:12px">构建异构知识图谱（项目-文档-达人-指标），支持全局可视化、子图提取、隐性关联发现。</p>
+  <table class="compare-table" style="margin-top:20px">
+    <tr><th>层级</th><th>内容</th><th>查询方式</th><th>适用场景</th></tr>
+    <tr><td class="hl">文档层</td><td>wiki/ 符号化编译后的结构化页面</td><td>关键词匹配 + 图邻居扩展</td><td>SOP、会议纪要、方法论</td></tr>
+    <tr><td class="hl">数据层</td><td>data/ Base 结构化 JSON</td><td>JSON 过滤 + 聚合计算</td><td>KPI、档案、精确数值</td></tr>
+    <tr><td class="hl">图谱层</td><td>graph/ 知识图谱</td><td>图遍历 + 子图提取</td><td>关系发现、实体关联</td></tr>
+  </table>
+
+  <h4 style="font-size:15px;color:var(--primary-dark);margin:28px 0 12px">&#129302; 多 Agent 协作关系</h4>
+  <table class="compare-table">
+    <tr><th>调用方 / 被调用方</th><th>qa-bot</th><th>wiki-manager</th><th>weekly-reporter</th><th>card-builder</th></tr>
+    <tr><td class="hl">qa-bot</td><td>&#8212;</td><td>触发同步</td><td>触发周报</td><td>&#8212;</td></tr>
+    <tr><td class="hl">wiki-manager</td><td>提供知识底座</td><td>&#8212;</td><td>提供知识底座</td><td>&#8212;</td></tr>
+    <tr><td class="hl">weekly-reporter</td><td>&#8212;</td><td>归档周报</td><td>&#8212;</td><td>调用渲染</td></tr>
+    <tr><td class="hl">card-builder</td><td>&#8212;</td><td>&#8212;</td><td>&#8212;</td><td>&#8212;</td></tr>
+  </table>
+</section>
+
+
+<!-- ==================== 五、AI 技术深度解析 ==================== -->
+<section>
+  <div class="section-header">
+    <div class="section-num">05</div>
+    <div class="section-title">
+      AI 技术深度解析
+      <span class="pixel">Technical Deep Dive</span>
     </div>
   </div>
 
-  <h4 style="font-size:15px;color:var(--primary);margin:32px 0 16px">人与 AI 的分工</h4>
+  <h4 style="font-size:15px;color:var(--primary-dark);margin:0 0 12px">&#129309; 人与 AI 的分工</h4>
   <table class="compare-table">
     <tr><th>人类负责</th><th>AI 负责</th></tr>
     <tr><td>知识库维护（Wiki/Base 内容更新）</td><td class="pos">实时检索、智能匹配</td></tr>
     <tr><td>权限策略制定（哪些数据敏感）</td><td class="pos">自动执行 scope 检查</td></tr>
     <tr><td>业务判断和决策</td><td class="pos">数据呈现、趋势分析、周报初稿</td></tr>
-    <tr><td>异常问题处理</td><td class="pos">常规问题 7×24 秒级响应</td></tr>
+    <tr><td>异常问题处理</td><td class="pos">常规问题 7&#215;24 秒级响应</td></tr>
+    <tr><td>周报内容审核</td><td class="pos">数据汇总 + LLM 润色生成</td></tr>
+    <tr><td>风险阈值策略制定（KPI 下滑多少算异常）</td><td class="pos">自动扫描、嵌入预警、持续跟踪</td></tr>
   </table>
-</section>
-
-<!-- ==================== DEMO ==================== -->
-<section>
-  <div class="section-header">
-    <div class="section-num">05</div>
-    <div class="section-title">
-      演示场景
-      <span class="en">Demo Scenarios</span>
-    </div>
-  </div>
-
-  <p style="color:var(--text-muted);font-size:14px;margin-bottom:20px">
-    覆盖 9 个核心用例，从自我介绍到跨项目敏感数据拒答。
+  <p style="color:var(--text-muted);font-size:13px;margin-top:12px;text-align:center">
+    <strong>关键设计</strong>：AI 不替代人做决策，而是把人从"找信息"的重复劳动中解放出来，让人专注于"用信息做判断"。
   </p>
 
-  <div class="timeline">
-    <div class="t-item">
-      <h4>第一幕 · 自己项目能力展示</h4>
-      <p>在垂类达人孵化项目群测试：自我介绍、SOP 文档检索、KPI 数据查询、知识图谱生成、闲聊拒答。</p>
-      <div class="check">✓ 默认指向当前 scope · ✓ 只输出一条消息 · ✓ 数据来源可溯源</div>
+  <div class="deco-line"><div class="line"></div><div class="diamond"></div><div class="line"></div></div>
+
+  <h4 style="font-size:15px;color:var(--primary-dark);margin:0 0 12px">&#9889; 核心模型选型思路</h4>
+  <div class="tech-stack">
+    <div class="tech-layer">
+      <div class="left" style="width:110px"><div class="name">OpenClaw</div><div class="role">编排层</div></div>
+      <div class="right"><div class="tech-item accent">任务分发</div><div class="tech-item accent">状态管理</div><div class="tech-item accent">Agent 通信</div><div class="tech-item accent">工具调用</div></div>
     </div>
-    <div class="t-item">
-      <h4>第二幕 · 切换 scope 对比</h4>
-      <p>切换到品牌代运营项目群，同一问题得到不同答案，验证群聊即边界的隔离效果。</p>
-      <div class="check">✓ 群切换感知 · ✓ 上下文自动切换 · ✓ 数据范围变化</div>
+    <div class="tech-layer">
+      <div class="left" style="width:110px"><div class="name">LLM</div><div class="role">推理层</div></div>
+      <div class="right"><div class="tech-item">意图识别</div><div class="tech-item">自然语言生成</div><div class="tech-item">回答润色</div></div>
     </div>
-    <div class="t-item">
-      <h4>第三幕 · 跨项目公开信息</h4>
-      <p>"直播电商的 PM 是谁？"——公开信息，正常回答。</p>
-      <div class="check">✓ 不滥用拒答 · ✓ 区分公开/敏感</div>
+    <div class="tech-layer">
+      <div class="left" style="width:110px"><div class="name">Python 工具</div><div class="role">精确层</div></div>
+      <div class="right"><div class="tech-item">数据过滤</div><div class="tech-item">图谱构建</div><div class="tech-item">Base API</div><div class="tech-item">文件 I/O</div></div>
     </div>
-    <div class="t-item">
-      <h4>第四幕 · 跨项目敏感数据 + 降级</h4>
-      <p>"直播电商上周 GMV 多少？"——敏感数据，严格拒答。"Week 20 数据？"——不存在，降级为文档查询。</p>
-      <div class="check">✓ 敏感数据不泄露 · ✓ 无数据不编造 · ✓ 自动返回文档链接</div>
+  </div>
+  <p style="font-size:12px;color:var(--text-muted);margin-top:12px;text-align:center">
+    <strong>分层原则</strong>：能规则不模型，能模型不端到端——降低幻觉，提升可控性。
+  </p>
+
+  <div class="deco-line"><div class="line"></div><div class="diamond"></div><div class="line"></div></div>
+
+  <h4 style="font-size:15px;color:var(--primary-dark);margin:0 0 12px">&#128218; 知识编译与图谱检索</h4>
+  <p style="color:var(--text-muted);font-size:13px;margin-bottom:12px">
+    Compass 采用<strong>符号化知识编译（Symbolic Knowledge Compilation）</strong>构建知识底座，不依赖向量数据库。
+  </p>
+
+  <div style="background:var(--bg-soft);border:3px solid var(--border);padding:22px 28px;box-shadow:var(--pixel-shadow);margin-top:16px">
+    <p class="pixel" style="color:var(--primary-dark);font-size:13px;margin-bottom:12px">知识编译流程</p>
+    <div class="arch-row" style="margin:0;gap:8px;flex-wrap:wrap">
+      <div class="arch-box" style="min-width:auto;padding:10px 14px"><div class="title" style="font-size:11px">增量拉取</div><div class="desc" style="font-size:10px">sync_state 比对</div></div>
+      <div class="arch-arrow" style="font-size:14px">&#8594;</div>
+      <div class="arch-box" style="min-width:auto;padding:10px 14px"><div class="title" style="font-size:11px">知识编译</div><div class="desc" style="font-size:10px">ingest.py</div></div>
+      <div class="arch-arrow" style="font-size:14px">&#8594;</div>
+      <div class="arch-box" style="min-width:auto;padding:10px 14px"><div class="title" style="font-size:11px">构建图谱</div><div class="desc" style="font-size:10px">build_graph.py</div></div>
+      <div class="arch-arrow" style="font-size:14px">&#8594;</div>
+      <div class="arch-box primary" style="min-width:auto;padding:10px 14px"><div class="title" style="font-size:11px">检索就绪</div><div class="desc" style="font-size:10px">index + graph + sources</div></div>
+    </div>
+  </div>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:18px">
+    <div style="background:var(--bg-soft);border:3px solid var(--border);padding:18px;box-shadow:var(--pixel-shadow)">
+      <p class="pixel" style="color:var(--primary-dark);font-size:12px;margin-bottom:8px">&#128270; 增量拉取逻辑</p>
+      <p style="font-size:11px;color:var(--text-muted);line-height:1.9">
+        &#8226; 比对本地 sync_state.json（doc_token + edit_time）<br>
+        &#8226; 新增文档：首次下载 + 记录元数据<br>
+        &#8226; 修改文档：edit_time 变化则覆盖更新<br>
+        &#8226; 删除检测：远端缺失 &#8594; 标记 DELETED<br>
+        &#8226; 生成增量报告：新增/修改/删除计数
+      </p>
+    </div>
+    <div style="background:var(--bg-soft);border:3px solid var(--border);padding:18px;box-shadow:var(--pixel-shadow)">
+      <p class="pixel" style="color:var(--primary-dark);font-size:12px;margin-bottom:8px">&#128300; 检索机制</p>
+      <p style="font-size:11px;color:var(--text-muted);line-height:1.9">
+        Step 0: 权限过滤 &#8594; scope 过滤可见目录<br>
+        Step 1: 关键词匹配 wiki/index.md（CJK 双字滑动窗口）<br>
+        Step 2: 图邻居扩展（graph.json，confidence &#8805; 0.7）<br>
+        Step 3: 读取相关页面完整内容<br>
+        Step 4: LLM 综合答案（标注 [[PageName]]）<br>
+        Step 5: 返回带飞书链接的 Markdown
+      </p>
+    </div>
+  </div>
+
+  <div class="deco-line"><div class="line"></div><div class="diamond"></div><div class="line"></div></div>
+
+  <h4 style="font-size:15px;color:var(--primary-dark);margin:0 0 12px">&#128203; 核心数据流详解</h4>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:16px">
+    <div style="background:var(--bg-soft);border:3px solid var(--border);padding:18px;box-shadow:var(--pixel-shadow)">
+      <p class="pixel" style="color:var(--primary-dark);font-size:12px;margin-bottom:8px">&#128197; 周一早晨主链路</p>
+      <p style="font-size:11px;color:var(--text-muted);line-height:1.9">
+        9:00 weekly-reporter 触发<br>
+        &#9500;&#8594; data-collection 采集上周数据<br>
+        &#9500;&#8594; risk-monitor 嵌入风险检测<br>
+        &#9500;&#8594; 生成项目级周报 Markdown<br>
+        &#9500;&#8594; dept-aggregator 聚合部门看板<br>
+        &#9500;&#8594; 归档 Markdown 到飞书 Wiki<br>
+        &#9492;&#8594; card-builder 推送卡片到各群
+      </p>
+    </div>
+    <div style="background:var(--bg-soft);border:3px solid var(--border);padding:18px;box-shadow:var(--pixel-shadow)">
+      <p class="pixel" style="color:var(--primary-dark);font-size:12px;margin-bottom:8px">&#128172; 问答链路</p>
+      <p style="font-size:11px;color:var(--text-muted);line-height:1.9">
+        项目群内用户 @司南 提问<br>
+        &#8595;<br>
+        qa-bot &#8594; intent-classifier 识别意图<br>
+        &#8594; 权限判断（public / dept / project）<br>
+        &#8594; 数据层查询 / 知识层检索<br>
+        &#8594; 生成带引用的 Markdown 答案
+      </p>
+    </div>
+  </div>
+
+  <div class="deco-line"><div class="line"></div><div class="diamond"></div><div class="line"></div></div>
+
+  <h4 style="font-size:15px;color:var(--primary-dark);margin:0 0 12px">&#128260; 数据闭环设计</h4>
+  <div class="hl-grid" style="grid-template-columns:repeat(3,1fr);margin-top:16px">
+    <div class="hl-card" style="padding:20px">
+      <h4 style="font-size:13px">&#128197; 周级闭环（Monday Loop）</h4>
+      <p style="font-size:11px;margin-top:8px">Base 数据录入 &#8594; weekly-reporter 生成周报 &#8594; 写入 Wiki / 更新 OnePage / 推送群 &#8594; wiki-manager 同步 &#8594; qa-bot 基于最新知识回答</p>
+    </div>
+    <div class="hl-card" style="padding:20px">
+      <h4 style="font-size:13px">&#128172; 问答反哺（Daily Loop）</h4>
+      <p style="font-size:11px;margin-top:8px">qa-bot 被提问 &#8594; 发现信息缺失/过时 &#8594; 反馈 wiki-manager &#8594; PM 补充 Wiki &#8594; wiki-manager 同步 &#8594; 下次回答更准确</p>
+    </div>
+    <div class="hl-card" style="padding:20px">
+      <h4 style="font-size:13px">&#9888; 风险跟踪（Risk Loop）</h4>
+      <p style="font-size:11px;margin-top:8px">risk-monitor 检测到风险 &#8594; 嵌入周报 &#8594; PM 周会讨论 &#8594; 产生行动项 &#8594; 下周检查完成状态 &#8594; 风险解除或升级</p>
     </div>
   </div>
 </section>
 
-<!-- ==================== VALUE ==================== -->
+<!-- ==================== 六、Demo 场景与验证 ==================== -->
 <section>
   <div class="section-header">
     <div class="section-num">06</div>
     <div class="section-title">
-      实际价值
-      <span class="en">Business Value</span>
+      Demo 场景与验证
+      <span class="pixel">Demo Scenarios</span>
     </div>
   </div>
 
+  <h4 style="font-size:15px;color:var(--primary-dark);margin:0 0 12px">&#128172; 1. 问答检索</h4>
+  <table class="compare-table">
+    <tr><th>场景</th><th>说明</th><th>核心验证点</th></tr>
+    <tr><td class="hl">本项目 SOP 检索</td><td>群内提问，未指定项目名</td><td class="pos">默认当前 scope；返回 [[PageName]] + 飞书链接；无思考过程暴露</td></tr>
+    <tr><td class="hl">本项目 KPI 查询</td><td>群内查询数据指标</td><td class="pos">正确读取 Base；表格呈现；来源可溯源；无本地路径</td></tr>
+    <tr><td class="hl">跨项目简单问题</td><td>询问其他项目公开信息</td><td class="pos">正常回答，不拒答</td></tr>
+    <tr><td class="hl">跨项目敏感问题</td><td>询问其他项目 KPI/GMV</td><td class="pos">严格拒答，不泄露数值；给出正确引导</td></tr>
+    <tr><td class="hl">闲聊拒答</td><td>非工作相关问题</td><td class="pos">礼貌引导回工作话题，不越界回答</td></tr>
+  </table>
+
+  <h4 style="font-size:15px;color:var(--primary-dark);margin:28px 0 12px">&#128197; 2. 项目周报生成</h4>
+  <p style="color:var(--text-muted);font-size:13px;margin-bottom:12px">每周一 9:00 自动触发，或群内输入"生成周报"。</p>
+  <div style="background:var(--bg-soft);border:3px solid var(--border);padding:22px 28px;box-shadow:var(--pixel-shadow)">
+    <div class="arch-row" style="margin:0;gap:10px;flex-wrap:wrap">
+      <div class="arch-box" style="min-width:auto;padding:10px 14px"><div class="title" style="font-size:11px">采集数据</div><div class="desc" style="font-size:10px">Base KPI + task</div></div>
+      <div class="arch-arrow" style="font-size:14px">&#8594;</div>
+      <div class="arch-box" style="min-width:auto;padding:10px 14px"><div class="title" style="font-size:11px">风险检测</div><div class="desc" style="font-size:10px">连续下滑预警</div></div>
+      <div class="arch-arrow" style="font-size:14px">&#8594;</div>
+      <div class="arch-box" style="min-width:auto;padding:10px 14px"><div class="title" style="font-size:11px">生成 Markdown</div><div class="desc" style="font-size:10px">项目级周报</div></div>
+      <div class="arch-arrow" style="font-size:14px">&#8594;</div>
+      <div class="arch-box" style="min-width:auto;padding:10px 14px"><div class="title" style="font-size:11px">渲染 HTML</div><div class="desc" style="font-size:10px">前端可视化</div></div>
+      <div class="arch-arrow" style="font-size:14px">&#8594;</div>
+      <div class="arch-box" style="min-width:auto;padding:10px 14px"><div class="title" style="font-size:11px">归档 Wiki</div><div class="desc" style="font-size:10px">周报归档目录</div></div>
+      <div class="arch-arrow" style="font-size:14px">&#8594;</div>
+      <div class="arch-box primary" style="min-width:auto;padding:10px 14px"><div class="title" style="font-size:11px">推送卡片</div><div class="desc" style="font-size:10px">项目群</div></div>
+    </div>
+    <div style="margin-top:14px">
+      <span class="check">&#10003; Markdown 归档飞书 Wiki</span>
+      <span class="check" style="margin-left:16px">&#10003; 前端页面含数据看板 + 风险预警</span>
+      <span class="check" style="margin-left:16px">&#10003; 卡片一屏可读</span>
+    </div>
+  </div>
+
+  <h4 style="font-size:15px;color:var(--primary-dark);margin:28px 0 12px">&#127970; 3. 部门周报生成</h4>
+  <p style="color:var(--text-muted);font-size:13px;margin-bottom:12px">每周一 9:05（项目周报完成后），或部门群内输入"部门周报"。</p>
+  <div style="background:var(--bg-soft);border:3px solid var(--border);padding:22px 28px;box-shadow:var(--pixel-shadow)">
+    <div class="arch-row" style="margin:0;gap:10px;flex-wrap:wrap">
+      <div class="arch-box" style="min-width:auto;padding:10px 14px"><div class="title" style="font-size:11px">汇总项目</div><div class="desc" style="font-size:10px">6 个项目数据</div></div>
+      <div class="arch-arrow" style="font-size:14px">&#8594;</div>
+      <div class="arch-box" style="min-width:auto;padding:10px 14px"><div class="title" style="font-size:11px">状态分布</div><div class="desc" style="font-size:10px">正常/风险/严重</div></div>
+      <div class="arch-arrow" style="font-size:14px">&#8594;</div>
+      <div class="arch-box" style="min-width:auto;padding:10px 14px"><div class="title" style="font-size:11px">Top3 精选</div><div class="desc" style="font-size:10px">跨项目复用知识</div></div>
+      <div class="arch-arrow" style="font-size:14px">&#8594;</div>
+      <div class="arch-box" style="min-width:auto;padding:10px 14px"><div class="title" style="font-size:11px">归档 Wiki</div><div class="desc" style="font-size:10px">部门看板目录</div></div>
+      <div class="arch-arrow" style="font-size:14px">&#8594;</div>
+      <div class="arch-box primary" style="min-width:auto;padding:10px 14px"><div class="title" style="font-size:11px">推送卡片</div><div class="desc" style="font-size:10px">部门群</div></div>
+    </div>
+    <div style="margin-top:14px">
+      <span class="check">&#10003; 正确统计各项目状态</span>
+      <span class="check" style="margin-left:16px">&#10003; 知识精选来源可追溯</span>
+      <span class="check" style="margin-left:16px">&#10003; 风险项自动 @ 负责人</span>
+    </div>
+  </div>
+
+  <h4 style="font-size:15px;color:var(--primary-dark);margin:28px 0 12px">&#128260; 4. 知识库更新</h4>
+  <p style="color:var(--text-muted);font-size:13px;margin-bottom:12px">群内输入"更新知识库"，或 wiki-manager 定时任务触发。</p>
+  <div style="background:var(--bg-soft);border:3px solid var(--border);padding:22px 28px;box-shadow:var(--pixel-shadow)">
+    <div class="arch-row" style="margin:0;gap:10px;flex-wrap:wrap">
+      <div class="arch-box" style="min-width:auto;padding:10px 14px"><div class="title" style="font-size:11px">检索增量</div><div class="desc" style="font-size:10px">最近 7 天变更</div></div>
+      <div class="arch-arrow" style="font-size:14px">&#8594;</div>
+      <div class="arch-box" style="min-width:auto;padding:10px 14px"><div class="title" style="font-size:11px">增量编译</div><div class="desc" style="font-size:10px">解析实体/概念</div></div>
+      <div class="arch-arrow" style="font-size:14px">&#8594;</div>
+      <div class="arch-box" style="min-width:auto;padding:10px 14px"><div class="title" style="font-size:11px">图谱增量</div><div class="desc" style="font-size:10px">局部更新</div></div>
+      <div class="arch-arrow" style="font-size:14px">&#8594;</div>
+      <div class="arch-box primary" style="min-width:auto;padding:10px 14px"><div class="title" style="font-size:11px">更新报告</div><div class="desc" style="font-size:10px">人工可审阅</div></div>
+    </div>
+    <div style="margin-top:14px">
+      <span class="check">&#10003; 仅处理最近 7 天变更</span>
+      <span class="check" style="margin-left:16px">&#10003; 删除文档软删除标记</span>
+      <span class="check" style="margin-left:16px">&#10003; 图谱增量更新</span>
+      <span class="check" style="margin-left:16px">&#10003; 报告结构清晰</span>
+    </div>
+  </div>
+
+  <h4 style="font-size:15px;color:var(--primary-dark);margin:28px 0 12px">&#9989; 关键验证点汇总</h4>
+  <table class="compare-table">
+    <tr><th>能力</th><th>验证要点</th></tr>
+    <tr><td class="hl">问答检索</td><td>未指定项目名时默认指向当前 scope；跨项目敏感数据严格拒答；数据查不到时降级为文档链接，不编造</td></tr>
+    <tr><td class="hl">项目周报</td><td>Markdown 归档飞书 Wiki；前端页面完整展示数据+风险+计划；卡片一屏可读</td></tr>
+    <tr><td class="hl">部门周报</td><td>正确聚合多项目状态；知识精选可溯源；风险项自动 @ 负责人</td></tr>
+    <tr><td class="hl">知识库更新</td><td>增量同步（最近 7 天）；删除文档软删除标记；图谱增量重建；返回结构化更新报告</td></tr>
+  </table>
+</section>
+
+<!-- ==================== 七、价值前景 ==================== -->
+<section>
+  <div class="section-header">
+    <div class="section-num">07</div>
+    <div class="section-title">
+      价值前景
+      <span class="pixel">Business Value</span>
+    </div>
+  </div>
+
+  <h4 style="font-size:15px;color:var(--primary-dark);margin:0 0 12px">&#128200; 效率提升</h4>
   <div class="stats-grid">
     <div class="stat-card">
       <div class="number">10<span class="unit">s</span></div>
       <div class="label">信息检索时间</div>
-      <div class="arrow">↓ 从 5-15 分钟</div>
+      <div class="arrow">&#8595; 从 5-15 分钟</div>
     </div>
     <div class="stat-card">
       <div class="number">0</div>
@@ -800,34 +915,104 @@
     <div class="stat-card">
       <div class="number">15<span class="unit">min</span></div>
       <div class="label">周报撰写时间</div>
-      <div class="arrow">↓ 从半天</div>
+      <div class="arrow">&#8595; 从半天</div>
     </div>
   </div>
 
-  <div class="deco-line" style="margin:40px 0">
-    <div class="line"></div><div class="diamond"></div><div class="line"></div>
+  <div class="deco-line" style="margin:36px 0"><div class="line"></div><div class="diamond"></div><div class="line"></div></div>
+
+  <h4 style="font-size:15px;color:var(--primary-dark);margin:0 0 12px">&#127775; 可复用性与推广价值</h4>
+  <p style="color:var(--text-muted);font-size:13px;margin-bottom:16px">
+    Compass 架构不绑定 MCN 行业。任何具备以下特征的团队均可复用：
+  </p>
+  <div class="hl-grid" style="grid-template-columns:repeat(2,1fr);margin-top:0">
+    <div class="hl-card" style="padding:20px">
+      <h4 style="font-size:14px">&#9989; 多项目并行（3+ 个项目组）</h4>
+    </div>
+    <div class="hl-card" style="padding:20px">
+      <h4 style="font-size:14px">&#9989; 文档 + 数据双轨知识（Wiki + 表格/数据库）</h4>
+    </div>
+    <div class="hl-card" style="padding:20px">
+      <h4 style="font-size:14px">&#9989; 有权限隔离需求（项目间数据敏感）</h4>
+    </div>
+    <div class="hl-card" style="padding:20px">
+      <h4 style="font-size:14px">&#9989; 群聊是主要协作入口（飞书/钉钉/企业微信）</h4>
+    </div>
+  </div>
+  <p style="color:var(--text-muted);font-size:13px;margin-top:16px">
+    <strong>潜在应用场景</strong>：律所（案件知识库）、咨询公司（项目交付物管理）、研发管理（多团队文档+指标）、医疗（科室知识+病例数据）。
+  </p>
+</section>
+
+<!-- ==================== 八、技术栈 ==================== -->
+<section>
+  <div class="section-header">
+    <div class="section-num">08</div>
+    <div class="section-title">
+      技术栈
+      <span class="pixel">Tech Stack</span>
+    </div>
   </div>
 
-  <div style="background:var(--bg-panel);border:1px solid var(--border);padding:32px">
-    <h4 style="font-size:15px;color:var(--primary);margin-bottom:16px">可复用性与推广价值</h4>
-    <p style="color:var(--text-muted);font-size:13px;line-height:2">
-      Compass 架构不绑定 MCN 行业。任何具备<strong>多项目并行 + 文档/数据双轨知识 + 权限隔离需求 + 群聊协作入口</strong>的团队均可复用。<br><br>
-      潜在场景：律所（案件知识库）、咨询公司（项目交付物管理）、研发管理（多团队文档+指标）、医疗（科室知识+病例数据）。
-    </p>
+  <h4 style="font-size:15px;color:var(--primary-dark);margin:0 0 12px">&#128187; 技术层级</h4>
+  <table class="compare-table">
+    <tr><th>层级</th><th>技术</th></tr>
+    <tr><td class="hl">Agent 框架</td><td>OpenClaw（skill-based 调用链）</td></tr>
+    <tr><td class="hl">知识编译</td><td>符号化知识编译（ingest.py：LLM 结构化提取 &#8594; Markdown 页面）</td></tr>
+    <tr><td class="hl">知识检索</td><td>图增强检索（query.py：CJK 关键词匹配 + graph.json 邻居扩展）</td></tr>
+    <tr><td class="hl">数据查询</td><td>Python + lark-cli Base API + JSON 结构化过滤</td></tr>
+    <tr><td class="hl">知识图谱</td><td>build_graph.py（两-pass 建图 + Louvain 社区检测）+ vis.js 可视化</td></tr>
+    <tr><td class="hl">数据同步</td><td>飞书 Wiki API + Base API + content_hash 增量判断</td></tr>
+    <tr><td class="hl">消息卡片</td><td>飞书消息卡片 JSON（card-builder 渲染）</td></tr>
+    <tr><td class="hl">部署</td><td>本地 Gateway（可扩展为云端）</td></tr>
+  </table>
+
+  <h4 style="font-size:15px;color:var(--primary-dark);margin:28px 0 12px">&#128295; 关键工具链</h4>
+  <div class="tech-stack">
+    <div class="tech-layer">
+      <div class="left" style="width:160px"><div class="name">wiki_ingest.py</div><div class="role">知识编译</div></div>
+      <div class="right"><div class="tech-item">Markdown &#8594; 结构化 wiki/（实体 + 概念 + 来源）</div></div>
+    </div>
+    <div class="tech-layer">
+      <div class="left" style="width:160px"><div class="name">wiki_query.py</div><div class="role">图增强检索</div></div>
+      <div class="right"><div class="tech-item">关键词 + 图邻居 &#8594; 完整页面</div></div>
+    </div>
+    <div class="tech-layer">
+      <div class="left" style="width:160px"><div class="name">build_graph.py</div><div class="role">知识图谱</div></div>
+      <div class="right"><div class="tech-item">显式边 + 语义推断边 + Louvain 社区检测</div></div>
+    </div>
+    <div class="tech-layer">
+      <div class="left" style="width:160px"><div class="name">data_query.py</div><div class="role">数据查询</div></div>
+      <div class="right"><div class="tech-item">Schema 驱动的 Base 结构化查询</div></div>
+    </div>
+    <div class="tech-layer">
+      <div class="left" style="width:160px"><div class="name">lark-cli</div><div class="role">飞书 API 入口</div></div>
+      <div class="right"><div class="tech-item">Base + Wiki + IM 统一封装</div></div>
+    </div>
+  </div>
+
+  <h4 style="font-size:15px;color:var(--primary-dark);margin:28px 0 12px">&#128221; 工程规范</h4>
+  <div class="hl-grid" style="margin-top:0">
+    <div class="hl-card" style="padding:20px">
+      <h4 style="font-size:14px">Skill 化开发</h4>
+      <p style="font-size:12px">每个能力独立为 SKILL.md + 工具脚本，可插拔</p>
+    </div>
+    <div class="hl-card" style="padding:20px">
+      <h4 style="font-size:14px">配置即代码</h4>
+      <p style="font-size:12px">agent.json 定义 Agent 行为，版本可控</p>
+    </div>
+    <div class="hl-card" style="padding:20px">
+      <h4 style="font-size:14px">软链接共享</h4>
+      <p style="font-size:12px">workspace 内通过软链接实现多 Agent 资源共享</p>
+    </div>
   </div>
 </section>
 
 <!-- ==================== FOOTER ==================== -->
 <section class="footer">
-  <div class="compass-deco" style="width:80px;height:80px;margin-bottom:24px;opacity:0.5">
-    <svg viewBox="0 0 180 180" fill="none">
-      <circle cx="90" cy="90" r="85" stroke="#d4a853" stroke-width="0.5" opacity="0.3"/>
-      <polygon points="90,35 102,90 90,145 78,90" fill="#d4a853" opacity="0.4"/>
-      <circle cx="90" cy="90" r="3" fill="#d4a853"/>
-    </svg>
-  </div>
+  <img src="pics/logo.jpg" alt="司南" class="footer-avatar">
   <div class="quote">让知识触手可及，让数据有边界，让协作更高效</div>
-  <div class="credit">Compass 司南 — MCN 事业部 AI 知识中枢</div>
+  <div class="credit">Compass &#183; 企业办公知识整合与分发 Agent</div>
 </section>
 
 </div>
