@@ -1,0 +1,72 @@
+{
+  "table_token": "tble1XnkfdwWywkN",
+  "table_name": "team_profile",
+  "display_name": "团队档案",
+  "project": "virtual-ip",
+  "base_token": "FeyIbsjrNa7pPksOqXmcE7ZMnff",
+  "synced_at": "2026-05-05T19:34:13.733938",
+  "record_count": 8,
+  "content_hash": "6f7f5c5eeba79058",
+  "fields": [
+    {
+      "id": "fldxdc1F4M",
+      "name": "角色",
+      "type": "text"
+    },
+    {
+      "id": "fldcNJceex",
+      "name": "风险等级",
+      "type": "text"
+    },
+    {
+      "id": "fldng6naMg",
+      "name": "入职日期",
+      "type": "text"
+    },
+    {
+      "id": "fldABTsMeT",
+      "name": "是否负责人",
+      "type": "text"
+    },
+    {
+      "id": "fldSgcl9yP",
+      "name": "专长",
+      "type": "text"
+    },
+    {
+      "id": "fldvsv4Gr3",
+      "name": "成员昵称",
+      "type": "text"
+    },
+    {
+      "id": "fld5dRAZAf",
+      "name": "状态",
+      "type": "text"
+    },
+    {
+      "id": "fld09ynuqn",
+      "name": "职责",
+      "type": "text"
+    },
+    {
+      "id": "fldCRZkT7T",
+      "name": "PM备注",
+      "type": "text"
+    },
+    {
+      "id": "fldz60QTpk",
+      "name": "成员编号",
+      "type": "text"
+    },
+    {
+      "id": "fldGPhtL2s",
+      "name": "真实姓名",
+      "type": "text"
+    },
+    {
+      "id": "fldb6EmkZ5",
+      "name": "多行文本",
+      "type": "text"
+    }
+  ]
+}

@@ -1,0 +1,127 @@
+{
+  "table_token": "tbl3OGLktyaOHRqb",
+  "table_name": "ip_weekly_snapshot",
+  "display_name": "IP周度快照",
+  "project": "virtual-ip",
+  "base_token": "FeyIbsjrNa7pPksOqXmcE7ZMnff",
+  "synced_at": "2026-05-05T19:34:09.354297",
+  "record_count": 10,
+  "content_hash": "2e9d4e5003b8aff7",
+  "fields": [
+    {
+      "id": "fldJ8rRrMa",
+      "name": "场均观看",
+      "type": "number"
+    },
+    {
+      "id": "fldpB8qmpf",
+      "name": "快照编号",
+      "type": "text"
+    },
+    {
+      "id": "fldYvrFB5l",
+      "name": "总点赞",
+      "type": "number"
+    },
+    {
+      "id": "fldQWaw0sG",
+      "name": "互动率",
+      "type": "number"
+    },
+    {
+      "id": "fldLOMdxfG",
+      "name": "短视频数",
+      "type": "number"
+    },
+    {
+      "id": "fldJcx12tv",
+      "name": "开发进度",
+      "type": "number"
+    },
+    {
+      "id": "fldxQoZyB0",
+      "name": "技术故障率",
+      "type": "number"
+    },
+    {
+      "id": "fld4PX4EA9",
+      "name": "多行文本",
+      "type": "text"
+    },
+    {
+      "id": "fldUrxIYHc",
+      "name": "IP编号",
+      "type": "text"
+    },
+    {
+      "id": "fldh0vSZZB",
+      "name": "上线状态",
+      "type": "text"
+    },
+    {
+      "id": "fld8LRn0Sf",
+      "name": "日期范围",
+      "type": "text"
+    },
+    {
+      "id": "fld1eL0MBZ",
+      "name": "品牌收入",
+      "type": "number"
+    },
+    {
+      "id": "fldgbPoYXO",
+      "name": "平均直播时长",
+      "type": "number"
+    },
+    {
+      "id": "fldS2Ug6jj",
+      "name": "直播场次",
+      "type": "number"
+    },
+    {
+      "id": "fldc0SaNNz",
+      "name": "PM备注",
+      "type": "text"
+    },
+    {
+      "id": "fldsgPMSMQ",
+      "name": "IP名称",
+      "type": "text"
+    },
+    {
+      "id": "fldG7YDLaI",
+      "name": "总分享",
+      "type": "number"
+    },
+    {
+      "id": "fldHOpGV8M",
+      "name": "礼物收入",
+      "type": "number"
+    },
+    {
+      "id": "fldhP7O4tO",
+      "name": "周收入",
+      "type": "number"
+    },
+    {
+      "id": "fldGmxYsQ5",
+      "name": "新增粉丝",
+      "type": "number"
+    },
+    {
+      "id": "fldAnxw5sd",
+      "name": "总评论",
+      "type": "number"
+    },
+    {
+      "id": "fld8Jzg2ur",
+      "name": "周次",
+      "type": "number"
+    },
+    {
+      "id": "fldnvizgcw",
+      "name": "总粉丝数",
+      "type": "number"
+    }
+  ]
+}

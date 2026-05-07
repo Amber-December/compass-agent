@@ -1,0 +1,87 @@
+{
+  "table_token": "tblwa0o5rL1rOk9m",
+  "table_name": "kol_weekly_snapshot",
+  "display_name": "达人周度快照",
+  "project": "kol-incubation",
+  "base_token": "LTLNbBlGTaB4mNs6by0cvhPhnib",
+  "synced_at": "2026-05-05T19:33:34.306484",
+  "record_count": 37,
+  "content_hash": "0c5c98c8c089a9c6",
+  "fields": [
+    {
+      "id": "fld9EfLLQ6",
+      "name": "爆款内容数",
+      "type": "number"
+    },
+    {
+      "id": "fld8072XMh",
+      "name": "粉丝数",
+      "type": "number"
+    },
+    {
+      "id": "fldxUfDWaQ",
+      "name": "快照编号",
+      "type": "text"
+    },
+    {
+      "id": "fld00NxMgT",
+      "name": "内容数",
+      "type": "number"
+    },
+    {
+      "id": "fldkBywHKK",
+      "name": "平均完播率",
+      "type": "number"
+    },
+    {
+      "id": "fldoztYO0I",
+      "name": "粉丝增长率",
+      "type": "number"
+    },
+    {
+      "id": "fldYDgnGmx",
+      "name": "日期范围",
+      "type": "text"
+    },
+    {
+      "id": "fld8bBucXd",
+      "name": "总播放量",
+      "type": "number"
+    },
+    {
+      "id": "fldu5XXs4O",
+      "name": "周收入",
+      "type": "number"
+    },
+    {
+      "id": "fld6tMLrnY",
+      "name": "达人昵称",
+      "type": "text"
+    },
+    {
+      "id": "fld2Ixun46",
+      "name": "商单内容数",
+      "type": "number"
+    },
+    {
+      "id": "fldv1eArhp",
+      "name": "周次",
+      "type": "number"
+    },
+    {
+      "id": "fldk0fBcei",
+      "name": "达人编号",
+      "type": "text"
+    },
+    {
+      "id": "fldPy3MM80",
+      "name": "等级",
+      "type": "select"
+    },
+    {
+      "id": "fldDseNhiG",
+      "name": "达人类型",
+      "type": "select"
+    }
+  ]
+}

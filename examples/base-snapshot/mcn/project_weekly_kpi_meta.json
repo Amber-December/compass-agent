@@ -1,0 +1,162 @@
+{
+  "table_token": "tbl9OF7TP0ecPHRG",
+  "table_name": "project_weekly_kpi",
+  "display_name": "项目周度KPI汇总",
+  "project": "mcn",
+  "base_token": "SZ1Cb3RbbabNJLsr6TpcJPEfn2g",
+  "synced_at": "2026-05-05T19:33:29.714846",
+  "record_count": 46,
+  "content_hash": "b7bb71978e4a0f90",
+  "fields": [
+    {
+      "id": "fld4N0mjZm",
+      "name": "日期范围",
+      "type": "text"
+    },
+    {
+      "id": "fld5g5Z0v4",
+      "name": "私域转化",
+      "type": "number"
+    },
+    {
+      "id": "fld3GS3Xj4",
+      "name": "技术故障率",
+      "type": "number"
+    },
+    {
+      "id": "fldW7E00uP",
+      "name": "周均私域沉淀",
+      "type": "number"
+    },
+    {
+      "id": "fld2Rjb8ya",
+      "name": "ISO周",
+      "type": "number"
+    },
+    {
+      "id": "fld8W9roUF",
+      "name": "单品牌周曝光",
+      "type": "number"
+    },
+    {
+      "id": "fldv4N4btd",
+      "name": "新增签约达人",
+      "type": "number"
+    },
+    {
+      "id": "fldUc1v9PI",
+      "name": "多行文本",
+      "type": "text"
+    },
+    {
+      "id": "fldwZqPcCY",
+      "name": "周均新增品牌",
+      "type": "number"
+    },
+    {
+      "id": "fldD1PXHX9",
+      "name": "周均账号增量",
+      "type": "number"
+    },
+    {
+      "id": "fldDwHVdTB",
+      "name": "矩阵周播放量",
+      "type": "number"
+    },
+    {
+      "id": "fldQ4hvtJL",
+      "name": "互动率",
+      "type": "number"
+    },
+    {
+      "id": "fldkE6D9P0",
+      "name": "项目相对周",
+      "type": "number"
+    },
+    {
+      "id": "fldIdRW3Hi",
+      "name": "商单转化率",
+      "type": "number"
+    },
+    {
+      "id": "fldejIvtZY",
+      "name": "周更新条数",
+      "type": "number"
+    },
+    {
+      "id": "fldIk42AYO",
+      "name": "头部达人数量",
+      "type": "number"
+    },
+    {
+      "id": "fldSM5RLD8",
+      "name": "PM",
+      "type": "text"
+    },
+    {
+      "id": "fldIWcfUXb",
+      "name": "ROI",
+      "type": "number"
+    },
+    {
+      "id": "flda754jJ7",
+      "name": "虚拟IP粉丝总量",
+      "type": "number"
+    },
+    {
+      "id": "fldr6BcF3h",
+      "name": "复购率",
+      "type": "number"
+    },
+    {
+      "id": "fldfixnNmm",
+      "name": "周均粉丝增长率",
+      "type": "number"
+    },
+    {
+      "id": "fldqC2i3hA",
+      "name": "项目ID",
+      "type": "text"
+    },
+    {
+      "id": "fldaQCj8B5",
+      "name": "状态",
+      "type": "text"
+    },
+    {
+      "id": "fldFUqCVVZ",
+      "name": "客户满意度",
+      "type": "number"
+    },
+    {
+      "id": "fldF86ZCu1",
+      "name": "爆款占比",
+      "type": "number"
+    },
+    {
+      "id": "fldsrJpLCG",
+      "name": "场均观看",
+      "type": "number"
+    },
+    {
+      "id": "fldHtyep2N",
+      "name": "直播转化率",
+      "type": "number"
+    },
+    {
+      "id": "flds5PdYBX",
+      "name": "项目名称",
+      "type": "text"
+    },
+    {
+      "id": "fldzG540yS",
+      "name": "上线虚拟IP数量",
+      "type": "number"
+    },
+    {
+      "id": "fldQTr6yIq",
+      "name": "粉丝活跃度",
+      "type": "number"
+    }
+  ]
+}

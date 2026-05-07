@@ -1,0 +1,97 @@
+{
+  "table_token": "tbl3Q4mMJqb5g2rt",
+  "table_name": "tech_issue",
+  "display_name": "技术故障",
+  "project": "virtual-ip",
+  "base_token": "FeyIbsjrNa7pPksOqXmcE7ZMnff",
+  "synced_at": "2026-05-05T19:34:12.293160",
+  "record_count": 16,
+  "content_hash": "655476296b5a912c",
+  "fields": [
+    {
+      "id": "fldi9sMKTO",
+      "name": "持续时长",
+      "type": "number"
+    },
+    {
+      "id": "fldBO5mkIn",
+      "name": "根因",
+      "type": "text"
+    },
+    {
+      "id": "fldPvhgrsx",
+      "name": "IP名称",
+      "type": "text"
+    },
+    {
+      "id": "fldRwEiJiq",
+      "name": "解决时间",
+      "type": "text"
+    },
+    {
+      "id": "fldNOty0eN",
+      "name": "发生时间",
+      "type": "text"
+    },
+    {
+      "id": "fldkJhrsGj",
+      "name": "故障描述",
+      "type": "text"
+    },
+    {
+      "id": "fldsXJ5uFP",
+      "name": "故障类型",
+      "type": "text"
+    },
+    {
+      "id": "fldqK5kQPl",
+      "name": "状态",
+      "type": "text"
+    },
+    {
+      "id": "fldEvICTPQ",
+      "name": "严重等级",
+      "type": "text"
+    },
+    {
+      "id": "fld7SRwa7e",
+      "name": "多行文本",
+      "type": "text"
+    },
+    {
+      "id": "fldxiROHnX",
+      "name": "关联场次",
+      "type": "text"
+    },
+    {
+      "id": "fldYNW58ra",
+      "name": "影响范围",
+      "type": "text"
+    },
+    {
+      "id": "fldUBtGjRN",
+      "name": "PM备注",
+      "type": "text"
+    },
+    {
+      "id": "fld8qoEXL9",
+      "name": "报告人",
+      "type": "text"
+    },
+    {
+      "id": "fldiuC0DfN",
+      "name": "修复措施",
+      "type": "text"
+    },
+    {
+      "id": "fldfb1oz6k",
+      "name": "处理人",
+      "type": "text"
+    },
+    {
+      "id": "fldVdNrg07",
+      "name": "故障编号",
+      "type": "text"
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "table_token": "tbl3jDP61lu1vZXY",
+  "table_name": "project_kpi",
+  "display_name": "项目周度KPI",
+  "project": "brand-ops",
+  "base_token": "J99JbkE9eaEK97sMGfEcSG8UnLd",
+  "synced_at": "2026-05-05T19:33:49.058962",
+  "record_count": 7,
+  "content_hash": "e74b706145e7c206",
+  "fields": [
+    {
+      "id": "fldvlo2U71",
+      "name": "日期范围",
+      "type": "text"
+    },
+    {
+      "id": "fldnLutEkG",
+      "name": "周均新增品牌",
+      "type": "number"
+    },
+    {
+      "id": "fldUveVjEP",
+      "name": "客户满意度",
+      "type": "number"
+    },
+    {
+      "id": "fldHPKI03D",
+      "name": "项目状态",
+      "type": "text"
+    },
+    {
+      "id": "fldR39VPCL",
+      "name": "周次",
+      "type": "number"
+    },
+    {
+      "id": "fldUhDTRh9",
+      "name": "单品牌周曝光",
+      "type": "number"
+    },
+    {
+      "id": "fld0MvSaBZ",
+      "name": "活跃客户数",
+      "type": "number"
+    },
+    {
+      "id": "flduZelWnT",
+      "name": "总交付内容",
+      "type": "number"
+    },
+    {
+      "id": "fldv0H6TLR",
+      "name": "多行文本",
+      "type": "text"
+    }
+  ]
+}

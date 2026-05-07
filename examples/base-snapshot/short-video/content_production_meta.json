@@ -1,0 +1,92 @@
+{
+  "table_token": "tblQphP0IoJEZuGi",
+  "table_name": "content_production",
+  "display_name": "内容产出",
+  "project": "short-video",
+  "base_token": "X8o0b9M9ZaSk0asVcr4ceF16neg",
+  "synced_at": "2026-05-05T19:34:03.618049",
+  "record_count": 200,
+  "content_hash": "0d197b6e0dea0f8d",
+  "fields": [
+    {
+      "id": "fldttqTKMg",
+      "name": "完播率",
+      "type": "number"
+    },
+    {
+      "id": "fld7RrfBwX",
+      "name": "发布平台",
+      "type": "text"
+    },
+    {
+      "id": "fld587bu20",
+      "name": "选题标签",
+      "type": "text"
+    },
+    {
+      "id": "fldQx6GvKF",
+      "name": "是否爆款",
+      "type": "text"
+    },
+    {
+      "id": "fldx1Badb7",
+      "name": "播放量",
+      "type": "number"
+    },
+    {
+      "id": "fldIyrp631",
+      "name": "发布日期",
+      "type": "text"
+    },
+    {
+      "id": "fld1jKvgbl",
+      "name": "内容 ID",
+      "type": "text"
+    },
+    {
+      "id": "fldzI7KHzW",
+      "name": "所属周次",
+      "type": "number"
+    },
+    {
+      "id": "fldqYpJAwe",
+      "name": "内容类型",
+      "type": "text"
+    },
+    {
+      "id": "fldZRbEqlj",
+      "name": "分享数",
+      "type": "number"
+    },
+    {
+      "id": "fldrpuXiiB",
+      "name": "评论数",
+      "type": "number"
+    },
+    {
+      "id": "fldE5hbNIb",
+      "name": "所属项目",
+      "type": "text"
+    },
+    {
+      "id": "fldswglool",
+      "name": "点赞数",
+      "type": "number"
+    },
+    {
+      "id": "fldeBolfav",
+      "name": "关联账号",
+      "type": "text"
+    },
+    {
+      "id": "fldF8vaV29",
+      "name": "数据评级",
+      "type": "text"
+    },
+    {
+      "id": "fld3cOuNTG",
+      "name": "内容标题",
+      "type": "text"
+    }
+  ]
+}

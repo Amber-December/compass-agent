@@ -1,0 +1,112 @@
+{
+  "table_token": "tbl78gzsEVIlQqMO",
+  "table_name": "live_session",
+  "display_name": "直播场次",
+  "project": "virtual-ip",
+  "base_token": "FeyIbsjrNa7pPksOqXmcE7ZMnff",
+  "synced_at": "2026-05-05T19:34:10.781700",
+  "record_count": 30,
+  "content_hash": "6d27eb4fcbd46cfc",
+  "fields": [
+    {
+      "id": "fldGB8WW08",
+      "name": "技术故障",
+      "type": "text"
+    },
+    {
+      "id": "fldKYi7mBX",
+      "name": "峰值在线",
+      "type": "number"
+    },
+    {
+      "id": "fldLHvGM6i",
+      "name": "分享数",
+      "type": "number"
+    },
+    {
+      "id": "flduNxoaG4",
+      "name": "所属周次",
+      "type": "number"
+    },
+    {
+      "id": "fldqX64gFn",
+      "name": "互动率",
+      "type": "number"
+    },
+    {
+      "id": "fldozc1MfP",
+      "name": "品牌收入",
+      "type": "number"
+    },
+    {
+      "id": "fldMEuqdTi",
+      "name": "场次编号",
+      "type": "text"
+    },
+    {
+      "id": "fldTOfir2v",
+      "name": "开播时间",
+      "type": "text"
+    },
+    {
+      "id": "fld0Fvypqh",
+      "name": "平台",
+      "type": "text"
+    },
+    {
+      "id": "fld3DowSxw",
+      "name": "总收入",
+      "type": "number"
+    },
+    {
+      "id": "fldEc3dy3Y",
+      "name": "多行文本",
+      "type": "text"
+    },
+    {
+      "id": "fld3bGNuTW",
+      "name": "礼物收入",
+      "type": "number"
+    },
+    {
+      "id": "fldsk3UaMX",
+      "name": "所属项目",
+      "type": "text"
+    },
+    {
+      "id": "fldRZC9zU3",
+      "name": "观看人数",
+      "type": "number"
+    },
+    {
+      "id": "fldn5ogqxI",
+      "name": "IP名称",
+      "type": "text"
+    },
+    {
+      "id": "fldF82l72L",
+      "name": "评论数",
+      "type": "number"
+    },
+    {
+      "id": "fldT24YqOm",
+      "name": "直播时长",
+      "type": "number"
+    },
+    {
+      "id": "fldHrBfhXN",
+      "name": "PM备注",
+      "type": "text"
+    },
+    {
+      "id": "fldWCqffnj",
+      "name": "点赞数",
+      "type": "number"
+    },
+    {
+      "id": "fldlTaEEyX",
+      "name": "直播日期",
+      "type": "text"
+    }
+  ]
+}

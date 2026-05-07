@@ -1,0 +1,62 @@
+{
+  "table_token": "tblWEbBYnj1mxgVi",
+  "table_name": "project_kpi",
+  "display_name": "项目周度KPI",
+  "project": "private-domain",
+  "base_token": "WKOXb2zm7a1XIFseYMmcYl4znJn",
+  "synced_at": "2026-05-05T19:34:25.099971",
+  "record_count": 8,
+  "content_hash": "481bfa8053654d32",
+  "fields": [
+    {
+      "id": "fldh4trm9y",
+      "name": "复购率",
+      "type": "number"
+    },
+    {
+      "id": "fldfdJrr7F",
+      "name": "私域转化",
+      "type": "number"
+    },
+    {
+      "id": "fldUuz1Dc0",
+      "name": "总订单数",
+      "type": "number"
+    },
+    {
+      "id": "fldrk5TEwf",
+      "name": "周次",
+      "type": "number"
+    },
+    {
+      "id": "fldhlwEVN3",
+      "name": "周均私域沉淀",
+      "type": "number"
+    },
+    {
+      "id": "fldTuYlhoP",
+      "name": "粉丝活跃度",
+      "type": "number"
+    },
+    {
+      "id": "fld0GCAbXL",
+      "name": "项目状态",
+      "type": "text"
+    },
+    {
+      "id": "flddzUBJ5T",
+      "name": "活跃社群数",
+      "type": "number"
+    },
+    {
+      "id": "fldykYoUWK",
+      "name": "多行文本",
+      "type": "text"
+    },
+    {
+      "id": "fldBbKyutD",
+      "name": "日期范围",
+      "type": "text"
+    }
+  ]
+}

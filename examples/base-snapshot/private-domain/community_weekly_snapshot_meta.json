@@ -1,0 +1,87 @@
+{
+  "table_token": "tblzbS0aGV4hNNj8",
+  "table_name": "community_weekly_snapshot",
+  "display_name": "社群周度快照",
+  "project": "private-domain",
+  "base_token": "WKOXb2zm7a1XIFseYMmcYl4znJn",
+  "synced_at": "2026-05-05T19:34:18.545984",
+  "record_count": 41,
+  "content_hash": "af0db89c980848fb",
+  "fields": [
+    {
+      "id": "fldeFNbd37",
+      "name": "日期范围",
+      "type": "text"
+    },
+    {
+      "id": "fldLy7JZFF",
+      "name": "转化率",
+      "type": "number"
+    },
+    {
+      "id": "fldWQgAFO9",
+      "name": "订单数",
+      "type": "number"
+    },
+    {
+      "id": "fldtT5cECW",
+      "name": "总成员数",
+      "type": "number"
+    },
+    {
+      "id": "fldUsLbXGb",
+      "name": "复购数",
+      "type": "number"
+    },
+    {
+      "id": "fldQj3nXLC",
+      "name": "活跃成员数",
+      "type": "number"
+    },
+    {
+      "id": "fldnuACJce",
+      "name": "新增成员",
+      "type": "number"
+    },
+    {
+      "id": "fldLIkLDJS",
+      "name": "复购率",
+      "type": "number"
+    },
+    {
+      "id": "fldb2AD1nm",
+      "name": "周次",
+      "type": "number"
+    },
+    {
+      "id": "fldO7XqLB7",
+      "name": "社群编号",
+      "type": "text"
+    },
+    {
+      "id": "fldcl4Vnng",
+      "name": "数据状态",
+      "type": "text"
+    },
+    {
+      "id": "fld6vB6Vuc",
+      "name": "快照编号",
+      "type": "text"
+    },
+    {
+      "id": "flde3Q27QR",
+      "name": "社群名称",
+      "type": "text"
+    },
+    {
+      "id": "fldgQcXESi",
+      "name": "多行文本",
+      "type": "text"
+    },
+    {
+      "id": "fldHbYWgH6",
+      "name": "活跃度",
+      "type": "number"
+    }
+  ]
+}

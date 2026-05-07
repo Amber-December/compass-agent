@@ -1,0 +1,102 @@
+{
+  "table_token": "tblaL4F3Hp4pnOJK",
+  "table_name": "brand_cooperation",
+  "display_name": "品牌合作",
+  "project": "kol-incubation",
+  "base_token": "LTLNbBlGTaB4mNs6by0cvhPhnib",
+  "synced_at": "2026-05-05T19:33:35.844369",
+  "record_count": 3,
+  "content_hash": "0c079dc19fd4fee4",
+  "fields": [
+    {
+      "id": "fldEXOyW3Q",
+      "name": "内容要求",
+      "type": "text"
+    },
+    {
+      "id": "fldeCLx74N",
+      "name": "已交付内容",
+      "type": "number"
+    },
+    {
+      "id": "fldpotcYbq",
+      "name": "品牌名称",
+      "type": "text"
+    },
+    {
+      "id": "fldgU0L8nu",
+      "name": "结束日期",
+      "type": "datetime"
+    },
+    {
+      "id": "fldrdZlJTu",
+      "name": "要求内容数",
+      "type": "number"
+    },
+    {
+      "id": "fldA5sv4Je",
+      "name": "结算状态",
+      "type": "select"
+    },
+    {
+      "id": "fldPR5Qepj",
+      "name": "合作阶段",
+      "type": "select"
+    },
+    {
+      "id": "fldvgooqde",
+      "name": "风险标记",
+      "type": "checkbox"
+    },
+    {
+      "id": "fldP5nEO0I",
+      "name": "品牌联系人",
+      "type": "text"
+    },
+    {
+      "id": "fldaDNGBXu",
+      "name": "开始日期",
+      "type": "datetime"
+    },
+    {
+      "id": "flddbjvuzy",
+      "name": "PM备注",
+      "type": "text"
+    },
+    {
+      "id": "fldPZYu89G",
+      "name": "曝光量",
+      "type": "number"
+    },
+    {
+      "id": "fldTLaYrGX",
+      "name": "参与达人",
+      "type": "text"
+    },
+    {
+      "id": "fldBVIHsfn",
+      "name": "实际收入",
+      "type": "number"
+    },
+    {
+      "id": "fld7ZIBOIQ",
+      "name": "满意度评分",
+      "type": "number"
+    },
+    {
+      "id": "fld1kPdM1k",
+      "name": "风险原因",
+      "type": "text"
+    },
+    {
+      "id": "fld7mjQGNd",
+      "name": "合作编号",
+      "type": "text"
+    },
+    {
+      "id": "fldP95lrqu",
+      "name": "合同金额",
+      "type": "number"
+    }
+  ]
+}

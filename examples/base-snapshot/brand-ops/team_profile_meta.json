@@ -1,0 +1,47 @@
+{
+  "table_token": "tblcSYQHl8BBDjEF",
+  "table_name": "team_profile",
+  "display_name": "团队档案",
+  "project": "brand-ops",
+  "base_token": "J99JbkE9eaEK97sMGfEcSG8UnLd",
+  "synced_at": "2026-05-05T19:33:47.472680",
+  "record_count": 4,
+  "content_hash": "862f469744289fb1",
+  "fields": [
+    {
+      "id": "fldIoGVshj",
+      "name": "等级",
+      "type": "text"
+    },
+    {
+      "id": "fld2b65z9t",
+      "name": "入职日期",
+      "type": "text"
+    },
+    {
+      "id": "fldrzS9OSp",
+      "name": "PM备注",
+      "type": "text"
+    },
+    {
+      "id": "fld9wsRXkd",
+      "name": "多行文本",
+      "type": "text"
+    },
+    {
+      "id": "fldE7OCyWB",
+      "name": "成员编号",
+      "type": "text"
+    },
+    {
+      "id": "fldF9Z9b9R",
+      "name": "姓名",
+      "type": "text"
+    },
+    {
+      "id": "fldWtTXRg3",
+      "name": "角色",
+      "type": "text"
+    }
+  ]
+}

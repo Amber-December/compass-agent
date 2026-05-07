@@ -1,0 +1,42 @@
+{
+  "table_token": "tblIv9gutvqSCF3t",
+  "table_name": "team_profile",
+  "display_name": "团队档案",
+  "project": "short-video",
+  "base_token": "X8o0b9M9ZaSk0asVcr4ceF16neg",
+  "synced_at": "2026-05-05T19:34:05.043066",
+  "record_count": 7,
+  "content_hash": "16b6d6b708402b3c",
+  "fields": [
+    {
+      "id": "fldG8S9ugV",
+      "name": "成员编号",
+      "type": "text"
+    },
+    {
+      "id": "fldPG9kP6U",
+      "name": "姓名",
+      "type": "text"
+    },
+    {
+      "id": "flde6nR4k2",
+      "name": "角色",
+      "type": "text"
+    },
+    {
+      "id": "fldd2dOPWB",
+      "name": "等级",
+      "type": "text"
+    },
+    {
+      "id": "fldHMhfw1V",
+      "name": "入职日期",
+      "type": "text"
+    },
+    {
+      "id": "fldcwm16ht",
+      "name": "PM备注",
+      "type": "text"
+    }
+  ]
+}

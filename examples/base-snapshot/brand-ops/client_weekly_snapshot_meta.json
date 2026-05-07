@@ -1,0 +1,82 @@
+{
+  "table_token": "tbl1A5YesPpwXFXx",
+  "table_name": "client_weekly_snapshot",
+  "display_name": "客户周度快照",
+  "project": "brand-ops",
+  "base_token": "J99JbkE9eaEK97sMGfEcSG8UnLd",
+  "synced_at": "2026-05-05T19:33:44.169311",
+  "record_count": 29,
+  "content_hash": "b312bf72a4125556",
+  "fields": [
+    {
+      "id": "fldgKN2HbP",
+      "name": "已交付内容",
+      "type": "number"
+    },
+    {
+      "id": "fldxkbcDu1",
+      "name": "快照编号",
+      "type": "text"
+    },
+    {
+      "id": "fldNyJd223",
+      "name": "日期范围",
+      "type": "text"
+    },
+    {
+      "id": "fldGgReoU0",
+      "name": "曝光量",
+      "type": "number"
+    },
+    {
+      "id": "fldwJEYapZ",
+      "name": "营收",
+      "type": "number"
+    },
+    {
+      "id": "flda49yKF4",
+      "name": "满意度",
+      "type": "number"
+    },
+    {
+      "id": "fldqKoPipY",
+      "name": "多行文本",
+      "type": "text"
+    },
+    {
+      "id": "fldrdjI6ZG",
+      "name": "客户名称",
+      "type": "text"
+    },
+    {
+      "id": "fld2l3mJxa",
+      "name": "状态",
+      "type": "text"
+    },
+    {
+      "id": "fld7091qG3",
+      "name": "计划内容",
+      "type": "number"
+    },
+    {
+      "id": "fldig8Y8Mf",
+      "name": "数据状态",
+      "type": "text"
+    },
+    {
+      "id": "fldE7vL1Rm",
+      "name": "周次",
+      "type": "number"
+    },
+    {
+      "id": "fld4OqdGag",
+      "name": "客户编号",
+      "type": "text"
+    },
+    {
+      "id": "fldpD04fWj",
+      "name": "行业",
+      "type": "text"
+    }
+  ]
+}

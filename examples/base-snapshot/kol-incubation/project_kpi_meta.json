@@ -1,0 +1,77 @@
+{
+  "table_token": "tbl83PBLxIbUir1x",
+  "table_name": "project_kpi",
+  "display_name": "项目周度KPI",
+  "project": "kol-incubation",
+  "base_token": "LTLNbBlGTaB4mNs6by0cvhPhnib",
+  "synced_at": "2026-05-05T19:33:40.964061",
+  "record_count": 9,
+  "content_hash": "0c5c96686edecb7d",
+  "fields": [
+    {
+      "id": "flddBaJ8zx",
+      "name": "平均粉丝增长率",
+      "type": "number"
+    },
+    {
+      "id": "fldDkLjNIR",
+      "name": "项目状态",
+      "type": "select"
+    },
+    {
+      "id": "fldPDVRwMC",
+      "name": "总播放量",
+      "type": "number"
+    },
+    {
+      "id": "fldQN9h35B",
+      "name": "活跃达人数量",
+      "type": "number"
+    },
+    {
+      "id": "fldhNnFEZl",
+      "name": "头部达人数量",
+      "type": "number"
+    },
+    {
+      "id": "fld8Ae8Epk",
+      "name": "达人周均变现",
+      "type": "number"
+    },
+    {
+      "id": "fldjO6fVwz",
+      "name": "商单内容数",
+      "type": "number"
+    },
+    {
+      "id": "fldMo3m6DP",
+      "name": "周总营收",
+      "type": "number"
+    },
+    {
+      "id": "fldpZEbYhG",
+      "name": "日期范围",
+      "type": "text"
+    },
+    {
+      "id": "fldCb90GHs",
+      "name": "商单转化率",
+      "type": "number"
+    },
+    {
+      "id": "fldkArJp92",
+      "name": "总内容数",
+      "type": "number"
+    },
+    {
+      "id": "fldoXLfOi1",
+      "name": "周次",
+      "type": "number"
+    },
+    {
+      "id": "fldZ6x3XLa",
+      "name": "新增签约达人",
+      "type": "number"
+    }
+  ]
+}

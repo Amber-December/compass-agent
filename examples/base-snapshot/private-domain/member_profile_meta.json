@@ -1,0 +1,72 @@
+{
+  "table_token": "tblodbIjKkBYjiQB",
+  "table_name": "member_profile",
+  "display_name": "成员档案",
+  "project": "private-domain",
+  "base_token": "WKOXb2zm7a1XIFseYMmcYl4znJn",
+  "synced_at": "2026-05-05T19:34:20.396396",
+  "record_count": 30,
+  "content_hash": "62c910dc343bcfff",
+  "fields": [
+    {
+      "id": "fld1MaRCcK",
+      "name": "加入日期",
+      "type": "text"
+    },
+    {
+      "id": "fldC9BHyAR",
+      "name": "来源渠道",
+      "type": "text"
+    },
+    {
+      "id": "fldpkZNRWM",
+      "name": "多行文本",
+      "type": "text"
+    },
+    {
+      "id": "fld3ENuIDR",
+      "name": "加入周次",
+      "type": "number"
+    },
+    {
+      "id": "fldwnWHjnV",
+      "name": "累计订单",
+      "type": "number"
+    },
+    {
+      "id": "fldDGVd8cg",
+      "name": "最近活跃",
+      "type": "text"
+    },
+    {
+      "id": "fldoTF0Kmr",
+      "name": "用户标签",
+      "type": "text"
+    },
+    {
+      "id": "fldBNTUlSD",
+      "name": "姓名",
+      "type": "text"
+    },
+    {
+      "id": "fldz3JVe5o",
+      "name": "成员编号",
+      "type": "text"
+    },
+    {
+      "id": "fld1rnOjqj",
+      "name": "累计消费",
+      "type": "number"
+    },
+    {
+      "id": "fldJ70PBPO",
+      "name": "所属社群",
+      "type": "text"
+    },
+    {
+      "id": "fldymqa6gO",
+      "name": "PM备注",
+      "type": "text"
+    }
+  ]
+}

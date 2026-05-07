@@ -1,0 +1,82 @@
+{
+  "table_token": "tblIDKGdBt5nO50g",
+  "table_name": "product_selection",
+  "display_name": "选品管理",
+  "project": "live-commerce",
+  "base_token": "KFnUbyA0jaSXcrsHuENcY9gBnJe",
+  "synced_at": "2026-05-05T19:33:55.061527",
+  "record_count": 12,
+  "content_hash": "9f536b647c92b847",
+  "fields": [
+    {
+      "id": "fldaFU3kWv",
+      "name": "库存",
+      "type": "number"
+    },
+    {
+      "id": "fldXrvdrkh",
+      "name": "多行文本",
+      "type": "text"
+    },
+    {
+      "id": "fldsi252ly",
+      "name": "累计销量",
+      "type": "number"
+    },
+    {
+      "id": "fldbYHfa2p",
+      "name": "累计GMV",
+      "type": "number"
+    },
+    {
+      "id": "fldKhUIQTR",
+      "name": "状态",
+      "type": "text"
+    },
+    {
+      "id": "fldOZSNkWP",
+      "name": "PM备注",
+      "type": "text"
+    },
+    {
+      "id": "fldeCj47e2",
+      "name": "佣金率",
+      "type": "number"
+    },
+    {
+      "id": "fldxQAUx0w",
+      "name": "直播价",
+      "type": "number"
+    },
+    {
+      "id": "fldWfL0BcX",
+      "name": "供应商",
+      "type": "text"
+    },
+    {
+      "id": "fldyZJV58D",
+      "name": "成本价",
+      "type": "number"
+    },
+    {
+      "id": "flds1ewN07",
+      "name": "关联场次",
+      "type": "text"
+    },
+    {
+      "id": "fld67E2GSv",
+      "name": "商品编号",
+      "type": "text"
+    },
+    {
+      "id": "fldyEowXiY",
+      "name": "商品名称",
+      "type": "text"
+    },
+    {
+      "id": "fld2obkUZI",
+      "name": "类目",
+      "type": "text"
+    }
+  ]
+}

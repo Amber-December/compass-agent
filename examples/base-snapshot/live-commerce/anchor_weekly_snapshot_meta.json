@@ -1,0 +1,102 @@
+{
+  "table_token": "tblL1I1WH3tAEGAF",
+  "table_name": "anchor_weekly_snapshot",
+  "display_name": "主播周度快照",
+  "project": "live-commerce",
+  "base_token": "KFnUbyA0jaSXcrsHuENcY9gBnJe",
+  "synced_at": "2026-05-05T19:33:52.046731",
+  "record_count": 32,
+  "content_hash": "261c2e9f2ad28efd",
+  "fields": [
+    {
+      "id": "fldcvcMVqO",
+      "name": "快照编号",
+      "type": "text"
+    },
+    {
+      "id": "fldXk2Q65r",
+      "name": "主播编号",
+      "type": "text"
+    },
+    {
+      "id": "fldAjIbxRk",
+      "name": "直播场次",
+      "type": "number"
+    },
+    {
+      "id": "fldzXUP1KH",
+      "name": "角色",
+      "type": "text"
+    },
+    {
+      "id": "fldaoCWogF",
+      "name": "主播名称",
+      "type": "text"
+    },
+    {
+      "id": "fldSsguaX8",
+      "name": "总评论",
+      "type": "number"
+    },
+    {
+      "id": "fldfciWICY",
+      "name": "日期范围",
+      "type": "text"
+    },
+    {
+      "id": "fldvFtUd2J",
+      "name": "总观看人数",
+      "type": "number"
+    },
+    {
+      "id": "fldiWbOMu0",
+      "name": "多行文本",
+      "type": "text"
+    },
+    {
+      "id": "fldu6QtXRG",
+      "name": "平均ROI",
+      "type": "number"
+    },
+    {
+      "id": "fldkmqa2w6",
+      "name": "平均客单价",
+      "type": "number"
+    },
+    {
+      "id": "fldRTOTTdI",
+      "name": "总GMV",
+      "type": "number"
+    },
+    {
+      "id": "fldU2xDfMe",
+      "name": "总订单数",
+      "type": "number"
+    },
+    {
+      "id": "fld69f1kX3",
+      "name": "总投流费用",
+      "type": "number"
+    },
+    {
+      "id": "fldgIohRX1",
+      "name": "周次",
+      "type": "number"
+    },
+    {
+      "id": "fldYsg36Rb",
+      "name": "平均转化率",
+      "type": "number"
+    },
+    {
+      "id": "fldWbQ6TZ3",
+      "name": "总点赞",
+      "type": "number"
+    },
+    {
+      "id": "fldeEtOy0W",
+      "name": "数据状态",
+      "type": "text"
+    }
+  ]
+}

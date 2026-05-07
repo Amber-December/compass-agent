@@ -1,0 +1,67 @@
+{
+  "table_token": "tbl6MYZhmSjQs7KF",
+  "table_name": "community_profile",
+  "display_name": "社群档案",
+  "project": "private-domain",
+  "base_token": "WKOXb2zm7a1XIFseYMmcYl4znJn",
+  "synced_at": "2026-05-05T19:34:16.822922",
+  "record_count": 6,
+  "content_hash": "796900d81e141bab",
+  "fields": [
+    {
+      "id": "fldiIDFjNo",
+      "name": "多行文本",
+      "type": "text"
+    },
+    {
+      "id": "fldNczwt4T",
+      "name": "社群编号",
+      "type": "text"
+    },
+    {
+      "id": "fldhdfby4A",
+      "name": "状态",
+      "type": "text"
+    },
+    {
+      "id": "fldj71HZOv",
+      "name": "社群名称",
+      "type": "text"
+    },
+    {
+      "id": "fldZVbjPTM",
+      "name": "平台",
+      "type": "text"
+    },
+    {
+      "id": "fldUr0yqkO",
+      "name": "风险等级",
+      "type": "text"
+    },
+    {
+      "id": "fldV2qSvh8",
+      "name": "PM备注",
+      "type": "text"
+    },
+    {
+      "id": "fldNqLeCOr",
+      "name": "类目",
+      "type": "text"
+    },
+    {
+      "id": "fldjSdQ6a6",
+      "name": "创建达人",
+      "type": "text"
+    },
+    {
+      "id": "fldyTAZte0",
+      "name": "创建日期",
+      "type": "text"
+    },
+    {
+      "id": "fldIzClqX8",
+      "name": "当前成员数",
+      "type": "number"
+    }
+  ]
+}

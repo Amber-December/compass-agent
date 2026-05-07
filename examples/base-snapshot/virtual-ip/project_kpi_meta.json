@@ -1,0 +1,67 @@
+{
+  "table_token": "tblnihoSAgKNSdNp",
+  "table_name": "project_kpi",
+  "display_name": "项目周度KPI",
+  "project": "virtual-ip",
+  "base_token": "FeyIbsjrNa7pPksOqXmcE7ZMnff",
+  "synced_at": "2026-05-05T19:34:15.161960",
+  "record_count": 5,
+  "content_hash": "fbcdf80c3afb981e",
+  "fields": [
+    {
+      "id": "fldBZD50Gv",
+      "name": "上线虚拟IP数量",
+      "type": "number"
+    },
+    {
+      "id": "fld6rKjeg2",
+      "name": "技术故障率",
+      "type": "number"
+    },
+    {
+      "id": "flduZ8EyfD",
+      "name": "总直播场次",
+      "type": "number"
+    },
+    {
+      "id": "fldEu87bET",
+      "name": "总短视频数",
+      "type": "number"
+    },
+    {
+      "id": "fld2PptZYT",
+      "name": "日期范围",
+      "type": "text"
+    },
+    {
+      "id": "fldoB2x1pv",
+      "name": "虚拟IP粉丝总量",
+      "type": "number"
+    },
+    {
+      "id": "fldl4YW19f",
+      "name": "项目状态",
+      "type": "text"
+    },
+    {
+      "id": "fldvRJ8FV2",
+      "name": "多行文本",
+      "type": "text"
+    },
+    {
+      "id": "fldtPuPPkT",
+      "name": "周次",
+      "type": "number"
+    },
+    {
+      "id": "fld5Lwz1fW",
+      "name": "互动率",
+      "type": "number"
+    },
+    {
+      "id": "fldrC22Bmu",
+      "name": "活跃IP数",
+      "type": "number"
+    }
+  ]
+}

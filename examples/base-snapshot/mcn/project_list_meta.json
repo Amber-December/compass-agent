@@ -1,0 +1,52 @@
+{
+  "table_token": "tblbbwkCKI5pHy4C",
+  "table_name": "project_list",
+  "display_name": "项目清单",
+  "project": "mcn",
+  "base_token": "SZ1Cb3RbbabNJLsr6TpcJPEfn2g",
+  "synced_at": "2026-05-05T19:33:28.067078",
+  "record_count": 6,
+  "content_hash": "a0b8e7c30c02d0da",
+  "fields": [
+    {
+      "id": "fld7q4DtZd",
+      "name": "项目名称",
+      "type": "text"
+    },
+    {
+      "id": "fldTeKkRbY",
+      "name": "多行文本",
+      "type": "text"
+    },
+    {
+      "id": "fld0oYOJ1l",
+      "name": "总周数",
+      "type": "number"
+    },
+    {
+      "id": "fldqoXQoDD",
+      "name": "项目ID",
+      "type": "text"
+    },
+    {
+      "id": "fldtO1fyfS",
+      "name": "当前状态",
+      "type": "text"
+    },
+    {
+      "id": "fld2bQCfHy",
+      "name": "PM",
+      "type": "text"
+    },
+    {
+      "id": "fldcK0yyBR",
+      "name": "KPI数量",
+      "type": "number"
+    },
+    {
+      "id": "fld5DWx693",
+      "name": "项目类型",
+      "type": "text"
+    }
+  ]
+}

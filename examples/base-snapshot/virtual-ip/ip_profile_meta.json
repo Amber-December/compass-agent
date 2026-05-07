@@ -1,0 +1,112 @@
+{
+  "table_token": "tblizcCslMArUBSg",
+  "table_name": "ip_profile",
+  "display_name": "IP档案",
+  "project": "virtual-ip",
+  "base_token": "FeyIbsjrNa7pPksOqXmcE7ZMnff",
+  "synced_at": "2026-05-05T19:34:07.908425",
+  "record_count": 4,
+  "content_hash": "cf8a86c5b2b6a697",
+  "fields": [
+    {
+      "id": "fld7gu5AK3",
+      "name": "核心技能",
+      "type": "text"
+    },
+    {
+      "id": "fldJ8yuict",
+      "name": "人设策划",
+      "type": "text"
+    },
+    {
+      "id": "fldN3exzxO",
+      "name": "平台",
+      "type": "text"
+    },
+    {
+      "id": "flduI3aSph",
+      "name": "运营",
+      "type": "text"
+    },
+    {
+      "id": "fld9RjHNlH",
+      "name": "人设设定",
+      "type": "text"
+    },
+    {
+      "id": "fldC8sonjg",
+      "name": "上线日期",
+      "type": "text"
+    },
+    {
+      "id": "fldDeFFz6h",
+      "name": "PM备注",
+      "type": "text"
+    },
+    {
+      "id": "fldphuyO6b",
+      "name": "IP编号",
+      "type": "text"
+    },
+    {
+      "id": "fldbrdy8qB",
+      "name": "多行文本",
+      "type": "text"
+    },
+    {
+      "id": "fldPvegNKk",
+      "name": "累计短视频数",
+      "type": "number"
+    },
+    {
+      "id": "fldCXhCanA",
+      "name": "总粉丝数",
+      "type": "number"
+    },
+    {
+      "id": "fldXC7mN48",
+      "name": "IP类型",
+      "type": "text"
+    },
+    {
+      "id": "fldgDlDGkz",
+      "name": "内容风格",
+      "type": "text"
+    },
+    {
+      "id": "fldIyO3TNu",
+      "name": "周收入",
+      "type": "number"
+    },
+    {
+      "id": "fldjNdVdW3",
+      "name": "累计直播场次",
+      "type": "number"
+    },
+    {
+      "id": "fldh0bqQBS",
+      "name": "互动率",
+      "type": "number"
+    },
+    {
+      "id": "fld8SmYuRm",
+      "name": "IP名称",
+      "type": "text"
+    },
+    {
+      "id": "fldPVhTHYD",
+      "name": "技术负责人",
+      "type": "text"
+    },
+    {
+      "id": "fldOdkMOBG",
+      "name": "状态",
+      "type": "text"
+    },
+    {
+      "id": "fldYNC3l5W",
+      "name": "变现渠道",
+      "type": "text"
+    }
+  ]
+}

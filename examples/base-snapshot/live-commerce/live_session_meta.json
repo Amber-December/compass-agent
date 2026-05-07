@@ -1,0 +1,127 @@
+{
+  "table_token": "tblkoG7mX1m1UFkY",
+  "table_name": "live_session",
+  "display_name": "直播场次",
+  "project": "live-commerce",
+  "base_token": "KFnUbyA0jaSXcrsHuENcY9gBnJe",
+  "synced_at": "2026-05-05T19:33:53.533756",
+  "record_count": 21,
+  "content_hash": "deac49d40454842d",
+  "fields": [
+    {
+      "id": "fldHDjuRf3",
+      "name": "观看人数",
+      "type": "number"
+    },
+    {
+      "id": "fldsegtNtC",
+      "name": "直播日期",
+      "type": "text"
+    },
+    {
+      "id": "fldHtwwVbp",
+      "name": "峰值在线",
+      "type": "number"
+    },
+    {
+      "id": "fldNc0GZCP",
+      "name": "PM备注",
+      "type": "text"
+    },
+    {
+      "id": "fldmWpZyvx",
+      "name": "平台",
+      "type": "text"
+    },
+    {
+      "id": "fldcqnXusR",
+      "name": "商品数",
+      "type": "number"
+    },
+    {
+      "id": "fldAdNI8xB",
+      "name": "开播时间",
+      "type": "text"
+    },
+    {
+      "id": "fldfLkkVyL",
+      "name": "所属周次",
+      "type": "number"
+    },
+    {
+      "id": "fldE95u8AF",
+      "name": "分享数",
+      "type": "number"
+    },
+    {
+      "id": "fldARWQia5",
+      "name": "所属项目",
+      "type": "text"
+    },
+    {
+      "id": "fldV2MBn9t",
+      "name": "GMV",
+      "type": "number"
+    },
+    {
+      "id": "fldCq2B5lF",
+      "name": "场次编号",
+      "type": "text"
+    },
+    {
+      "id": "fldPELBki1",
+      "name": "投流费用",
+      "type": "number"
+    },
+    {
+      "id": "fldZBDUCZj",
+      "name": "评论数",
+      "type": "number"
+    },
+    {
+      "id": "fldBOBXW1M",
+      "name": "多行文本",
+      "type": "text"
+    },
+    {
+      "id": "fldEcHi7y6",
+      "name": "主播",
+      "type": "text"
+    },
+    {
+      "id": "fldniaWnWa",
+      "name": "ROI",
+      "type": "number"
+    },
+    {
+      "id": "fldIqi42jE",
+      "name": "转化率",
+      "type": "number"
+    },
+    {
+      "id": "fldSQDuhEX",
+      "name": "订单数",
+      "type": "number"
+    },
+    {
+      "id": "fldBEUam7a",
+      "name": "点赞数",
+      "type": "number"
+    },
+    {
+      "id": "fldfGy7CUY",
+      "name": "直播时长",
+      "type": "number"
+    },
+    {
+      "id": "fldCHlhhwL",
+      "name": "数据状态",
+      "type": "text"
+    },
+    {
+      "id": "fldXsyVaih",
+      "name": "客单价",
+      "type": "number"
+    }
+  ]
+}

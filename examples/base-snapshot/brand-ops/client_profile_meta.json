@@ -1,0 +1,82 @@
+{
+  "table_token": "tblwIcIfwjQLaiNc",
+  "table_name": "client_profile",
+  "display_name": "客户档案",
+  "project": "brand-ops",
+  "base_token": "J99JbkE9eaEK97sMGfEcSG8UnLd",
+  "synced_at": "2026-05-05T19:33:42.499216",
+  "record_count": 7,
+  "content_hash": "046192c26461365e",
+  "fields": [
+    {
+      "id": "fldm263SPu",
+      "name": "合同金额",
+      "type": "number"
+    },
+    {
+      "id": "fld1HBnl6B",
+      "name": "月费",
+      "type": "number"
+    },
+    {
+      "id": "fld1PCMVbj",
+      "name": "签约日期",
+      "type": "text"
+    },
+    {
+      "id": "fldrKMFHlp",
+      "name": "满意度",
+      "type": "number"
+    },
+    {
+      "id": "fld9FljmdI",
+      "name": "合同类型",
+      "type": "text"
+    },
+    {
+      "id": "fldiqMaibg",
+      "name": "客户名称",
+      "type": "text"
+    },
+    {
+      "id": "fldvawk2b9",
+      "name": "风险标记",
+      "type": "text"
+    },
+    {
+      "id": "fld7kdAXNq",
+      "name": "风险原因",
+      "type": "text"
+    },
+    {
+      "id": "fldpKke1H0",
+      "name": "多行文本",
+      "type": "text"
+    },
+    {
+      "id": "fld7JbA3IR",
+      "name": "客户编号",
+      "type": "text"
+    },
+    {
+      "id": "fldxeERJAy",
+      "name": "行业",
+      "type": "text"
+    },
+    {
+      "id": "fld7NQNJdf",
+      "name": "联系人",
+      "type": "text"
+    },
+    {
+      "id": "fldrG72llK",
+      "name": "状态",
+      "type": "text"
+    },
+    {
+      "id": "fldDpE65nm",
+      "name": "PM备注",
+      "type": "text"
+    }
+  ]
+}

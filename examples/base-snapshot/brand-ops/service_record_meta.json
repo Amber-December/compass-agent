@@ -1,0 +1,67 @@
+{
+  "table_token": "tbl2Ku7rK0ph0mRT",
+  "table_name": "service_record",
+  "display_name": "服务记录",
+  "project": "brand-ops",
+  "base_token": "J99JbkE9eaEK97sMGfEcSG8UnLd",
+  "synced_at": "2026-05-05T19:33:45.885439",
+  "record_count": 90,
+  "content_hash": "84e2e66cc9adf3b4",
+  "fields": [
+    {
+      "id": "fldpKt4N1m",
+      "name": "服务周次",
+      "type": "number"
+    },
+    {
+      "id": "fldk8J6Giw",
+      "name": "服务类型",
+      "type": "text"
+    },
+    {
+      "id": "fldfnVUBA7",
+      "name": "执行状态",
+      "type": "text"
+    },
+    {
+      "id": "fldxdxobuq",
+      "name": "服务日期",
+      "type": "text"
+    },
+    {
+      "id": "fld0XI3SHw",
+      "name": "执行人",
+      "type": "text"
+    },
+    {
+      "id": "fldNbyPfsS",
+      "name": "多行文本",
+      "type": "text"
+    },
+    {
+      "id": "fldTFR5Ly3",
+      "name": "关联客户",
+      "type": "text"
+    },
+    {
+      "id": "fldbZJyVS8",
+      "name": "记录编号",
+      "type": "text"
+    },
+    {
+      "id": "fld6P4vZx5",
+      "name": "所属项目",
+      "type": "text"
+    },
+    {
+      "id": "flddMgO1xU",
+      "name": "服务描述",
+      "type": "text"
+    },
+    {
+      "id": "fldIcAz05a",
+      "name": "PM备注",
+      "type": "text"
+    }
+  ]
+}

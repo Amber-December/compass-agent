@@ -1,0 +1,47 @@
+{
+  "table_token": "tblHw2rtoGApg8QK",
+  "table_name": "team_profile",
+  "display_name": "团队档案",
+  "project": "live-commerce",
+  "base_token": "KFnUbyA0jaSXcrsHuENcY9gBnJe",
+  "synced_at": "2026-05-05T19:33:57.061386",
+  "record_count": 3,
+  "content_hash": "7beff481cf04e7d8",
+  "fields": [
+    {
+      "id": "fldkiJH2wj",
+      "name": "等级",
+      "type": "text"
+    },
+    {
+      "id": "fldHASsNkj",
+      "name": "入职日期",
+      "type": "text"
+    },
+    {
+      "id": "fldmLObgKR",
+      "name": "PM备注",
+      "type": "text"
+    },
+    {
+      "id": "fldg6d2Umw",
+      "name": "多行文本",
+      "type": "text"
+    },
+    {
+      "id": "fldIehikw8",
+      "name": "成员编号",
+      "type": "text"
+    },
+    {
+      "id": "fldeOGEu9I",
+      "name": "姓名",
+      "type": "text"
+    },
+    {
+      "id": "fldytXcJWQ",
+      "name": "角色",
+      "type": "text"
+    }
+  ]
+}

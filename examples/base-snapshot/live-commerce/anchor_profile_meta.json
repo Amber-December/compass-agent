@@ -1,0 +1,97 @@
+{
+  "table_token": "tblO4nPhrGmQyIxB",
+  "table_name": "anchor_profile",
+  "display_name": "主播档案",
+  "project": "live-commerce",
+  "base_token": "KFnUbyA0jaSXcrsHuENcY9gBnJe",
+  "synced_at": "2026-05-05T19:33:50.524266",
+  "record_count": 4,
+  "content_hash": "ec07b2d87e311918",
+  "fields": [
+    {
+      "id": "flds31Qwyf",
+      "name": "平台",
+      "type": "text"
+    },
+    {
+      "id": "fldkqCcRw7",
+      "name": "签约日期",
+      "type": "text"
+    },
+    {
+      "id": "fldaCPtBar",
+      "name": "内容风格",
+      "type": "text"
+    },
+    {
+      "id": "fldOpjVLrZ",
+      "name": "等级",
+      "type": "text"
+    },
+    {
+      "id": "fldHcicvHk",
+      "name": "是否负责人",
+      "type": "text"
+    },
+    {
+      "id": "fldL2wwG8E",
+      "name": "角色",
+      "type": "text"
+    },
+    {
+      "id": "fldgnCXQs5",
+      "name": "PM备注",
+      "type": "text"
+    },
+    {
+      "id": "fldFHT20XC",
+      "name": "主播昵称",
+      "type": "text"
+    },
+    {
+      "id": "fldWpMCyXO",
+      "name": "场均GMV",
+      "type": "number"
+    },
+    {
+      "id": "fldmbJXcFn",
+      "name": "累计场次",
+      "type": "number"
+    },
+    {
+      "id": "fld6VN2PNa",
+      "name": "最高GMV",
+      "type": "number"
+    },
+    {
+      "id": "fldaqAg4by",
+      "name": "状态",
+      "type": "text"
+    },
+    {
+      "id": "fldRRnEe2y",
+      "name": "真实姓名",
+      "type": "text"
+    },
+    {
+      "id": "fldIadhLjq",
+      "name": "多行文本",
+      "type": "text"
+    },
+    {
+      "id": "fldzKOO3TA",
+      "name": "风险等级",
+      "type": "text"
+    },
+    {
+      "id": "fldTRsx5oB",
+      "name": "风险原因",
+      "type": "text"
+    },
+    {
+      "id": "fldaBFINCt",
+      "name": "主播编号",
+      "type": "text"
+    }
+  ]
+}

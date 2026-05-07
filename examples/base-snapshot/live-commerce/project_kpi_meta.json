@@ -1,0 +1,67 @@
+{
+  "table_token": "tbllcWWX1QMiXOH2",
+  "table_name": "project_kpi",
+  "display_name": "项目周度KPI",
+  "project": "live-commerce",
+  "base_token": "KFnUbyA0jaSXcrsHuENcY9gBnJe",
+  "synced_at": "2026-05-05T19:33:58.572301",
+  "record_count": 8,
+  "content_hash": "b061ec52994401ec",
+  "fields": [
+    {
+      "id": "fldNeXb1M3",
+      "name": "总GMV",
+      "type": "number"
+    },
+    {
+      "id": "fldjfjGVqe",
+      "name": "直播转化率",
+      "type": "number"
+    },
+    {
+      "id": "fldChQs4sI",
+      "name": "场均观看",
+      "type": "number"
+    },
+    {
+      "id": "fldDm20bUQ",
+      "name": "ROI",
+      "type": "number"
+    },
+    {
+      "id": "fldHKm9tn5",
+      "name": "总订单数",
+      "type": "number"
+    },
+    {
+      "id": "fld57lW32Y",
+      "name": "项目状态",
+      "type": "text"
+    },
+    {
+      "id": "fldEzwK92p",
+      "name": "多行文本",
+      "type": "text"
+    },
+    {
+      "id": "flddZ0Ysxn",
+      "name": "周次",
+      "type": "number"
+    },
+    {
+      "id": "fldq3lPMQS",
+      "name": "活跃主播数",
+      "type": "number"
+    },
+    {
+      "id": "fldWkin234",
+      "name": "日期范围",
+      "type": "text"
+    },
+    {
+      "id": "fldk6B1pUG",
+      "name": "总投流费用",
+      "type": "number"
+    }
+  ]
+}

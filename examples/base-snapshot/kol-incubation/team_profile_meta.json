@@ -1,0 +1,47 @@
+{
+  "table_token": "tblKajrMfSWEWXvZ",
+  "table_name": "team_profile",
+  "display_name": "团队档案",
+  "project": "kol-incubation",
+  "base_token": "LTLNbBlGTaB4mNs6by0cvhPhnib",
+  "synced_at": "2026-05-05T19:33:39.366402",
+  "record_count": 4,
+  "content_hash": "fce8fc277f1cd37b",
+  "fields": [
+    {
+      "id": "fldha5PyJa",
+      "name": "成员编号",
+      "type": "text"
+    },
+    {
+      "id": "fldNYxsYu9",
+      "name": "姓名",
+      "type": "text"
+    },
+    {
+      "id": "fld28ux56a",
+      "name": "角色",
+      "type": "text"
+    },
+    {
+      "id": "fld9wj4taU",
+      "name": "等级",
+      "type": "text"
+    },
+    {
+      "id": "fld0Rz1SE4",
+      "name": "入职日期",
+      "type": "text"
+    },
+    {
+      "id": "fldcywbzIC",
+      "name": "PM备注",
+      "type": "text"
+    },
+    {
+      "id": "fldp7BU8s0",
+      "name": "多行文本",
+      "type": "text"
+    }
+  ]
+}

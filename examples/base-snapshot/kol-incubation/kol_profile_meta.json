@@ -1,0 +1,122 @@
+{
+  "table_token": "tblLhY6gJgm4AFtT",
+  "table_name": "kol_profile",
+  "display_name": "达人档案",
+  "project": "kol-incubation",
+  "base_token": "LTLNbBlGTaB4mNs6by0cvhPhnib",
+  "synced_at": "2026-05-05T19:33:32.832839",
+  "record_count": 6,
+  "content_hash": "043b87d9f8756b0b",
+  "fields": [
+    {
+      "id": "fldz5DukPh",
+      "name": "当前粉丝数",
+      "type": "number"
+    },
+    {
+      "id": "fldiuHixCf",
+      "name": "内容风格",
+      "type": "text"
+    },
+    {
+      "id": "fldHsrwejF",
+      "name": "达人类型",
+      "type": "select"
+    },
+    {
+      "id": "fldDbMicDp",
+      "name": "累计收入",
+      "type": "number"
+    },
+    {
+      "id": "fld9slIywg",
+      "name": "订单数",
+      "type": "number"
+    },
+    {
+      "id": "fld8k7M3tl",
+      "name": "平均点赞",
+      "type": "number"
+    },
+    {
+      "id": "fldMm5vxxR",
+      "name": "达人编号",
+      "type": "text"
+    },
+    {
+      "id": "fldfbWyk0x",
+      "name": "PM备注",
+      "type": "text"
+    },
+    {
+      "id": "fldVV91g3e",
+      "name": "达人昵称",
+      "type": "text"
+    },
+    {
+      "id": "fldOO8bOkT",
+      "name": "真实姓名",
+      "type": "text"
+    },
+    {
+      "id": "fldbBNoPDy",
+      "name": "一级分类",
+      "type": "select"
+    },
+    {
+      "id": "fldf6o1SEB",
+      "name": "等级",
+      "type": "select"
+    },
+    {
+      "id": "fldQN1KoZe",
+      "name": "状态",
+      "type": "select"
+    },
+    {
+      "id": "fldwu9JKAO",
+      "name": "平台",
+      "type": "select"
+    },
+    {
+      "id": "fldVEIutjH",
+      "name": "初始粉丝数",
+      "type": "number"
+    },
+    {
+      "id": "fldkeZOTom",
+      "name": "风险等级",
+      "type": "select"
+    },
+    {
+      "id": "fldC9iq9oH",
+      "name": "签约日期",
+      "type": "datetime"
+    },
+    {
+      "id": "fldy4H5KLX",
+      "name": "商单报价",
+      "type": "number"
+    },
+    {
+      "id": "fldijYs9a5",
+      "name": "二级分类",
+      "type": "text"
+    },
+    {
+      "id": "fldUcUTqpW",
+      "name": "近4周粉丝增长",
+      "type": "number"
+    },
+    {
+      "id": "fldMK3rMKE",
+      "name": "风险原因",
+      "type": "text"
+    },
+    {
+      "id": "fldKtVPPsR",
+      "name": "月收入",
+      "type": "number"
+    }
+  ]
+}

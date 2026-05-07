@@ -1,0 +1,112 @@
+{
+  "table_token": "tblE3JvWpkZgEBoL",
+  "table_name": "content_production",
+  "display_name": "内容产出",
+  "project": "kol-incubation",
+  "base_token": "LTLNbBlGTaB4mNs6by0cvhPhnib",
+  "synced_at": "2026-05-05T19:33:37.792513",
+  "record_count": 69,
+  "content_hash": "6a93fa48dff6b3a8",
+  "fields": [
+    {
+      "id": "fldg7dEM9l",
+      "name": "内容链接",
+      "type": "text"
+    },
+    {
+      "id": "fldgkMG3xd",
+      "name": "评论数",
+      "type": "number"
+    },
+    {
+      "id": "fldqEDBMZQ",
+      "name": "数据评级",
+      "type": "text"
+    },
+    {
+      "id": "fld8MRBHZC",
+      "name": "是否爆款",
+      "type": "text"
+    },
+    {
+      "id": "fldLsoniQV",
+      "name": "内容标题",
+      "type": "text"
+    },
+    {
+      "id": "fld2LDSds5",
+      "name": "内容类型",
+      "type": "text"
+    },
+    {
+      "id": "fldxj6BeHz",
+      "name": "内容ID",
+      "type": "text"
+    },
+    {
+      "id": "fld01mHTV0",
+      "name": "品牌名称",
+      "type": "text"
+    },
+    {
+      "id": "fldro0uyOf",
+      "name": "是否商单",
+      "type": "text"
+    },
+    {
+      "id": "fldL4HqeBI",
+      "name": "播放量",
+      "type": "number"
+    },
+    {
+      "id": "fldv89dEsm",
+      "name": "点赞数",
+      "type": "number"
+    },
+    {
+      "id": "fldyX2T5Em",
+      "name": "关联达人",
+      "type": "text"
+    },
+    {
+      "id": "fld8nzdUw7",
+      "name": "所属周次",
+      "type": "number"
+    },
+    {
+      "id": "fld5AcwGpy",
+      "name": "选题标签",
+      "type": "text"
+    },
+    {
+      "id": "flds3MSOII",
+      "name": "发布平台",
+      "type": "text"
+    },
+    {
+      "id": "fldwwzQymg",
+      "name": "发布日期",
+      "type": "datetime"
+    },
+    {
+      "id": "fldrGtawyY",
+      "name": "分享数",
+      "type": "number"
+    },
+    {
+      "id": "fldjqBvPXm",
+      "name": "所属项目",
+      "type": "text"
+    },
+    {
+      "id": "fldKB7ySa7",
+      "name": "完播率",
+      "type": "number"
+    },
+    {
+      "id": "fldrKRXAUh",
+      "name": "爆款原因",
+      "type": "text"
+    }
+  ]
+}

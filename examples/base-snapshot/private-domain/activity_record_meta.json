@@ -1,0 +1,67 @@
+{
+  "table_token": "tblIW5uSiACEaEdZ",
+  "table_name": "activity_record",
+  "display_name": "活动记录",
+  "project": "private-domain",
+  "base_token": "WKOXb2zm7a1XIFseYMmcYl4znJn",
+  "synced_at": "2026-05-05T19:34:22.027933",
+  "record_count": 8,
+  "content_hash": "de8b6a4371fa2865",
+  "fields": [
+    {
+      "id": "fldMUT67d3",
+      "name": "所属周次",
+      "type": "number"
+    },
+    {
+      "id": "fldxuuFmjA",
+      "name": "活动名称",
+      "type": "text"
+    },
+    {
+      "id": "fld5ewFC3y",
+      "name": "活动日期",
+      "type": "text"
+    },
+    {
+      "id": "fldAQ6ECtE",
+      "name": "参与人数",
+      "type": "number"
+    },
+    {
+      "id": "fld5fEkd4E",
+      "name": "活动成本",
+      "type": "number"
+    },
+    {
+      "id": "fldk5Oxqvu",
+      "name": "新增成员",
+      "type": "number"
+    },
+    {
+      "id": "fldkd3XzHB",
+      "name": "活动类型",
+      "type": "text"
+    },
+    {
+      "id": "fld54gFdej",
+      "name": "目标人群",
+      "type": "text"
+    },
+    {
+      "id": "fldIscKQaI",
+      "name": "转化率",
+      "type": "number"
+    },
+    {
+      "id": "fld1z7LgoX",
+      "name": "多行文本",
+      "type": "text"
+    },
+    {
+      "id": "fldtfpjxHc",
+      "name": "活动编号",
+      "type": "text"
+    }
+  ]
+}

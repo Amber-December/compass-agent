@@ -1,0 +1,82 @@
+{
+  "table_token": "tbl2W9lYDuXxiqjp",
+  "table_name": "account_profile",
+  "display_name": "账号档案",
+  "project": "short-video",
+  "base_token": "X8o0b9M9ZaSk0asVcr4ceF16neg",
+  "synced_at": "2026-05-05T19:34:00.153218",
+  "record_count": 6,
+  "content_hash": "d40c2b5710e46289",
+  "fields": [
+    {
+      "id": "fldSiBqlnZ",
+      "name": "平台",
+      "type": "text"
+    },
+    {
+      "id": "fldtl2awBo",
+      "name": "一级分类",
+      "type": "text"
+    },
+    {
+      "id": "fldN0rD6kt",
+      "name": "二级分类",
+      "type": "text"
+    },
+    {
+      "id": "fldxMgukzq",
+      "name": "当前粉丝数",
+      "type": "number"
+    },
+    {
+      "id": "fld1e1quwL",
+      "name": "等级",
+      "type": "text"
+    },
+    {
+      "id": "fldQYpOvm5",
+      "name": "PM备注",
+      "type": "text"
+    },
+    {
+      "id": "fldH6YWt6Y",
+      "name": "内容风格",
+      "type": "text"
+    },
+    {
+      "id": "fld1fWHggg",
+      "name": "账号名称",
+      "type": "text"
+    },
+    {
+      "id": "fld7pBkekd",
+      "name": "状态",
+      "type": "text"
+    },
+    {
+      "id": "fldsVMPq68",
+      "name": "初始粉丝数",
+      "type": "number"
+    },
+    {
+      "id": "fldhLOEuoG",
+      "name": "账号编号",
+      "type": "text"
+    },
+    {
+      "id": "fldSZd3ubR",
+      "name": "风险等级",
+      "type": "text"
+    },
+    {
+      "id": "fldkhdCOFg",
+      "name": "风险原因",
+      "type": "text"
+    },
+    {
+      "id": "fld0YuroOi",
+      "name": "签约日期",
+      "type": "text"
+    }
+  ]
+}

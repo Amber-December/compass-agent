@@ -1,0 +1,52 @@
+{
+  "table_token": "tbli4vUzTszy0gp1",
+  "table_name": "department_health",
+  "display_name": "部门健康度周报",
+  "project": "mcn",
+  "base_token": "SZ1Cb3RbbabNJLsr6TpcJPEfn2g",
+  "synced_at": "2026-05-05T19:33:31.213847",
+  "record_count": 9,
+  "content_hash": "b0cb46470b42c57e",
+  "fields": [
+    {
+      "id": "fld2hGj0Z4",
+      "name": "风险项目列表",
+      "type": "text"
+    },
+    {
+      "id": "fldOBns2pV",
+      "name": "ISO周",
+      "type": "number"
+    },
+    {
+      "id": "fldgUPd3hs",
+      "name": "项目总数",
+      "type": "number"
+    },
+    {
+      "id": "fldULFcTxi",
+      "name": "日期范围",
+      "type": "text"
+    },
+    {
+      "id": "fldXj4vfNh",
+      "name": "预警项目数",
+      "type": "number"
+    },
+    {
+      "id": "fldiFtOg4i",
+      "name": "正常项目数",
+      "type": "number"
+    },
+    {
+      "id": "fld2DsLaDK",
+      "name": "风险项目数",
+      "type": "number"
+    },
+    {
+      "id": "fldMT1At0f",
+      "name": "多行文本",
+      "type": "text"
+    }
+  ]
+}
