@@ -56,4 +56,8 @@ agents/wiki-manager/workspace/graph
 agents/wiki-manager/workspace/wiki
 agents/wiki-manager/workspace/state/*
 !agents/wiki-manager/workspace/state/.gitkeep
+# Config: keep structure + example template, ignore actual config files
+agents/wiki-manager/workspace/config/*
+!agents/wiki-manager/workspace/config/.gitkeep
+!agents/wiki-manager/workspace/config/*.example
 workspace/knowledge/wiki/projects/*/sources/

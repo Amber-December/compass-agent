@@ -1,0 +1,119 @@
+# wiki-manager 源映射配置（模板）
+# 复制此文件为 sources.yaml 并填入真实值
+# -----------------------------------------------------------
+
+# ============================================================
+# 1. Wiki 文档源配置
+# ============================================================
+wiki:
+  # 飞书 Wiki 空间根配置
+  space:
+    space_id: "YOUR_WIKI_SPACE_ID"          # 飞书 Wiki 空间 ID
+    root_node_token: ""                      # 根节点 token（如有统一根节点）
+
+  # scope 映射规则：按目录路径匹配，决定文档落入 wiki/ 下的哪个 scope
+  # 优先级：从上到下匹配，第一个匹配的 rule 生效
+  scope_rules:
+    - path: "SOP/*"
+      scope: "public"
+      project_id: null
+
+    - path: "入职指南/*"
+      scope: "public"
+      project_id: null
+
+    - path: "部门周报/*"
+      scope: "dept"
+      project_id: null
+
+    - path: "会议纪要/部门级/*"
+      scope: "dept"
+      project_id: null
+
+    - path: "垂类达人孵化/*"
+      scope: "projects"
+      project_id: "kol-incubation"
+
+    - path: "品牌代运营/*"
+      scope: "projects"
+      project_id: "brand-ops"
+
+    - path: "直播电商/*"
+      scope: "projects"
+      project_id: "live-commerce"
+
+    - path: "短视频内容矩阵/*"
+      scope: "projects"
+      project_id: "short-video"
+
+    - path: "虚拟IP孵化/*"
+      scope: "projects"
+      project_id: "virtual-ip"
+
+    - path: "达人私域运营/*"
+      scope: "projects"
+      project_id: "private-domain"
+
+  # Wiki 节点注册表
+  # 从飞书 Wiki 链接解析：https://{your-domain}.feishu.cn/wiki/{node_token}
+  nodes:
+    # bitable 节点（飞书 Base 入口）
+    - node_token: "YOUR_NODE_TOKEN"
+      title: "MCN 部门数据库"
+      scope: "dept"
+      type: "bitable"
+      lark_url: "https://{your-domain}.feishu.cn/wiki/YOUR_NODE_TOKEN"
+      base_token: "YOUR_BASE_TOKEN"
+
+    # docx 节点（飞书文档）
+    - node_token: "YOUR_DOC_NODE_TOKEN"
+      obj_token: "YOUR_DOC_OBJ_TOKEN"
+      title: "示例文档"
+      scope: "public"
+      type: "docx"
+      lark_url: "https://{your-domain}.feishu.cn/wiki/YOUR_DOC_NODE_TOKEN"
+
+# ============================================================
+# 2. Base 数据表源配置
+# ============================================================
+base:
+  # 示例：垂类达人孵化
+  - base_token: "YOUR_BASE_TOKEN"
+    profile: "compass"
+    project: "kol-incubation"
+    tables:
+      - table_token: "YOUR_TABLE_TOKEN"
+        table_name: "kol_profile"
+        display_name: "达人档案"
+        schema: "data/schema/垂类达人孵化/kol_profile.yaml"
+
+# ============================================================
+# 3. Schema 注册表（供验证和数据对齐使用）
+# ============================================================
+schema_registry:
+  - "data/schema/mcn/*.yaml"
+  - "data/schema/垂类达人孵化/*.yaml"
+  - "data/schema/品牌代运营/*.yaml"
+  - "data/schema/直播电商/*.yaml"
+  - "data/schema/短视频内容矩阵/*.yaml"
+  - "data/schema/虚拟IP孵化/*.yaml"
+  - "data/schema/达人私域运营/*.yaml"
+
+# ============================================================
+# 4. 同步策略微调
+# ============================================================
+sync_policy:
+  # 增量检测方式：content_hash（推荐）或 modified_time
+  diff_strategy: "content_hash"
+
+  # 全量同步时是否重建图谱
+  rebuild_graph_on_full_sync: true
+
+  # 增量同步时是否重建图谱
+  rebuild_graph_on_incremental: false
+
+  # 飞书侧删除的文档，本地是否标记 archived
+  archive_on_missing: true
+
+  # 每次同步单个源的最大重试次数
+  max_retries_per_source: 3
