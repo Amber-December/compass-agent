@@ -1,0 +1,166 @@
+{
+  "agents": {
+    "defaults": {
+      "workspace": "/path/to/your/workspace",
+      "models": {
+        "kimi/kimi-code": {
+          "alias": "Kimi"
+        }
+      },
+      "model": {
+        "primary": "kimi/kimi-code"
+      }
+    },
+    "list": [
+      {
+        "id": "main"
+      },
+      {
+        "id": "wiki-manager",
+        "name": "wiki-manager",
+        "workspace": "/path/to/your/agents/wiki-manager/workspace",
+        "agentDir": "/path/to/your/.openclaw/agents/wiki-manager/agent",
+        "model": "kimi/kimi-code"
+      },
+      {
+        "id": "qa-bot",
+        "name": "qa-bot",
+        "workspace": "/path/to/your/agents/qa-bot/workspace",
+        "agentDir": "/path/to/your/.openclaw/agents/qa-bot/agent",
+        "model": "kimi/kimi-code"
+      }
+    ]
+  },
+  "gateway": {
+    "mode": "local",
+    "auth": {
+      "mode": "token",
+      "token": "YOUR_GATEWAY_TOKEN"
+    },
+    "port": 18789,
+    "bind": "loopback",
+    "tailscale": {
+      "mode": "off",
+      "resetOnExit": false
+    },
+    "controlUi": {
+      "allowInsecureAuth": true
+    },
+    "nodes": {
+      "denyCommands": [
+        "camera.snap",
+        "camera.clip",
+        "screen.record",
+        "contacts.add",
+        "calendar.add",
+        "reminders.add",
+        "sms.send",
+        "sms.search"
+      ]
+    }
+  },
+  "session": {
+    "dmScope": "per-channel-peer"
+  },
+  "skills": {
+    "load": {
+      "extraDirs": [
+        "/path/to/your/agents/qa-bot/workspace/skills",
+        "/path/to/your/agents/wiki-manager/workspace/skills"
+      ],
+      "watch": true,
+      "watchDebounceMs": 250
+    }
+  },
+  "tools": {
+    "profile": "coding",
+    "web": {
+      "search": {
+        "provider": "kimi",
+        "enabled": true
+      }
+    }
+  },
+  "models": {
+    "mode": "merge",
+    "providers": {
+      "kimi": {
+        "baseUrl": "https://api.kimi.com/coding/",
+        "api": "anthropic-messages",
+        "models": [
+          {
+            "id": "kimi-code",
+            "name": "Kimi Code",
+            "reasoning": true,
+            "input": [
+              "text",
+              "image"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 262144,
+            "maxTokens": 32768
+          }
+        ]
+      }
+    }
+  },
+  "auth": {
+    "profiles": {
+      "kimi:default": {
+        "provider": "kimi",
+        "mode": "api_key"
+      }
+    }
+  },
+  "channels": {
+    "feishu": {
+      "enabled": true,
+      "appId": "YOUR_FEISHU_APP_ID",
+      "appSecret": "YOUR_FEISHU_APP_SECRET",
+      "connectionMode": "websocket",
+      "domain": "feishu",
+      "dmPolicy": "open",
+      "groupPolicy": "open",
+      "requireMention": true
+    }
+  },
+  "plugins": {
+    "entries": {
+      "moonshot": {
+        "enabled": true,
+        "config": {
+          "webSearch": {
+            "apiKey": "YOUR_MOONSHOT_API_KEY"
+          }
+        }
+      },
+      "kimi": {
+        "enabled": true
+      }
+    }
+  },
+  "wizard": {
+    "lastRunAt": "2026-04-25T10:23:08.809Z",
+    "lastRunVersion": "2026.4.23",
+    "lastRunCommand": "onboard",
+    "lastRunMode": "local"
+  },
+  "meta": {
+    "lastTouchedVersion": "2026.4.23",
+    "lastTouchedAt": "2026-05-06T09:34:58.360Z"
+  },
+  "bindings": [
+    {
+      "type": "route",
+      "agentId": "qa-bot",
+      "match": {
+        "channel": "feishu"
+      }
+    }
+  ]
+}
