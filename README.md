@@ -277,16 +277,19 @@ openclaw run weekly-reporter --prompt "生成周报"
 
 ```
 compass-agent/
-├── .openclaw/                           # OpenClaw 运行时配置（本地，不提交）
+├── .openclaw/                           # OpenClaw 运行时配置
 ├── agents/                              # Agent 定义
 │   ├── qa-bot/                          # 统一问答入口
 │   ├── wiki-manager/                    # 知识底座同步引擎
 │   │   └── workspace/
 │   │       ├── config/
-│   │       │   ├── sources.yaml         # 飞书数据源配置（本地，不提交）
+│   │       │   ├── sources.yaml         # 飞书数据源配置
 │   │       │   └── sources.yaml.example # 配置模板
-│   │       ├── raw_lark/                # 从飞书拉取的原始文档（本地，不提交）
-│   │       ├── state/                   # 同步状态（本地，不提交）
+│   │       ├── raw_lark/                # 从飞书拉取的原始文档
+│   │       │   ├── base/                # Base 多维表格原始数据
+│   │       │   ├── minutes/             # 妙记原始数据
+│   │       │   └── wiki/                # Wiki 原始 Markdown
+│   │       ├── state/                   # 同步状态
 │   │       └── tools/                   # 核心工具脚本
 │   ├── weekly-reporter/                 # 周报合成助手
 │   └── card-builder/                    # 卡片渲染层
@@ -294,17 +297,17 @@ compass-agent/
 │   ├── assets/images/                   # 截图与 Logo
 │   ├── projects/                        # 项目看板模板
 │   └── index.html                       # 产品说明页
-├── examples/                            # 示例数据（虚构，可提交）
-│   ├── base/                            # 模拟 Base 数据
-│   └── wiki/                            # 模拟 Wiki 文档
-├── workspace/                           # 知识底座（运行时生成，不提交）
+├── examples/                            # 示例数据
+│   ├── base/                            # 模拟 Base 多维表格数据
+│   └── wiki/                            # 模拟 Wiki 原始文档
+├── workspace/                           # 知识底座
 │   ├── knowledge/
 │   │   ├── wiki/                        # 符号化编译后的知识
 │   │   ├── graph/                       # 知识图谱
 │   │   └── data/                        # Base 结构化数据
 │   └── memory/                          # Agent 记忆
 ├── start-gateway.sh                     # Gateway 启动脚本
-├── openclaw.json                        # OpenClaw 根配置（本地，不提交）
+├── openclaw.json                        # OpenClaw 根配置
 ├── openclaw.json.example                # 根配置模板
 └── .env.example                         # 环境变量模板
 ```
