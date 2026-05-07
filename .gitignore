@@ -26,6 +26,7 @@ logs/
 # Sensitive configs (use .example templates instead)
 accounts.json
 openclaw.json
+workspace/openclaw.json
 
 # Wiki local index cache
 wiki/sources/*.md.tmp
