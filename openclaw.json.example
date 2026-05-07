@@ -3,12 +3,12 @@
     "defaults": {
       "workspace": "/path/to/your/workspace",
       "models": {
-        "kimi/kimi-code": {
-          "alias": "Kimi"
+        "your-provider/your-model": {
+          "alias": "YourModel"
         }
       },
       "model": {
-        "primary": "kimi/kimi-code"
+        "primary": "your-provider/your-model"
       }
     },
     "list": [
@@ -20,14 +20,14 @@
         "name": "wiki-manager",
         "workspace": "/path/to/your/agents/wiki-manager/workspace",
         "agentDir": "/path/to/your/.openclaw/agents/wiki-manager/agent",
-        "model": "kimi/kimi-code"
+        "model": "your-provider/your-model"
       },
       {
         "id": "qa-bot",
         "name": "qa-bot",
         "workspace": "/path/to/your/agents/qa-bot/workspace",
         "agentDir": "/path/to/your/.openclaw/agents/qa-bot/agent",
-        "model": "kimi/kimi-code"
+        "model": "your-provider/your-model"
       }
     ]
   },
@@ -76,7 +76,7 @@
     "profile": "coding",
     "web": {
       "search": {
-        "provider": "kimi",
+        "provider": "your-search-provider",
         "enabled": true
       }
     }
@@ -84,13 +84,13 @@
   "models": {
     "mode": "merge",
     "providers": {
-      "kimi": {
-        "baseUrl": "https://api.kimi.com/coding/",
+      "your-provider": {
+        "baseUrl": "https://api.your-provider.com/v1/",
         "api": "anthropic-messages",
         "models": [
           {
-            "id": "kimi-code",
-            "name": "Kimi Code",
+            "id": "your-model",
+            "name": "Your Model",
             "reasoning": true,
             "input": [
               "text",
@@ -111,8 +111,8 @@
   },
   "auth": {
     "profiles": {
-      "kimi:default": {
-        "provider": "kimi",
+      "default": {
+        "provider": "your-provider",
         "mode": "api_key"
       }
     }
@@ -131,15 +131,15 @@
   },
   "plugins": {
     "entries": {
-      "moonshot": {
+      "web-search": {
         "enabled": true,
         "config": {
           "webSearch": {
-            "apiKey": "YOUR_MOONSHOT_API_KEY"
+            "apiKey": "YOUR_WEB_SEARCH_API_KEY"
           }
         }
       },
-      "kimi": {
+      "your-provider": {
         "enabled": true
       }
     }
