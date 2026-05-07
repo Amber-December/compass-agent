@@ -210,12 +210,40 @@ cd compass-agent
 # 安装 OpenClaw CLI
 npm install -g openclaw
 
-# 配置飞书应用凭证
-# 复制 .env.example 为 .env 并填写 app_id / app_secret
+# 配置环境变量
+# 复制 .env.example 为 .env 并填写飞书应用凭证
 cp .env.example .env
+
+# 配置 OpenClaw
+# 复制示例配置文件并填入真实值
+cp openclaw.json.example openclaw.json
+# 编辑 openclaw.json，替换所有 YOUR_* 占位符
 ```
 
-### 2. 启动 Gateway
+> **安全提示**：`openclaw.json` 和 `agents/wiki-manager/workspace/config/sources.yaml` 含有 API 密钥和飞书凭证，已加入 `.gitignore`，**切勿提交到 Git**。
+
+### 2. 使用示例数据体验（无需飞书）
+
+项目中包含一套**完全虚构的示例数据**，可直接用于本地开发和体验：
+
+```bash
+# 示例数据位置
+examples/
+├── base-snapshot/      # 模拟飞书 Base 多维表格数据（JSON）
+└── wiki-sources/       # 模拟飞书 Wiki 文档（Markdown）
+
+# 快速体验数据查询
+python -c "
+import json
+with open('examples/base-snapshot/live-commerce/project_kpi.json') as f:
+    data = json.load(f)
+    print(f'共 {len(data)} 周数据，平均 GMV: {sum(d[\"总GMV\"] for d in data)/len(data):,.0f}')
+"
+```
+
+详见 [`examples/README.md`](examples/README.md)。
+
+### 3. 启动 Gateway
 
 ```bash
 bash start-gateway.sh
@@ -223,18 +251,60 @@ bash start-gateway.sh
 
 Gateway 启动后监听 `127.0.0.1:18789`，Dashboard: `http://127.0.0.1:18789/`。
 
-### 3. 初始化知识底座
+### 4. 初始化知识底座（连接真实飞书）
 
 ```bash
+# 配置 wiki-manager 的数据源
+# 编辑 agents/wiki-manager/workspace/config/sources.yaml
+# 填入你的飞书 Wiki 空间 ID、节点 token、Base token 等
+
 # 触发 wiki-manager 全量同步
 openclaw run wiki-manager --prompt "刷新知识库"
 ```
 
-### 4. 手动生成周报（测试）
+### 5. 手动生成周报（测试）
 
 ```bash
 # 触发 weekly-reporter 生成周报
 openclaw run weekly-reporter --prompt "生成周报"
+```
+
+---
+
+## 目录结构
+
+```
+compass-agent/
+├── .openclaw/                           # OpenClaw 运行时配置（本地，不提交）
+├── agents/                              # Agent 定义
+│   ├── qa-bot/                          # 统一问答入口
+│   ├── wiki-manager/                    # 知识底座同步引擎
+│   │   └── workspace/
+│   │       ├── config/
+│   │       │   ├── sources.yaml         # 飞书数据源配置（本地，不提交）
+│   │       │   └── sources.yaml.example # 配置模板
+│   │       ├── raw_lark/                # 从飞书拉取的原始文档（本地，不提交）
+│   │       ├── state/                   # 同步状态（本地，不提交）
+│   │       └── tools/                   # 核心工具脚本
+│   ├── weekly-reporter/                 # 周报合成助手
+│   └── card-builder/                    # 卡片渲染层
+├── demo/                                # 项目演示
+│   ├── assets/images/                   # 截图与 Logo
+│   ├── projects/                        # 项目看板模板
+│   └── index.html                       # 产品说明页
+├── examples/                            # 示例数据（虚构，可提交）
+│   ├── base-snapshot/                   # 模拟 Base 数据
+│   └── wiki-sources/                    # 模拟 Wiki 文档
+├── workspace/                           # 知识底座（运行时生成，不提交）
+│   ├── knowledge/
+│   │   ├── wiki/                        # 符号化编译后的知识
+│   │   ├── graph/                       # 知识图谱
+│   │   └── data/                        # Base 结构化数据
+│   └── memory/                          # Agent 记忆
+├── start-gateway.sh                     # Gateway 启动脚本
+├── openclaw.json                        # OpenClaw 根配置（本地，不提交）
+├── openclaw.json.example                # 根配置模板
+└── .env.example                         # 环境变量模板
 ```
 
 ---
@@ -252,34 +322,6 @@ openclaw run weekly-reporter --prompt "生成周报"
 | 消息卡片 | 飞书消息卡片 JSON（card-builder 渲染） |
 | 前端看板 | Next.js + React + Chart.js + Tailwind CSS |
 | 部署 | 本地 Gateway（可扩展为云端） |
-
----
-
-## 目录结构
-
-```
-compass-agent/
-├── .openclaw/                # OpenClaw 运行时配置
-├── agents/                   # Agent 定义
-│   ├── qa-bot/               # 统一问答入口
-│   ├── wiki-manager/         # 知识底座同步引擎
-│   ├── weekly-reporter/      # 周报合成助手
-│   └── card-builder/         # 卡片渲染层
-├── demo/                     # 项目演示
-│   ├── assets/images/        # 截图与 Logo
-│   ├── projects/             # 项目看板模板
-│   └── index.html            # 产品说明页
-├── scripts/                  # 数据推送与维护脚本
-├── workspace/                # 知识底座（运行时生成）
-│   ├── knowledge/
-│   │   ├── wiki/             # 符号化编译后的知识
-│   │   ├── graph/            # 知识图谱
-│   │   └── data/             # Base 结构化数据
-│   └── memory/               # Agent 记忆
-├── start-gateway.sh          # Gateway 启动脚本
-├── openclaw.json             # OpenClaw 根配置
-└── .env.example              # 环境变量模板
-```
 
 ---
 
