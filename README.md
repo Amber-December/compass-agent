@@ -220,8 +220,6 @@ cp openclaw.json.example openclaw.json
 # 编辑 openclaw.json，替换所有 YOUR_* 占位符
 ```
 
-> **安全提示**：`openclaw.json` 和 `agents/wiki-manager/workspace/config/sources.yaml` 含有 API 密钥和飞书凭证，已加入 `.gitignore`，**切勿提交到 Git**。
-
 ### 2. 使用示例数据体验（无需飞书）
 
 项目中包含一套**完全虚构的示例数据**，可直接用于本地开发和体验：
