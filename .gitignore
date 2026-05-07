@@ -49,5 +49,8 @@ workspace/knowledge/data/
 workspace/knowledge/graph/graph.html
 workspace/knowledge/graph/subgraph_*.html
 agents/wiki-manager/workspace/raw_lark/
-agents/wiki-manager/workspace/state/sync_state.json
+agents/wiki-manager/workspace/data
+agents/wiki-manager/workspace/graph
+agents/wiki-manager/workspace/wiki
+agents/wiki-manager/workspace/state/
 workspace/knowledge/wiki/projects/*/sources/
