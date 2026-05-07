@@ -227,13 +227,17 @@ cp openclaw.json.example openclaw.json
 ```bash
 # 示例数据位置
 examples/
-├── base-snapshot/      # 模拟飞书 Base 多维表格数据（JSON）
-└── wiki-sources/       # 模拟飞书 Wiki 文档（Markdown）
+├── base/               # 模拟飞书 Base 多维表格数据（JSON）
+└── wiki/               # 模拟飞书 Wiki 文档（Markdown）
 
-# 快速体验数据查询
+# 方式一：直接放入 raw_lark 体验完整流程（无需飞书）
+cp -R examples/wiki/* agents/wiki-manager/workspace/raw_lark/wiki/
+cp -R examples/base/* workspace/knowledge/data/
+
+# 方式二：快速体验数据查询
 python -c "
 import json
-with open('examples/base-snapshot/live-commerce/project_kpi.json') as f:
+with open('examples/base/live-commerce/project_kpi.json') as f:
     data = json.load(f)
     print(f'共 {len(data)} 周数据，平均 GMV: {sum(d[\"总GMV\"] for d in data)/len(data):,.0f}')
 "
@@ -291,8 +295,8 @@ compass-agent/
 │   ├── projects/                        # 项目看板模板
 │   └── index.html                       # 产品说明页
 ├── examples/                            # 示例数据（虚构，可提交）
-│   ├── base-snapshot/                   # 模拟 Base 数据
-│   └── wiki-sources/                    # 模拟 Wiki 文档
+│   ├── base/                            # 模拟 Base 数据
+│   └── wiki/                            # 模拟 Wiki 文档
 ├── workspace/                           # 知识底座（运行时生成，不提交）
 │   ├── knowledge/
 │   │   ├── wiki/                        # 符号化编译后的知识

@@ -11,13 +11,13 @@
 ```
 examples/
 ├── README.md                 # 本文件
-├── base-snapshot/            # 飞书 Base 多维表格数据快照（JSON）
-└── wiki-sources/             # 飞书 Wiki 文档原始 Markdown
+├── base/                     # 飞书 Base 多维表格数据快照（JSON）
+└── wiki/                     # 飞书 Wiki 文档原始 Markdown
 ```
 
 ---
 
-## base-snapshot/
+## base/
 
 模拟从飞书 Base 同步的多维表格数据，按项目分类存储为 JSON 文件。
 
@@ -54,7 +54,7 @@ examples/
 
 ---
 
-## wiki-sources/
+## wiki/
 
 模拟从飞书 Wiki 同步的原始 Markdown 文档，保留了 frontmatter 元数据。
 
@@ -96,26 +96,41 @@ status: active
 
 ## 如何使用
 
-### 1. 快速体验数据查询
+### 1. 直接放入 raw_lark 体验（推荐）
+
+wiki-manager 的同步目标目录 `agents/wiki-manager/workspace/raw_lark/` 保持与飞书侧一致的 `base/minutes/wiki` 结构。你可以直接将示例数据复制进去，无需连接真实飞书即可体验完整流程：
+
+```bash
+# 将示例 Wiki 文档放入 raw_lark
+cp -R examples/wiki/* agents/wiki-manager/workspace/raw_lark/wiki/
+
+# 将示例 Base 数据放入 knowledge/data
+cp -R examples/base/* workspace/knowledge/data/
+
+# 然后运行 wiki-ingest 编译知识底座
+python agents/wiki-manager/workspace/tools/wiki_ingest.py
+```
+
+### 2. 快速体验数据查询
 
 ```python
 import json
 
-with open('examples/base-snapshot/live-commerce/project_kpi.json') as f:
+with open('examples/base/live-commerce/project_kpi.json') as f:
     data = json.load(f)
     print(f"共 {len(data)} 周数据")
     print(f"平均 GMV: {sum(d['总GMV'] for d in data) / len(data):,.0f}")
 ```
 
-### 2. 运行 wiki-ingest 编译知识底座
+### 3. 运行 wiki-ingest 编译知识底座
 
-将 `wiki-sources/` 作为输入，运行 wiki-manager 的知识编译流程，即可生成：
+将 `examples/wiki/` 作为输入，运行 wiki-manager 的知识编译流程，即可生成：
 - `wiki/concepts/` — 概念页
 - `wiki/entities/` — 实体页
 - `wiki/index.md` — 知识库索引
 - `wiki/overview.md` — 综合认知
 
-### 3. 构建知识图谱
+### 4. 构建知识图谱
 
 基于编译后的 wiki 内容，运行 `build_graph.py` 生成 `graph.json` 和可视化 HTML。
 
