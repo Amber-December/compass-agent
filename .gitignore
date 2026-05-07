@@ -38,6 +38,9 @@ __pycache__/
 .venv/
 venv/
 
+# Agent self-improving learnings (runtime generated)
+workspace/.learnings/
+
 # Local directories (not committed)
 database/
 eval/
